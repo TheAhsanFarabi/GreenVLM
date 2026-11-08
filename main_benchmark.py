@@ -116,14 +116,27 @@ def eval_pope(pred: str, ground_truth: str) -> float:
 # -------------------------------------------------------------
 def query_model(model: str, prompt: str, image_b64: str, max_tokens: int = 30) -> Dict[str, Any]:
     url = "http://localhost:11434/api/chat"
+    base = model.split(":")[0].lower()
+
+    # Reasoning VLMs (e.g. qwen3-vl) always emit chain-of-thought and only place the
+    # final answer in message.content *after* thinking finishes, so they need a larger
+    # decode budget. Their reasoning tokens are genuine decode work ("speaking" energy).
+    reasoning = base.startswith("qwen3")
+    num_predict = max(max_tokens + 256, 320) if reasoning else max_tokens
+
     payload = {
         "model": model,
         "messages": [{"role": "user", "content": prompt, "images": [image_b64]}],
         "stream": False,
-        "options": {"temperature": 0.0, "num_predict": max_tokens}
+        "options": {"temperature": 0.0, "num_predict": num_predict}
     }
+    # gemma thinking models hide the answer unless thinking is explicitly disabled.
+    # (llama3.2-vision is not a thinking model and errors if 'think' is sent.)
+    if base.startswith("gemma"):
+        payload["think"] = False
+
     req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"), headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=180) as resp:
+    with urllib.request.urlopen(req, timeout=300) as resp:
         res = json.loads(resp.read().decode("utf-8"))
         if "message" in res and "content" in res["message"]:
             res["response"] = res["message"]["content"]
@@ -201,20 +214,25 @@ def main():
     parser.add_argument("--resolutions", nargs="+", type=int, default=[224, 448, 896], help="Square resolutions (e.g. 224 448 896)")
     parser.add_argument("--data-dir", type=str, default="data/multitask_samples", help="Path to sample images and metadata")
     parser.add_argument("--output-dir", type=str, default="results", help="Directory to save JSON logs and figures")
+    parser.add_argument("--limit", type=int, default=0, help="Max samples per task (0 = all). Use for a quick pilot.")
     args = parser.parse_args()
 
     os.makedirs(args.output_dir, exist_ok=True)
     res_tuples = [(r, r) for r in args.resolutions]
 
-    meta_file = os.path.join(args.data_dir, "metadata.json")
-    if not os.path.exists(meta_file):
-        # Fallback to local cached directory
-        alt_meta = "multitask_samples/multitask_samples_metadata.json"
-        if os.path.exists(alt_meta):
-            meta_file = alt_meta
-        else:
-            print(f"[!] Metadata not found at '{meta_file}'. Please run 'python download_datasets.py' first.")
-            sys.exit(1)
+    meta_candidates = [
+        os.path.join(args.data_dir, "metadata.json"),
+        os.path.join(args.data_dir, "multitask_samples_metadata.json"),
+        "multitask_samples/multitask_samples_metadata.json",
+    ]
+    meta_file = next((c for c in meta_candidates if os.path.exists(c)), None)
+    if meta_file is None:
+        print(f"[!] Metadata not found. Tried: {meta_candidates}. Please run 'python download_datasets.py' first.")
+        sys.exit(1)
+
+    # Resolve image paths relative to the data dir's parent (metadata stores paths
+    # like 'multitask_samples/docvqa/doc_00.png' relative to 'data/').
+    data_base = os.path.dirname(os.path.abspath(args.data_dir))
 
     with open(meta_file, "r") as f:
         all_meta = json.load(f)
@@ -231,10 +249,27 @@ def main():
     full_log = []
     summary = {t: {} for t in args.tasks}
 
+    # Warm up: load the model into GPU memory with one throwaway call so the cold
+    # load cost is not charged to the first benchmarked sample's energy/time.
+    try:
+        warm_task = next((t for t in args.tasks if all_meta.get(t)), None)
+        if warm_task:
+            ws = all_meta[warm_task][0]
+            wpath = ws["image_path"]
+            if not os.path.exists(wpath):
+                wpath = os.path.join(data_base, wpath)
+            print("[*] Warming up model (loading into GPU memory)...")
+            query_model(args.model, "Describe this image.", resize_image_b64(wpath, res_tuples[0]), max_tokens=5)
+            print("[✓] Warmup complete.")
+    except Exception as e:
+        print(f"[!] Warmup skipped: {e}")
+
     for task in args.tasks:
         samples = all_meta.get(task, [])
         if not samples:
             continue
+        if args.limit > 0:
+            samples = samples[:args.limit]
         print(f"\n>>> Running Benchmark on Task: {task.upper()} ({len(samples)} samples)...")
 
         for res in res_tuples:
@@ -245,6 +280,10 @@ def main():
                 q = s["question"]
                 gts = s["ground_truth"]
                 img_path = s["image_path"]
+                if not os.path.exists(img_path):
+                    cand = os.path.join(data_base, img_path)
+                    if os.path.exists(cand):
+                        img_path = cand
 
                 if task == "DocVQA":
                     prompt = f"Question: {q}\nAnswer directly and concisely using words from the document."
