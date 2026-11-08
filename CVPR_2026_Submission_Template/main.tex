@@ -1,0 +1,59 @@
+% CVPR 2026 Paper Template
+% GreenVLM: The Illusion of "Free" Vision in Real-World Multimodal Tasks
+
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+%%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
+% \usepackage{cvpr}              % To produce the CAMERA-READY version
+\usepackage[review]{cvpr}      % To produce the REVIEW version (blinded)
+% \usepackage[pagenumbers]{cvpr} % To force page numbers and visible authors (e.g. for arXiv / preprint)
+
+% Import additional packages in the preamble file, before hyperref
+\input{preamble}
+
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\usepackage[pagebackref,breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
+
+%%%%%%%%% PAPER ID  - PLEASE UPDATE
+\def\paperID{*****} % *** Enter the Paper ID here for review
+\def\confName{CVPR}
+\def\confYear{2026}
+
+%%%%%%%%% TITLE
+\title{GreenVLM: The Illusion of ``Free'' Vision in Real-World Multimodal Tasks}
+
+%%%%%%%%% AUTHORS (Visible in Camera-Ready & Preprint Mode)
+\author{
+Israt Khandaker$^{1}$ \quad
+Nurul Labib$^{1}$ \quad
+Ahsan Farabi$^{1,2}$ \quad
+MR Saad$^{1}$ \\
+Ishayat Ibn Hasan$^{1}$ \quad
+Fayez Abdullah$^{1}$ \quad
+Sahriar Mahmud$^{1}$ \quad
+Sakhor Satapdo$^{1}$ \\[2mm]
+$^{1}$Department of Computer Science and Engineering \quad $^{2}$Research Institute \\
+{\tt\small \{israt.khandaker, nurul.labib, ahsan.farabi, mr.saad\}@institution.edu} \\
+{\tt\small \{ishayat.hasan, fayez.abdullah, sahriar.mahmud, sakhor.satapdo\}@institution.edu}
+}
+
+\begin{document}
+\maketitle
+
+\input{sec/0_abstract}    
+\input{sec/1_intro}
+\input{sec/2_related_work}
+\input{sec/3_methodology}
+\input{sec/4_experiments}
+\input{sec/5_discussion_conclusion}
+
+{
+    \small
+    \bibliographystyle{ieeenat_fullname}
+    \bibliography{main}
+}
+
+% Optional Supplementary Material
+% \input{sec/X_suppl}
+
+\end{document}

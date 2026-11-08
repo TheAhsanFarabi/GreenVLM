@@ -1,0 +1,59 @@
+\section{Methodology}
+\label{sec:methodology}
+
+In this section, we present the theoretical and experimental framework of \textbf{GreenVLM}. We formulate the task-conditioned energy dynamics of VLM inference, define the multi-task evaluation taxonomy, and detail our hardware energy instrumentation pipeline.
+
+\subsection{Task-Conditioned Thermodynamic Formulation}
+Consider a VLM parameterized by weights $\Theta$ processing an input image $I \in \mathbb{R}^{H \times W \times 3}$ and a text prompt $X_{\text{prompt}}$ consisting of $N_{\text{text}}$ tokens. The vision encoder and modality projector map $I$ into $N_{\text{vis}}(H, W)$ visual token embeddings.
+
+Inference proceeds in two strictly sequential physical phases:
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Prefill Phase (Seeing):} The model evaluates the concatenated prompt sequence of length $N_{\text{in}} = N_{\text{vis}} + N_{\text{text}}$, populating the initial Key-Value (KV) cache. Because operations are executed via parallel matrix-matrix multiplication ($\text{GEMM}$), prefill is compute-bound. The prefill execution time is given by $t_{\text{prefill}}(N_{\text{vis}}, N_{\text{text}})$.
+    \item \textbf{Decode Phase (Speaking):} The language model autoregressively generates $N_{\text{out}}$ output tokens one at a time. At batch size 1, each generated token requires reading the entire model weight matrix from DRAM into on-chip cache, rendering decode memory-bandwidth bound. The decode execution time is linear in output tokens: $t_{\text{decode}} = \sum_{k=1}^{N_{\text{out}}} \tau_{\text{dec}}^{(k)} \approx N_{\text{out}} \cdot \bar{\tau}_{\text{dec}}$, where $\bar{\tau}_{\text{dec}}$ is the average single-token decode latency.
+\end{enumerate}
+
+Given average board power draws $\bar{P}_{\text{pre}}$ and $\bar{P}_{\text{dec}}$ during the respective phases, total inference energy $E_{\text{tot}}$ is:
+\begin{equation}
+    E_{\text{tot}} = E_{\text{prefill}} + E_{\text{decode}} = \bar{P}_{\text{pre}} \cdot t_{\text{prefill}} + \bar{P}_{\text{dec}} \cdot \bar{\tau}_{\text{dec}} \cdot N_{\text{out}}
+    \label{eq:total_energy}
+\end{equation}
+
+Under the empirical invariant proved in Proposition 1 of~\cite{zhan2026seeing}, modern accelerator power is saturated in both compute-bound and memory-bound regimes ($\bar{P}_{\text{pre}} \approx \bar{P}_{\text{dec}} \approx \bar{P}$). Substituting this into Equation~\ref{eq:total_energy}, the visual prefill energy share $\rho_{\text{prefill}}$ simplifies directly to the duty-cycle ratio:
+\begin{equation}
+    \rho_{\text{prefill}}(H, W, \mathcal{T}) = \frac{t_{\text{prefill}}(N_{\text{vis}}(H, W))}{t_{\text{prefill}}(N_{\text{vis}}(H, W)) + \bar{\tau}_{\text{dec}} \cdot N_{\text{out}}(\mathcal{T})}
+    \label{eq:rho_prefill}
+\end{equation}
+
+\paragraph{The Two Thermodynamic Regimes:}
+Equation~\ref{eq:rho_prefill} exposes why prior conclusions were incomplete. The energy distribution is fundamentally governed by the ratio of visual tokens to generated output tokens:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Regime 1: Open Captioning ($\mathcal{T}_{\text{cap}}$):} Where $N_{\text{out}} \in [100, 150]$ and $N_{\text{vis}}$ is low, the second term dominates: $\bar{\tau}_{\text{dec}} \cdot N_{\text{out}} \gg t_{\text{prefill}} \implies \rho_{\text{prefill}} \to 0.05 - 0.14$. Decoding dominates.
+    \item \textbf{Regime 2: Document QA and Probing ($\mathcal{T}_{\text{doc}}$):} Where $N_{\text{out}} \in [1, 5]$ and $N_{\text{vis}} \ge 750$, the first term dominates: $t_{\text{prefill}} \gg \bar{\tau}_{\text{dec}} \cdot N_{\text{out}} \implies \rho_{\text{prefill}} \to 0.95 - 0.99+$. Visual prefill dominates.
+\end{itemize}
+
+\paragraph{Extension to Proposition 2 (Task-Conditioned Savings Bound):}
+Recall that Zhan \etal proved that visual pruning fraction $\eta$ saves at most $\frac{\Delta E}{E_{\text{tot}}} \le \eta \cdot \rho_{\text{prefill}}$. In Regime 1, savings were bounded by $\le 10\%$. In Regime 2, however, because $\rho_{\text{prefill}} \approx 0.99$, visual token reduction achieves up to:
+\begin{equation}
+    \frac{\Delta E}{E_{\text{tot}}} \le \eta \cdot 0.99 \approx \mathbf{99\%}
+\end{equation}
+In real-world visual applications, visual token reduction is the \emph{dominant} energy optimization lever.
+
+\subsection{Multi-Task Evaluation Taxonomy}
+To span the complete operational spectrum, our benchmark incorporates four standardized task archetypes:
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{DocVQA~\cite{mathew2021docvqa} (Document Intelligence):} High-resolution scanned forms, receipts, and financial tables. Answers are extracted textual entities ($N_{\text{out}} \approx 1-3$). Evaluated via the official Average Normalized Levenshtein Similarity (ANLS) metric with a 0.5 edit-distance threshold:
+    \begin{equation}
+        \text{ANLS}(a, g) = \max_{g \in \mathcal{G}} \left(1 - \frac{\text{Lev}(a, g)}{\max(|a|, |g|)}\right) \cdot \mathbb{I}\left(\frac{\text{Lev}(a, g)}{\max(|a|, |g|)} \le 0.5\right)
+    \end{equation}
+    \item \textbf{ChartQA~\cite{masry2022chartqa} (Visual Data Reasoning):} Visual parsing of bar charts, scatter plots, and line graphs. Evaluated via relaxed accuracy (exact string match or within 5\% relative numeric tolerance).
+    \item \textbf{POPE~\cite{li2023evaluating} (Zero-Drift Object Probing):} Binary verification queries (\eg, \emph{``Is there a chair in the image?''}). Target output is strictly constrained to \textbf{1 token} (\emph{``yes''} or \emph{``no''}), completely eliminating output length drift.
+    \item \textbf{COCO~\cite{lin2014microsoft} (Captioning Baseline):} Open-ended natural scene captioning, serving as our empirical control to replicate Zhan \etal's decode-dominant regime.
+\end{enumerate}
+
+\subsection{Hardware Energy Instrumentation Pipeline}
+To capture true physical Joules without software estimation artifacts, our profiler interfaces directly with platform hardware registers:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Intel/AMD RAPL Registers:} On CPU platforms, we sample the Running Average Power Limit (RAPL) MSR interface via Linux powercap (`/sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj`), capturing hardware energy at microsecond resolution in microjoules ($\mu\text{J}$).
+    \item \textbf{NVIDIA NVML Telemetry:} On GPU workstations, our profiler queries NVIDIA Management Library (`pynvml.nvmlDeviceGetPowerUsage`) at 50Hz, integrating instantaneous board power over time: $E = \int P(t) \, dt$.
+    \item \textbf{Nanosecond Phase Isolation:} The Ollama runtime separates `prompt_eval_duration` ($t_{\text{prefill}}$) and `eval_duration` ($t_{\text{decode}}$) via internal timers, allowing exact phase-level energy attribution.
+\end{itemize}

@@ -1,0 +1,41 @@
+\section{Supplementary Material: GreenVLM Extended Details}
+\label{sec:suppl}
+
+This supplementary document provides additional implementation details, prompt templates, and hardware specifications for the GreenVLM benchmark.
+
+\subsection{Prompt Templates across Task Archetypes}
+To ensure reproducibility and eliminate output length drift, all tasks were evaluated with standardized, deterministic system and user prompts:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{DocVQA Template:}
+    \begin{quote}
+        \ttfamily
+        Question: \{question\}\\
+        Answer the question directly and concisely using words from the document.
+    \end{quote}
+    \item \textbf{ChartQA Template:}
+    \begin{quote}
+        \ttfamily
+        Question: \{question\}\\
+        Answer concisely with the exact value or category from the chart.
+    \end{quote}
+    \item \textbf{POPE Template:}
+    \begin{quote}
+        \ttfamily
+        Question: \{question\}\\
+        Answer with exactly one word: 'yes' or 'no'.
+    \end{quote}
+    \item \textbf{COCO Captioning Template:}
+    \begin{quote}
+        \ttfamily
+        Describe this image concisely in 2 sentences.
+    \end{quote}
+\end{itemize}
+
+\subsection{Hardware and Instrumentation Specifications}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{CPU Platform:} 13th Gen Intel Core i3-1315U (6 cores / 8 threads: 2 Performance cores, 4 Efficient cores, 10MB L3 cache, base TDP 15W, maximum turbo power 45W).
+    \item \textbf{Operating System:} Ubuntu 24.04 LTS (Linux 6.8 kernel).
+    \item \textbf{Energy Telemetry:} Intel RAPL MSR hardware energy counter queried at sub-second intervals (`/sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj`) with microjoule precision.
+    \item \textbf{Inference Runtime:} Ollama native llama.cpp backend running with float16 / 4-bit quantized GGML weights.
+\end{itemize}

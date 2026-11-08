@@ -1,0 +1,44 @@
+\section{Introduction}
+\label{sec:intro}
+
+Vision-Language Models (VLMs) such as Qwen2.5-VL~\cite{qwen2_5_vl_2025}, InternVL~\cite{chen2024internvl}, and Gemma-3~\cite{gemma3_2025} have rapidly become the perceptual foundation for multimodal applications ranging from autonomous embodied agents to mobile document intelligence. However, their pervasive deployment on resource-constrained platforms---including edge accelerators, battery-powered robotics, and client workstations---is fundamentally bounded by their physical electrical energy footprint.
+
+To improve multimodal efficiency, a large body of recent literature has focused on reducing visual token overhead through token pruning, dropping, or spatial downsampling~\cite{chen2024fastv, zhang2024sparsevlm, yang2024visionzip, vasu2025fastvlm}. The implicit premise of these methods is that visual token ingestion constitutes the primary computational bottleneck.
+
+Recently, this premise was challenged in a pioneering study by Zhan \etal~\cite{zhan2026seeing}, who conducted systematic physical power rail profiling across edge hardware. Their study established two headline claims:
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Decode Dominance:} Autoregressive text generation (decoding) is memory-bandwidth bound and accounts for \textbf{86\% to 97\%} of total inference energy, while visual encoding (prefill) is compute-dense and accounts for only 3\% to 14\%.
+    \item \textbf{Visual Pruning Ceiling:} Visual token reduction has an immutable mathematical ceiling (Proposition 2 in~\cite{zhan2026seeing}), bounded by the prefill energy share $\rho_{\text{prefill}} = \frac{E_{\text{prefill}}}{E_{\text{tot}}}$. Because $\rho_{\text{prefill}} \le 10\%$ in their measurements, removing even 100\% of visual tokens saves at most 10\% of total energy. Consequently, they argue that visual token compression is ineffective and that system designers should focus solely on restricting output response length.
+\end{enumerate}
+
+\subsection{The Critical Blind Spots of Prior Profiling}
+While Zhan \etal's empirical measurements are internally consistent for their specific setup, their generalized claim---\emph{``the true energy bottleneck is not what the model sees, but how much it says''}---suffers from three fundamental methodological blind spots:
+
+\paragraph{1. Severe Task Selection Bias.}
+Zhan \etal's primary resolution sweeps were conducted exclusively using open-ended image captioning (\eg, \emph{``Describe this image in detail''}), which forces the language model to generate lengthy responses ($N_{\text{out}} \in [100, 150]$ tokens). However, real-world vision applications---such as document OCR, invoice information extraction, chart comprehension, traffic sign reading, and object probing---exhibit an inverted operational profile:
+\begin{equation}
+    N_{\text{vis}} \gg 1000 \quad \text{and} \quad N_{\text{out}} \in [1, 5]
+\end{equation}
+When extracting a total invoice amount (\eg, \emph{``\$975.00''}) or answering an object existence query (\eg, \emph{``yes''}), text decoding terminates in a fraction of a second, whereas ingesting the high-resolution visual input requires billions of operations.
+
+\paragraph{2. The Unexplored Resolution Crossover.}
+Even within Zhan \etal's own data on dynamic-resolution architectures (\eg, Qwen2.5-VL-3B), the prefill energy fraction climbed from \textbf{6\% at $224\times 224$ to 54\% at $896\times 896$}. That is, visual prefill \emph{already crossed 50\% of total energy} right at their experimental ceiling. By halting their sweep at $896\times 896$ and testing only wordy prompts, they failed to investigate the regime where visual energy climbs to 70\%--90\%+.
+
+\paragraph{3. The Utility Blind Spot (Zero Accuracy Evaluation).}
+Crucially, prior energy profiling studies measured electrical Joules and latencies in isolation, \textbf{without evaluating task accuracy anywhere in their papers}. In practical systems engineering, energy reduction is meaningless if perceptual accuracy drops to zero. Reducing input resolution or truncating tokens saves Joules, but if small text becomes illegible, the effective energy cost per \emph{successful} inference approaches infinity.
+
+\subsection{Our Approach and Contributions}
+In this work, we introduce \textbf{GreenVLM}, a task-conditioned thermodynamic framework and benchmark designed to answer the foundational question:
+\begin{quote}
+\centering
+\emph{When does looking at an image become more expensive than generating the answer---and is the extra visual energy actually worth it?}
+\end{quote}
+
+We establish a multi-task evaluation suite spanning four distinct operational archetypes: DocVQA~\cite{mathew2021docvqa} (document OCR), ChartQA~\cite{masry2022chartqa} (visual data reasoning), POPE~\cite{li2023evaluating} (object hallucination probing), and COCO~\cite{lin2014microsoft} (captioning baseline). Across 300 systematic evaluations across resolutions ($224^2, 448^2, 896^2$), our main contributions are:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Refuting the Universality of Decode Dominance:} We prove that the energy bottleneck is strictly task-conditioned. In document understanding and visual probing, \textbf{visual prefill consumes 98.9\% to 100.0\% of total inference energy}, while text generation consumes less than 1.1\% ($<$1 Joule).
+    \item \textbf{Mapping the Seeing-to-Speaking Phase Transition:} We map the complete continuous energy spectrum, demonstrating how the prefill energy share $\rho_{\text{prefill}}$ shifts from $\sim$10\% (COCO captioning) to the 50\% crossover zone and up to 99\%+ (DocVQA).
+    \item \textbf{First Joint Energy--Accuracy Pareto Frontier for VLMs:} We pair hardware energy measurements directly with standard task accuracy metrics (ANLS and exact match). We demonstrate that scaling resolution from $224^2 \to 448^2$ buys a \textbf{+55\% relative accuracy gain} before encountering a distinct diminishing-returns elbow.
+    \item \textbf{Open-Source Benchmarking Suite:} We release the complete GreenVLM benchmarking codebase, dataset caches, and GPU-ready profiler to enable reproducible multimodal energy research.
+\end{itemize}

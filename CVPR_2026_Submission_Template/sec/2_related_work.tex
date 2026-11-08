@@ -1,0 +1,43 @@
+\section{Related Work: Recent VLM Efficiency (2024--2026)}
+\label{sec:related_work}
+
+The computational and electrical efficiency of Vision-Language Models has emerged as a central research focus at the intersection of computer vision and machine learning systems. In this section, we survey contemporary developments across visual token scaling, token pruning, and energy profiling, contextualizing our contributions within the 2024--2026 literature.
+
+\subsection{Architectural Paradigms: Fixed vs. Dynamic Tokenization}
+Modern VLMs process visual inputs by partitioning images into $p \times p$ patches, encoding them via a Vision Transformer (ViT)~\cite{dosovitskiy2020image}, and projecting them into the language model's embedding space via a modality projector~\cite{liu2023visual}. Contemporary architectures diverge fundamentally in how visual tokens scale with input resolution:
+
+\paragraph{Fixed-Token Architectures.}
+Models such as Gemma-3~\cite{gemma3_2025}, SmolVLM~\cite{smolvlm2025}, and Moondream resize all incoming images to a predefined internal resolution (\eg, $378 \times 378$) before feature extraction. Consequently, they produce a constant visual token count ($N_{\text{vis}} = \text{const}$) regardless of input resolution. As we demonstrate empirically, while this fixes the computational prefill budget, it imposes an upper bound on optical resolution, causing small text in complex documents to blur and fail recognition.
+
+\paragraph{Dynamic Native-Resolution Architectures.}
+To overcome the resolution bottleneck in document OCR and dense scene understanding, state-of-the-art models such as Qwen2.5-VL~\cite{qwen2_5_vl_2025} and InternVL 2.5~\cite{chen2024internvl} employ native dynamic resolution mechanisms. Building upon NaViT's Patch-n-Pack paradigm~\cite{dehghani2023patch} and 2D Rotational Position Embeddings (2D-RoPE), these models ingest arbitrary aspect ratios without distortion. Crucially, their visual token count scales quadratically with input dimensions:
+\begin{equation}
+    N_{\text{vis}}(H, W) \approx \frac{H \cdot W}{p^2}
+\end{equation}
+For a $28 \times 28$ patch grid, visual tokens grow from 196 tokens at $224 \times 224$ to 3,136 tokens at $896 \times 896$, and over 7,000 tokens at $1344 \times 1344$. As we show, this dynamic scaling is precisely the mechanism that triggers the rapid phase transition into visual prefill energy dominance.
+
+\subsection{Visual Token Pruning and Acceleration}
+Because processing thousands of visual tokens imposes substantial prefill latency, numerous recent works have proposed pruning or merging visual tokens across the transformer layers:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Layer-Wise Pruning:} FastV~\cite{chen2024fastv} observed that visual attention concentrates heavily in early layers and drops up to 50\% of visual tokens after Layer 2. PyramidDrop~\cite{shen2024pyramiddrop} extended this with progressive token dropping across the depth of the network.
+    \item \textbf{Text-Guided Sparsification:} SparseVLM~\cite{zhang2024sparsevlm} utilizes text query embeddings to guide visual token selection, reducing latency by $\sim$37\%--43\% on general VQA benchmarks without retraining.
+    \item \textbf{Token Merging and Clustering:} VisionZip~\cite{yang2024visionzip} merges spatially and semantically redundant visual tokens via clustering, demonstrating that longer token sequences do not necessarily yield superior reasoning. FastVLM~\cite{vasu2025fastvlm} pairs FastViTHD encoders with language backbones, achieving 3$\times$ to 85$\times$ speedups in Time-To-First-Token (TTFT).
+\end{itemize}
+
+\paragraph{The Metric Gap:}
+A critical limitation shared by virtually all visual token pruning literature (2024--2026) is their reliance on \emph{proxy metrics}---primarily theoretical FLOP counts or isolated prefill latency (TTFT)---rather than physical electrical energy (Joules) measured on real hardware.
+
+\subsection{Energy Profiling and the Decode Dominance Debate}
+The first physical power rail study of VLM inference on edge accelerators was presented by Zhan \etal~\cite{zhan2026seeing}. Profiling InternVL3, Qwen2-VL, Qwen2.5-VL, and Gemma-3 on NVIDIA RTX 3070 and Jetson Orin platforms, they revealed that:
+\begin{enumerate}[leftmargin=*]
+    \item Average inference power $\bar{P}$ is a model-intrinsic constant ($<$5\% variation across resolutions, prompts, and contents).
+    \item Per-token decoding latency is 11$\times$ to 39$\times$ higher than per-token prefill latency due to memory bandwidth saturation at batch size 1.
+    \item End-to-end energy savings from pruning visual tokens by a fraction $\eta$ are strictly bounded by Proposition 2 in~\cite{zhan2026seeing}:
+    \begin{equation}
+        \frac{\Delta E}{E_{\text{tot}}} \le \eta \cdot \rho_{\text{prefill}} \le \rho_{\text{prefill}}
+    \end{equation}
+    where $\rho_{\text{prefill}} = \frac{E_{\text{prefill}}}{E_{\text{tot}}}$. Because they measured $\rho_{\text{prefill}} \le 0.10$ for open captioning on fixed-token models, they concluded that visual token pruning is fundamentally limited to $\le$10\% savings.
+\end{enumerate}
+
+\paragraph{Our Departure:}
+Zhan \etal's Proposition 2 is mathematically sound, but its empirical conclusion rests on treating $\rho_{\text{prefill}}$ as an immutable edge constant ($\sim$0.10). In \textbf{GreenVLM}, we show that $\rho_{\text{prefill}}$ is not constant: it is a dynamic function of task semantics $\mathcal{T}$ and resolution $(H, W)$. In document intelligence and visual probing, $\rho_{\text{prefill}} \to 0.99$, completely inverting the bound: visual token reduction in this regime saves up to \textbf{99\% of total inference energy}. Furthermore, we pair our energy measurements with real task accuracy, introducing the first Energy--Accuracy Pareto frontier for multimodal models.

@@ -1,0 +1,19 @@
+\section{Discussion and Conclusion}
+\label{sec:conclusion}
+
+\subsection{Architectural and Deployment Implications}
+Our findings in \textbf{GreenVLM} offer several immediate engineering implications for efficient multimodal deployment:
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Visual Token Reduction is Not Obsolete:} By demonstrating that visual prefill accounts for up to 99\% of inference energy in short-answer vision tasks, we revive the critical importance of visual token pruning and spatial downsampling methods~\cite{chen2024fastv, zhang2024sparsevlm, vasu2025fastvlm}. Proposition 2 in~\cite{zhan2026seeing} does not restrict visual pruning savings in these domains; rather, it guarantees that visual compression can eliminate the vast majority of total system energy.
+    \item \textbf{Task-Conditioned Adaptive Resolution:} Rather than fixing input resolution uniformly, edge runtime schedulers should adaptively scale resolution based on task semantics: allocating $224^2$ for coarse scene classification and captioning, while reserving $896^2$ or multi-tile dynamic grids only for high-density document OCR where accuracy gains justify the Joules.
+\end{enumerate}
+
+\subsection{Limitations and Ongoing Work}
+Our pilot empirical study in this submission evaluated 300 systematic inferences on a lightweight edge vision model (`moondream`). While this successfully exposes the architectural mechanism and proves the bottleneck inversion, two major extensions are currently in progress:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Dynamic-Resolution GPU Scaling:} We are currently executing scaled multi-task evaluations across native dynamic-resolution models (\eg, Qwen2.5-VL-7B~\cite{qwen2_5_vl_2025} and InternVL 2.5~\cite{chen2024internvl}) on high-power NVIDIA GPU workstations, measuring continuous quadratic visual token scaling ($196 \to 3136$ tokens).
+    \item \textbf{Temporal Modalities:} Extending the thermodynamic framework to multi-frame video inference, where temporal visual tokens scale linearly with frame count ($K \in [8, 64]$).
+\end{itemize}
+
+\subsection{Conclusion}
+In this work, we challenged the prevailing consensus that ``seeing is free, speaking is not'' in multimodal inference. We demonstrated that this conclusion arose from evaluating open-ended captioning prompts where output lengths are artificially prolonged. Through \textbf{GreenVLM}, we mapped the complete Seeing-to-Speaking phase transition across four task archetypes and established the first empirical Energy--Accuracy Pareto frontier for VLMs. Our results prove that in real-world document intelligence and visual probing, visual processing accounts for \textbf{98.9\% to 100\% of total energy}, establishing an empirical foundation for energy-optimal multimodal AI.
