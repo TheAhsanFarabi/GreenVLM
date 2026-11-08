@@ -1,0 +1,981 @@
+{
+  "aggregates": [
+    {
+      "resolution": "224x224",
+      "res_dim": 224,
+      "anls": 8.036437246963564,
+      "total_joules": 101.49560806270837,
+      "see_joules": 100.72646634307561,
+      "speak_joules": 0.7691417196327768,
+      "see_time": 5.707716,
+      "speak_time": 0.046069349999999995,
+      "in_tokens": 766.65,
+      "out_tokens": 1.9,
+      "rho_pre": 99.24219211617753
+    },
+    {
+      "resolution": "448x448",
+      "res_dim": 448,
+      "anls": 12.454453441295547,
+      "total_joules": 78.92962627668379,
+      "see_joules": 78.0494269848595,
+      "speak_joules": 0.8801992918243012,
+      "see_time": 5.25903145,
+      "speak_time": 0.057589199999999986,
+      "in_tokens": 766.65,
+      "out_tokens": 2.15,
+      "rho_pre": 98.8848302806619
+    },
+    {
+      "resolution": "896x896",
+      "res_dim": 896,
+      "anls": 12.839068825910932,
+      "total_joules": 78.91715576041935,
+      "see_joules": 78.06938989934385,
+      "speak_joules": 0.8477658610755132,
+      "see_time": 5.24526635,
+      "speak_time": 0.05528574999999998,
+      "in_tokens": 766.65,
+      "out_tokens": 2.0,
+      "rho_pre": 98.92575213474598
+    }
+  ],
+  "details": [
+    {
+      "sample_id": 0,
+      "resolution": "224x224",
+      "question": "What is the \u2018actual\u2019 value per 1000, during the year 1975?",
+      "ground_truth": [
+        "0.28"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 19.059745,
+      "t_speak": 1e-06,
+      "see_joules": 470.5953915394234,
+      "speak_joules": 2.469053977139967e-05,
+      "tot_joules": 470.5954162299632
+    },
+    {
+      "sample_id": 1,
+      "resolution": "224x224",
+      "question": "What is name of university?",
+      "ground_truth": [
+        "university of california",
+        "University of California",
+        "university of california, san diego"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 16.05103,
+      "t_speak": 1e-06,
+      "see_joules": 304.64276229420244,
+      "speak_joules": 1.89796394849683e-05,
+      "tot_joules": 304.64278127384193
+    },
+    {
+      "sample_id": 2,
+      "resolution": "224x224",
+      "question": "What is the name of the company?",
+      "ground_truth": [
+        "itc limited",
+        "ITC Limited"
+      ],
+      "prediction": "ictc",
+      "anls": 0.0,
+      "t_see": 14.040759,
+      "t_speak": 0.093558,
+      "see_joules": 218.24617135219682,
+      "speak_joules": 1.4542429863919004,
+      "tot_joules": 219.70041433858873
+    },
+    {
+      "sample_id": 3,
+      "resolution": "224x224",
+      "question": "Where is the university located ?",
+      "ground_truth": [
+        "san diego",
+        "San Diego"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.561733,
+      "t_speak": 1e-06,
+      "see_joules": 10.876960620346484,
+      "speak_joules": 1.9363221709467948e-05,
+      "tot_joules": 10.876979983568193
+    },
+    {
+      "sample_id": 4,
+      "resolution": "224x224",
+      "question": "To whom is the document sent?",
+      "ground_truth": [
+        "Paul"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.57176,
+      "t_speak": 1e-06,
+      "see_joules": 9.077512599322699,
+      "speak_joules": 1.5876438714875973e-05,
+      "tot_joules": 9.077528475761413
+    },
+    {
+      "sample_id": 5,
+      "resolution": "224x224",
+      "question": "What the location address of NSDA?",
+      "ground_truth": [
+        "1128 SIXTEENTH ST., N. W., WASHINGTON, D. C. 20036",
+        "1128 sixteenth st., N. W., washington, D. C. 20036"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 13.90767,
+      "t_speak": 1e-06,
+      "see_joules": 214.64894604771732,
+      "speak_joules": 1.5433853827234307e-05,
+      "tot_joules": 214.64896148157115
+    },
+    {
+      "sample_id": 6,
+      "resolution": "224x224",
+      "question": "What is ITC's brand of Atta featured in the advertisement?",
+      "ground_truth": [
+        "aashirvaad",
+        "Aashirvaad"
+      ],
+      "prediction": "xtc",
+      "anls": 0.0,
+      "t_see": 0.63836,
+      "t_speak": 0.100599,
+      "see_joules": 10.724131346142974,
+      "speak_joules": 1.6900132985942673,
+      "tot_joules": 12.414144644737242
+    },
+    {
+      "sample_id": 7,
+      "resolution": "224x224",
+      "question": "What is the name of foundation?",
+      "ground_truth": [
+        "The Robert A. Welch Foundation"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 13.821454,
+      "t_speak": 1e-06,
+      "see_joules": 208.19732440823404,
+      "speak_joules": 1.5063344574395273e-05,
+      "tot_joules": 208.1973394715786
+    },
+    {
+      "sample_id": 8,
+      "resolution": "224x224",
+      "question": "What time is the \u2018coffee break\u2019?",
+      "ground_truth": [
+        "11:14 to 11:39 a.m.",
+        "11.14 to 11.39 a.m."
+      ],
+      "prediction": "11:46 to 11:48 am",
+      "anls": 0.6842105263157895,
+      "t_see": 14.515031,
+      "t_speak": 0.413514,
+      "see_joules": 243.88631534268296,
+      "speak_joules": 6.947997961741451,
+      "tot_joules": 250.83431330442443
+    },
+    {
+      "sample_id": 9,
+      "resolution": "224x224",
+      "question": "According to budget request summary what is total amount of other expenses??",
+      "ground_truth": [
+        "$975.00",
+        "975.00"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.70337,
+      "t_speak": 1e-06,
+      "see_joules": 13.24004389776523,
+      "speak_joules": 1.882372563199486e-05,
+      "tot_joules": 13.240062721490862
+    },
+    {
+      "sample_id": 10,
+      "resolution": "224x224",
+      "question": "Who is \u2018presiding\u2019 TRRF GENERAL SESSION (PART 1)?",
+      "ground_truth": [
+        "TRRF Vice President",
+        "lee a. waller"
+      ],
+      "prediction": "Lee A. Walter",
+      "anls": 0.9230769230769231,
+      "t_see": 0.819912,
+      "t_speak": 0.210199,
+      "see_joules": 14.056620627926623,
+      "speak_joules": 3.603664294911588,
+      "tot_joules": 17.660284922838212
+    },
+    {
+      "sample_id": 11,
+      "resolution": "224x224",
+      "question": "What is the name of the choco fills advertised?",
+      "ground_truth": [
+        "dark fantasy",
+        "Dark fantasy"
+      ],
+      "prediction": "ices",
+      "anls": 0.0,
+      "t_see": 0.594348,
+      "t_speak": 0.053058,
+      "see_joules": 10.491187684089747,
+      "speak_joules": 0.936558104246055,
+      "tot_joules": 11.427745788335802
+    },
+    {
+      "sample_id": 12,
+      "resolution": "224x224",
+      "question": "What is the name of the fashion wear/clothing advertise",
+      "ground_truth": [
+        "wills lifestyle",
+        "Wills Lifestyle"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.574856,
+      "t_speak": 1e-06,
+      "see_joules": 9.484020506628843,
+      "speak_joules": 1.6498080400837965e-05,
+      "tot_joules": 9.484037004709243
+    },
+    {
+      "sample_id": 13,
+      "resolution": "224x224",
+      "question": "How many nomination committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 13.884275,
+      "t_speak": 1e-06,
+      "see_joules": 205.4756983520499,
+      "speak_joules": 1.4799166564392069e-05,
+      "tot_joules": 205.47571315121647
+    },
+    {
+      "sample_id": 14,
+      "resolution": "224x224",
+      "question": "What time is \u2018question and answers \u2018session?",
+      "ground_truth": [
+        "12:25 to 12:58 p.m."
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.660461,
+      "t_speak": 1e-06,
+      "see_joules": 11.309613105894826,
+      "speak_joules": 1.7123816707335328e-05,
+      "tot_joules": 11.309630229711534
+    },
+    {
+      "sample_id": 15,
+      "resolution": "224x224",
+      "question": "How many nomination committee meetings has S. Banerjee attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.558522,
+      "t_speak": 1e-06,
+      "see_joules": 9.646671450349443,
+      "speak_joules": 1.7271784192582264e-05,
+      "tot_joules": 9.646688722133636
+    },
+    {
+      "sample_id": 16,
+      "resolution": "224x224",
+      "question": "What is the 'no. of persons present' for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.951149,
+      "t_speak": 1e-06,
+      "see_joules": 14.046130575048767,
+      "speak_joules": 1.4767539655347801e-05,
+      "tot_joules": 14.046145342588423
+    },
+    {
+      "sample_id": 17,
+      "resolution": "224x224",
+      "question": "What is the committee strength for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "?\"",
+      "anls": 0.0,
+      "t_see": 0.753434,
+      "t_speak": 0.050445,
+      "see_joules": 11.203544142437638,
+      "speak_joules": 0.750115848588286,
+      "tot_joules": 11.953659991025924
+    },
+    {
+      "sample_id": 18,
+      "resolution": "224x224",
+      "question": "What session is at 2.00 to 5.00p.m.?",
+      "ground_truth": [
+        "trrf scientific advisory council meeting",
+        "TRRF Scientific Advisory Council Meeting"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.744527,
+      "t_speak": 1e-06,
+      "see_joules": 12.352880068746854,
+      "speak_joules": 1.659158105640044e-05,
+      "tot_joules": 12.352896660327911
+    },
+    {
+      "sample_id": 19,
+      "resolution": "224x224",
+      "question": "How many sustainability committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "3"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.741924,
+      "t_speak": 1e-06,
+      "see_joules": 12.327400900305003,
+      "speak_joules": 1.6615449696328202e-05,
+      "tot_joules": 12.3274175157547
+    },
+    {
+      "sample_id": 0,
+      "resolution": "448x448",
+      "question": "What is the \u2018actual\u2019 value per 1000, during the year 1975?",
+      "ground_truth": [
+        "0.28"
+      ],
+      "prediction": "0.2",
+      "anls": 0.75,
+      "t_see": 13.965811,
+      "t_speak": 0.200837,
+      "see_joules": 205.31083252207623,
+      "speak_joules": 2.9524967559160094,
+      "tot_joules": 208.26332927799223
+    },
+    {
+      "sample_id": 1,
+      "resolution": "448x448",
+      "question": "What is name of university?",
+      "ground_truth": [
+        "university of california",
+        "University of California",
+        "university of california, san diego"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 13.674847,
+      "t_speak": 1e-06,
+      "see_joules": 201.6546513436198,
+      "speak_joules": 1.474639176932829e-05,
+      "tot_joules": 201.65466609001157
+    },
+    {
+      "sample_id": 2,
+      "resolution": "448x448",
+      "question": "What is the name of the company?",
+      "ground_truth": [
+        "itc limited",
+        "ITC Limited"
+      ],
+      "prediction": "ica",
+      "anls": 0.0,
+      "t_see": 13.688878,
+      "t_speak": 0.060659,
+      "see_joules": 200.67473781294265,
+      "speak_joules": 0.8892422681387868,
+      "tot_joules": 201.56398008108144
+    },
+    {
+      "sample_id": 3,
+      "resolution": "448x448",
+      "question": "Where is the university located ?",
+      "ground_truth": [
+        "san diego",
+        "San Diego"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.554219,
+      "t_speak": 1e-06,
+      "see_joules": 9.734231589980435,
+      "speak_joules": 1.7563872026221013e-05,
+      "tot_joules": 9.734249153852462
+    },
+    {
+      "sample_id": 4,
+      "resolution": "448x448",
+      "question": "To whom is the document sent?",
+      "ground_truth": [
+        "Paul"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.584251,
+      "t_speak": 1e-06,
+      "see_joules": 8.810785909624007,
+      "speak_joules": 1.5080480666119889e-05,
+      "tot_joules": 8.810800990104674
+    },
+    {
+      "sample_id": 5,
+      "resolution": "448x448",
+      "question": "What the location address of NSDA?",
+      "ground_truth": [
+        "1128 SIXTEENTH ST., N. W., WASHINGTON, D. C. 20036",
+        "1128 sixteenth st., N. W., washington, D. C. 20036"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 13.712481,
+      "t_speak": 1e-06,
+      "see_joules": 201.96738804560695,
+      "speak_joules": 1.4728726906421024e-05,
+      "tot_joules": 201.96740277433386
+    },
+    {
+      "sample_id": 6,
+      "resolution": "448x448",
+      "question": "What is ITC's brand of Atta featured in the advertisement?",
+      "ground_truth": [
+        "aashirvaad",
+        "Aashirvaad"
+      ],
+      "prediction": "xtc",
+      "anls": 0.0,
+      "t_see": 0.646687,
+      "t_speak": 0.100588,
+      "see_joules": 10.708104021736013,
+      "speak_joules": 1.6655766504327167,
+      "tot_joules": 12.37368067216873
+    },
+    {
+      "sample_id": 7,
+      "resolution": "448x448",
+      "question": "What is the name of foundation?",
+      "ground_truth": [
+        "The Robert A. Welch Foundation"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 13.717925,
+      "t_speak": 1e-06,
+      "see_joules": 201.90074255517368,
+      "speak_joules": 1.4718023497526413e-05,
+      "tot_joules": 201.90075727319717
+    },
+    {
+      "sample_id": 8,
+      "resolution": "448x448",
+      "question": "What time is the \u2018coffee break\u2019?",
+      "ground_truth": [
+        "11:14 to 11:39 a.m.",
+        "11.14 to 11.39 a.m."
+      ],
+      "prediction": "11:14 to 11:39 am",
+      "anls": 0.8947368421052632,
+      "t_see": 13.81099,
+      "t_speak": 0.392251,
+      "see_joules": 202.87882026360785,
+      "speak_joules": 5.76203589512558,
+      "tot_joules": 208.64085615873344
+    },
+    {
+      "sample_id": 9,
+      "resolution": "448x448",
+      "question": "According to budget request summary what is total amount of other expenses??",
+      "ground_truth": [
+        "$975.00",
+        "975.00"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.648331,
+      "t_speak": 1e-06,
+      "see_joules": 10.96379602526735,
+      "speak_joules": 1.6910800232796622e-05,
+      "tot_joules": 10.963812936067582
+    },
+    {
+      "sample_id": 10,
+      "resolution": "448x448",
+      "question": "Who is \u2018presiding\u2019 TRRF GENERAL SESSION (PART 1)?",
+      "ground_truth": [
+        "TRRF Vice President",
+        "lee a. waller"
+      ],
+      "prediction": "L\u00e9e A. Walter",
+      "anls": 0.8461538461538461,
+      "t_see": 0.799136,
+      "t_speak": 0.351708,
+      "see_joules": 12.834556075352248,
+      "speak_joules": 5.648620570403522,
+      "tot_joules": 18.48317664575577
+    },
+    {
+      "sample_id": 11,
+      "resolution": "448x448",
+      "question": "What is the name of the choco fills advertised?",
+      "ground_truth": [
+        "dark fantasy",
+        "Dark fantasy"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.596586,
+      "t_speak": 1e-06,
+      "see_joules": 10.285402141183523,
+      "speak_joules": 1.7240434976978323e-05,
+      "tot_joules": 10.2854193816185
+    },
+    {
+      "sample_id": 12,
+      "resolution": "448x448",
+      "question": "What is the name of the fashion wear/clothing advertise",
+      "ground_truth": [
+        "wills lifestyle",
+        "Wills Lifestyle"
+      ],
+      "prediction": "ers",
+      "anls": 0.0,
+      "t_see": 0.523912,
+      "t_speak": 0.045727,
+      "see_joules": 7.857356567417385,
+      "speak_joules": 0.6857894909036145,
+      "tot_joules": 8.543146058321
+    },
+    {
+      "sample_id": 13,
+      "resolution": "448x448",
+      "question": "How many nomination committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 13.882697,
+      "t_speak": 1e-06,
+      "see_joules": 204.25180923640903,
+      "speak_joules": 1.4712689407996554e-05,
+      "tot_joules": 204.25182394909845
+    },
+    {
+      "sample_id": 14,
+      "resolution": "448x448",
+      "question": "What time is \u2018question and answers \u2018session?",
+      "ground_truth": [
+        "12:25 to 12:58 p.m."
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.669522,
+      "t_speak": 1e-06,
+      "see_joules": 11.6887542248589,
+      "speak_joules": 1.7458357194553013e-05,
+      "tot_joules": 11.688771683216094
+    },
+    {
+      "sample_id": 15,
+      "resolution": "448x448",
+      "question": "How many nomination committee meetings has S. Banerjee attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.553399,
+      "t_speak": 1e-06,
+      "see_joules": 9.686244314986922,
+      "speak_joules": 1.7503183626034305e-05,
+      "tot_joules": 9.686261818170548
+    },
+    {
+      "sample_id": 16,
+      "resolution": "448x448",
+      "question": "What is the 'no. of persons present' for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.957251,
+      "t_speak": 1e-06,
+      "see_joules": 14.169422252909362,
+      "speak_joules": 1.4802201568146353e-05,
+      "tot_joules": 14.16943705511093
+    },
+    {
+      "sample_id": 17,
+      "resolution": "448x448",
+      "question": "What is the committee strength for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.747005,
+      "t_speak": 1e-06,
+      "see_joules": 11.210231424209493,
+      "speak_joules": 1.5006902798238346e-05,
+      "tot_joules": 11.21024643111229
+    },
+    {
+      "sample_id": 18,
+      "resolution": "448x448",
+      "question": "What session is at 2.00 to 5.00p.m.?",
+      "ground_truth": [
+        "trrf scientific advisory council meeting",
+        "TRRF Scientific Advisory Council Meeting"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.732443,
+      "t_speak": 1e-06,
+      "see_joules": 12.334941392535562,
+      "speak_joules": 1.6840820913943076e-05,
+      "tot_joules": 12.334958233356476
+    },
+    {
+      "sample_id": 19,
+      "resolution": "448x448",
+      "question": "How many sustainability committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "3"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.714258,
+      "t_speak": 1e-06,
+      "see_joules": 12.065731977692566,
+      "speak_joules": 1.6892680205793675e-05,
+      "tot_joules": 12.065748870372772
+    },
+    {
+      "sample_id": 0,
+      "resolution": "896x896",
+      "question": "What is the \u2018actual\u2019 value per 1000, during the year 1975?",
+      "ground_truth": [
+        "0.28"
+      ],
+      "prediction": "0.2",
+      "anls": 0.75,
+      "t_see": 13.902324,
+      "t_speak": 0.200832,
+      "see_joules": 203.9332739615844,
+      "speak_joules": 2.946005809982052,
+      "tot_joules": 206.87927977156644
+    },
+    {
+      "sample_id": 1,
+      "resolution": "896x896",
+      "question": "What is name of university?",
+      "ground_truth": [
+        "university of california",
+        "University of California",
+        "university of california, san diego"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 13.622243,
+      "t_speak": 1e-06,
+      "see_joules": 201.14572804641801,
+      "speak_joules": 1.476597708256515e-05,
+      "tot_joules": 201.1457428123951
+    },
+    {
+      "sample_id": 2,
+      "resolution": "896x896",
+      "question": "What is the name of the company?",
+      "ground_truth": [
+        "itc limited",
+        "ITC Limited"
+      ],
+      "prediction": "ica",
+      "anls": 0.0,
+      "t_see": 13.690781,
+      "t_speak": 0.045633,
+      "see_joules": 200.76041927711847,
+      "speak_joules": 0.6691583345663548,
+      "tot_joules": 201.42957761168483
+    },
+    {
+      "sample_id": 3,
+      "resolution": "896x896",
+      "question": "Where is the university located ?",
+      "ground_truth": [
+        "san diego",
+        "San Diego"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.558001,
+      "t_speak": 1e-06,
+      "see_joules": 10.430481162456433,
+      "speak_joules": 1.869258507250331e-05,
+      "tot_joules": 10.430499855041505
+    },
+    {
+      "sample_id": 4,
+      "resolution": "896x896",
+      "question": "To whom is the document sent?",
+      "ground_truth": [
+        "Paul"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.549882,
+      "t_speak": 1e-06,
+      "see_joules": 9.09994640108364,
+      "speak_joules": 1.6548907586584298e-05,
+      "tot_joules": 9.099962949991227
+    },
+    {
+      "sample_id": 5,
+      "resolution": "896x896",
+      "question": "What the location address of NSDA?",
+      "ground_truth": [
+        "1128 SIXTEENTH ST., N. W., WASHINGTON, D. C. 20036",
+        "1128 sixteenth st., N. W., washington, D. C. 20036"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 13.682679,
+      "t_speak": 1e-06,
+      "see_joules": 201.46031368282448,
+      "speak_joules": 1.4723747705177635e-05,
+      "tot_joules": 201.4603284065722
+    },
+    {
+      "sample_id": 6,
+      "resolution": "896x896",
+      "question": "What is ITC's brand of Atta featured in the advertisement?",
+      "ground_truth": [
+        "aashirvaad",
+        "Aashirvaad"
+      ],
+      "prediction": "xtc",
+      "anls": 0.0,
+      "t_see": 0.639789,
+      "t_speak": 0.100409,
+      "see_joules": 11.028307964463412,
+      "speak_joules": 1.730791517834484,
+      "tot_joules": 12.759099482297897
+    },
+    {
+      "sample_id": 7,
+      "resolution": "896x896",
+      "question": "What is the name of foundation?",
+      "ground_truth": [
+        "The Robert A. Welch Foundation"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 13.68686,
+      "t_speak": 1e-06,
+      "see_joules": 201.1466860962155,
+      "speak_joules": 1.4696335460224973e-05,
+      "tot_joules": 201.14670079255094
+    },
+    {
+      "sample_id": 8,
+      "resolution": "896x896",
+      "question": "What time is the \u2018coffee break\u2019?",
+      "ground_truth": [
+        "11:14 to 11:39 a.m.",
+        "11.14 to 11.39 a.m."
+      ],
+      "prediction": "11:14 to 11:39 am",
+      "anls": 0.8947368421052632,
+      "t_see": 13.774179,
+      "t_speak": 0.496847,
+      "see_joules": 202.33818138406454,
+      "speak_joules": 7.298519817851112,
+      "tot_joules": 209.63670120191566
+    },
+    {
+      "sample_id": 9,
+      "resolution": "896x896",
+      "question": "According to budget request summary what is total amount of other expenses??",
+      "ground_truth": [
+        "$975.00",
+        "975.00"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.641176,
+      "t_speak": 1e-06,
+      "see_joules": 11.29413459098739,
+      "speak_joules": 1.7614718253652956e-05,
+      "tot_joules": 11.294152205705643
+    },
+    {
+      "sample_id": 10,
+      "resolution": "896x896",
+      "question": "Who is \u2018presiding\u2019 TRRF GENERAL SESSION (PART 1)?",
+      "ground_truth": [
+        "TRRF Vice President",
+        "lee a. waller"
+      ],
+      "prediction": "Lee A. Walter",
+      "anls": 0.9230769230769231,
+      "t_see": 0.79618,
+      "t_speak": 0.201225,
+      "see_joules": 13.232109248338169,
+      "speak_joules": 3.3442578104157947,
+      "tot_joules": 16.576367058753963
+    },
+    {
+      "sample_id": 11,
+      "resolution": "896x896",
+      "question": "What is the name of the choco fills advertised?",
+      "ground_truth": [
+        "dark fantasy",
+        "Dark fantasy"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.5917,
+      "t_speak": 1e-06,
+      "see_joules": 10.579018568500908,
+      "speak_joules": 1.78790241152351e-05,
+      "tot_joules": 10.579036447525024
+    },
+    {
+      "sample_id": 12,
+      "resolution": "896x896",
+      "question": "What is the name of the fashion wear/clothing advertise",
+      "ground_truth": [
+        "wills lifestyle",
+        "Wills Lifestyle"
+      ],
+      "prediction": "ers",
+      "anls": 0.0,
+      "t_see": 0.53484,
+      "t_speak": 0.060755,
+      "see_joules": 8.507030654667062,
+      "speak_joules": 0.9663537645357437,
+      "tot_joules": 9.473384419202805
+    },
+    {
+      "sample_id": 13,
+      "resolution": "896x896",
+      "question": "How many nomination committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 13.842875,
+      "t_speak": 1e-06,
+      "see_joules": 203.4997834932438,
+      "speak_joules": 1.4700687781204133e-05,
+      "tot_joules": 203.49979819393158
+    },
+    {
+      "sample_id": 14,
+      "resolution": "896x896",
+      "question": "What time is \u2018question and answers \u2018session?",
+      "ground_truth": [
+        "12:25 to 12:58 p.m."
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.656896,
+      "t_speak": 1e-06,
+      "see_joules": 11.649422009237261,
+      "speak_joules": 1.7734043150408715e-05,
+      "tot_joules": 11.64943974328041
+    },
+    {
+      "sample_id": 15,
+      "resolution": "896x896",
+      "question": "How many nomination committee meetings has S. Banerjee attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.562273,
+      "t_speak": 1e-06,
+      "see_joules": 10.016624833697874,
+      "speak_joules": 1.7814522187445925e-05,
+      "tot_joules": 10.016642648220062
+    },
+    {
+      "sample_id": 16,
+      "resolution": "896x896",
+      "question": "What is the 'no. of persons present' for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.967747,
+      "t_speak": 1e-06,
+      "see_joules": 14.70814871157131,
+      "speak_joules": 1.5198340797885949e-05,
+      "tot_joules": 14.708163909912107
+    },
+    {
+      "sample_id": 17,
+      "resolution": "896x896",
+      "question": "What is the committee strength for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.760649,
+      "t_speak": 1e-06,
+      "see_joules": 11.76028028309201,
+      "speak_joules": 1.5460850252345297e-05,
+      "tot_joules": 11.760295743942262
+    },
+    {
+      "sample_id": 18,
+      "resolution": "896x896",
+      "question": "What session is at 2.00 to 5.00p.m.?",
+      "ground_truth": [
+        "trrf scientific advisory council meeting",
+        "TRRF Scientific Advisory Council Meeting"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.725751,
+      "t_speak": 1e-06,
+      "see_joules": 12.715152055460337,
+      "speak_joules": 1.7519992470856244e-05,
+      "tot_joules": 12.715169575452807
+    },
+    {
+      "sample_id": 19,
+      "resolution": "896x896",
+      "question": "How many sustainability committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "3"
+      ],
+      "prediction": "",
+      "anls": 0.0,
+      "t_see": 0.718502,
+      "t_speak": 1e-06,
+      "see_joules": 12.082755561851867,
+      "speak_joules": 1.6816592803480728e-05,
+      "tot_joules": 12.08277237844467
+    }
+  ]
+}

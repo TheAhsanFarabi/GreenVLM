@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Environment and IDE
+.env
+.vscode/
+.idea/
+*.swp
+*~
+
+# Temporary & Scratch
+agy.txt
+scratch/
+*.log

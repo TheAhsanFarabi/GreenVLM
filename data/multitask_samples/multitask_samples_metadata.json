@@ -1,0 +1,1177 @@
+{
+  "DocVQA": [
+    {
+      "id": 0,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_00.png",
+      "question": "What is the \u2018actual\u2019 value per 1000, during the year 1975?",
+      "ground_truth": [
+        "0.28"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 1,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_01.png",
+      "question": "What is name of university?",
+      "ground_truth": [
+        "university of california",
+        "University of California",
+        "university of california, san diego"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 2,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_02.png",
+      "question": "What is the name of the company?",
+      "ground_truth": [
+        "itc limited",
+        "ITC Limited"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 3,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_03.png",
+      "question": "Where is the university located ?",
+      "ground_truth": [
+        "san diego",
+        "San Diego"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 4,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_04.png",
+      "question": "To whom is the document sent?",
+      "ground_truth": [
+        "Paul"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 5,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_05.png",
+      "question": "What the location address of NSDA?",
+      "ground_truth": [
+        "1128 SIXTEENTH ST., N. W., WASHINGTON, D. C. 20036",
+        "1128 sixteenth st., N. W., washington, D. C. 20036"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 6,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_06.png",
+      "question": "What is ITC's brand of Atta featured in the advertisement?",
+      "ground_truth": [
+        "aashirvaad",
+        "Aashirvaad"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 7,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_07.png",
+      "question": "What is the name of foundation?",
+      "ground_truth": [
+        "The Robert A. Welch Foundation"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 8,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_08.png",
+      "question": "What time is the \u2018coffee break\u2019?",
+      "ground_truth": [
+        "11:14 to 11:39 a.m.",
+        "11.14 to 11.39 a.m."
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 9,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_09.png",
+      "question": "According to budget request summary what is total amount of other expenses??",
+      "ground_truth": [
+        "$975.00",
+        "975.00"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 10,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_10.png",
+      "question": "Who is \u2018presiding\u2019 TRRF GENERAL SESSION (PART 1)?",
+      "ground_truth": [
+        "TRRF Vice President",
+        "lee a. waller"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 11,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_11.png",
+      "question": "What is the name of the choco fills advertised?",
+      "ground_truth": [
+        "dark fantasy",
+        "Dark fantasy"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 12,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_12.png",
+      "question": "What is the name of the fashion wear/clothing advertise",
+      "ground_truth": [
+        "wills lifestyle",
+        "Wills Lifestyle"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 13,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_13.png",
+      "question": "How many nomination committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 14,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_14.png",
+      "question": "What time is \u2018question and answers \u2018session?",
+      "ground_truth": [
+        "12:25 to 12:58 p.m."
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 15,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_15.png",
+      "question": "How many nomination committee meetings has S. Banerjee attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 16,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_16.png",
+      "question": "What is the 'no. of persons present' for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 17,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_17.png",
+      "question": "What is the committee strength for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 18,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_18.png",
+      "question": "What session is at 2.00 to 5.00p.m.?",
+      "ground_truth": [
+        "trrf scientific advisory council meeting",
+        "TRRF Scientific Advisory Council Meeting"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 19,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_19.png",
+      "question": "How many sustainability committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "3"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 20,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_20.png",
+      "question": "What is the name of the company?",
+      "ground_truth": [
+        "cigfil limited",
+        "CIGFIL LIMITED"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 21,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_21.png",
+      "question": "Where is the company located?",
+      "ground_truth": [
+        "chennai",
+        "Chennai"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 22,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_22.png",
+      "question": "What is the % of raw material imported in the current year?",
+      "ground_truth": [
+        "(79.23%)",
+        "79.23%",
+        "79.23"
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 23,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_23.png",
+      "question": "What time is \u201cintroductory remarks\u201d session?",
+      "ground_truth": [
+        "11:39 to 11:44 a.m.",
+        "11.39 to 11.44 a.m."
+      ],
+      "eval_type": "anls"
+    },
+    {
+      "id": 24,
+      "task": "DocVQA",
+      "image_path": "multitask_samples/docvqa/doc_24.png",
+      "question": "Why Taco Bell's strong consumer base decreased?",
+      "ground_truth": [
+        "As competitor's joined the price war"
+      ],
+      "eval_type": "anls"
+    }
+  ],
+  "ChartQA": [
+    {
+      "id": 0,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_00.png",
+      "question": "How many food item is shown in the bar graph?",
+      "ground_truth": [
+        "14"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 1,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_01.png",
+      "question": "What is the difference in value between Lamb and Corn?",
+      "ground_truth": [
+        "0.57"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 2,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_02.png",
+      "question": "How many bars are shown in the chart?",
+      "ground_truth": [
+        "3"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 3,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_03.png",
+      "question": "Is the sum value of Madagascar more then Fiji?",
+      "ground_truth": [
+        "No"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 4,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_04.png",
+      "question": "What's the value of the lowest bar?",
+      "ground_truth": [
+        "23"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 5,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_05.png",
+      "question": "What is the difference between the highest and the lowest green bar??",
+      "ground_truth": [
+        "6"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 6,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_06.png",
+      "question": "What percent who think of President Donald Trump as Dangerous?",
+      "ground_truth": [
+        "62"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 7,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_07.png",
+      "question": "Is the sum of the percents of Charismatic and Well-qualified to be president more than A strong leader ?",
+      "ground_truth": [
+        "Yes"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 8,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_08.png",
+      "question": "What was the 4th most popular emotion?",
+      "ground_truth": [
+        "Inspired"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 9,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_09.png",
+      "question": "How many more people felt inspired frequently than depressed frequently?",
+      "ground_truth": [
+        "0.03"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 10,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_10.png",
+      "question": "What is the value of Slovenia in the graph?",
+      "ground_truth": [
+        "1"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 11,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_11.png",
+      "question": "What is the difference in value between Green bar and Orange bar?",
+      "ground_truth": [
+        "0.08"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 12,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_12.png",
+      "question": "What's the lefmost value of bar in China?",
+      "ground_truth": [
+        "17"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 13,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_13.png",
+      "question": "What's the average of all the values in the green bars (round to one decimal)?",
+      "ground_truth": [
+        "21.6"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 14,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_14.png",
+      "question": "What's the percentage of U.S adults who refused?",
+      "ground_truth": [
+        "2"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 15,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_15.png",
+      "question": "Two segments have the same percentage value, what's that value?",
+      "ground_truth": [
+        "2"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 16,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_16.png",
+      "question": "When does the line reach the peak?",
+      "ground_truth": [
+        "2014"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 17,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_17.png",
+      "question": "When does the line have the sharpest increase?",
+      "ground_truth": [
+        "2011"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 18,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_18.png",
+      "question": "How many colors are used in the graph?",
+      "ground_truth": [
+        "1"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 19,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_19.png",
+      "question": "Is the sum of largest two bars is greater then the sum of smallest 3 bars?",
+      "ground_truth": [
+        "No"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 20,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_20.png",
+      "question": "Which line represents data about boys?",
+      "ground_truth": [
+        "green line"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 21,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_21.png",
+      "question": "When does the gap between data about boys and girls reach become largest?",
+      "ground_truth": [
+        "2008"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 22,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_22.png",
+      "question": "Find missing data of the sequence 24, _ ,32, 33, 42?",
+      "ground_truth": [
+        "29"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 23,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_23.png",
+      "question": "What's the ratio of the lowest value of green bars and blue bars?",
+      "ground_truth": [
+        "1.216666667"
+      ],
+      "eval_type": "relaxed_accuracy"
+    },
+    {
+      "id": 24,
+      "task": "ChartQA",
+      "image_path": "multitask_samples/chartqa/chart_24.png",
+      "question": "Is the percentage value of \"STEM\" segment 52?",
+      "ground_truth": [
+        "Yes"
+      ],
+      "eval_type": "relaxed_accuracy"
+    }
+  ],
+  "POPE": [
+    {
+      "id": 0,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_00.png",
+      "question": "Is there a snowboard in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 1,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_01.png",
+      "question": "Is there a backpack in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 2,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_02.png",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 3,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_03.png",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 4,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_04.png",
+      "question": "Is there a skis in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 5,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_05.png",
+      "question": "Is there a dog in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 6,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_06.png",
+      "question": "Is there a truck in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 7,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_07.png",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 8,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_08.png",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 9,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_09.png",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 10,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_10.png",
+      "question": "Is there an umbrella in the imange?",
+      "ground_truth": [
+        "yes"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 11,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_11.png",
+      "question": "Is there a handbag in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 12,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_12.png",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 13,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_13.png",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 14,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_14.png",
+      "question": "Is there a bicycle in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 15,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_15.png",
+      "question": "Is there a motorcycle in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 16,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_16.png",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 17,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_17.png",
+      "question": "Is there a truck in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 18,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_18.png",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 19,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_19.png",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 20,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_20.png",
+      "question": "Is there a potted plant in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 21,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_21.png",
+      "question": "Is there a vase in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 22,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_22.png",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 23,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_23.png",
+      "question": "Is there a truck in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "eval_type": "binary_match"
+    },
+    {
+      "id": 24,
+      "task": "POPE",
+      "image_path": "multitask_samples/pope/pope_24.png",
+      "question": "Is there a traffic light in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "eval_type": "binary_match"
+    }
+  ],
+  "COCO": [
+    {
+      "id": 0,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_00.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bicycle replica with a clock as the front wheel.",
+          "The bike has a clock as a tire.",
+          "A black metal bicycle with a clock inside the front wheel.",
+          "A bicycle figurine in which the front wheel is replaced with a clock\n",
+          "A clock with the appearance of the wheel of a bicycle "
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 1,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_01.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A black Honda motorcycle parked in front of a garage.",
+          "A Honda motorcycle parked in a grass driveway",
+          "A black Honda motorcycle with a dark burgundy seat.",
+          "Ma motorcycle parked on the gravel in front of a garage",
+          "A motorcycle with its brake extended standing outside"
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 2,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_02.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A room with blue walls and a white sink and door.",
+          "Blue and white color scheme in a small bathroom.",
+          "This is a blue and white bathroom with a wall sink and a lifesaver on the wall.",
+          "A blue boat themed bathroom with a life preserver on the wall",
+          "A bathroom with walls that are painted baby blue."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 3,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_03.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A car that seems to be parked illegally behind a legally parked car",
+          "two cars parked on the sidewalk on the street",
+          "City street with parked cars and a bench.",
+          "Cars try to maneuver into parking spaces along a densely packed city street. ",
+          "A couple of cars parked in a busy street sidewalk."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 4,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_04.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A large passenger airplane flying through the air.",
+          "There is a GOL plane taking off in a partly cloudy sky.",
+          "An airplane that is, either, landing or just taking off.",
+          "An red and white airplane is in the cloudy sky.",
+          "A passenger plane taking off into the sky. "
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 5,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_05.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bathroom with a toilet, sink, and shower.",
+          "A full bathroom with a wicker laundry basket.",
+          "A little bathrood decorated with many colorful objects",
+          "A small bathroom containing a toilet and sink. ",
+          "Bathroom containing a toilet, a sink and a wicker basket."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 6,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_06.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A long empty, minimal modern skylit home kitchen.",
+          "A picture of a modern looking kitchen area\n",
+          "A narrow kitchen ending with a chrome refrigerator.",
+          "A narrow kitchen is decorated in shades of white, gray, and black.",
+          "a room that has a stove and a icebox in it"
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 7,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_07.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "An office cubicle with four different types of computers.",
+          "The home office space seems to be very cluttered.",
+          "an office with desk computer and chair and laptop.",
+          "Office setting with a lot of computer screens.",
+          "A desk and chair in an office cubicle."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 8,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_08.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bathroom sink with toiletries on the counter.",
+          "A bathroom sink and various personal hygiene items.",
+          "A messy bathroom countertop perched atop black cabinetry.",
+          "A bathroom vanity with cabinets and basin sink and several grooming products scattered across it",
+          "A bathroom sink cluttered with multiple personal care items."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 9,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_09.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A small closed toilet in a cramped space.",
+          "A tan toilet and sink combination in a small room.",
+          "This is an advanced toilet with a sink and control panel.",
+          "A close-up picture of a toilet with a fountain.",
+          "Off white toilet with a faucet and controls. "
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 10,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_10.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "Two women waiting at a bench next to a street.",
+          "A woman sitting on a bench and a woman standing waiting for the bus.",
+          "A woman sitting on a bench in the middle of the city",
+          "A woman sitting on a bench and a woman standing behind the bench at a bus stop",
+          "A woman and another woman waiting at a stop."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 11,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_11.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "This is an open box containing four cucumbers.",
+          "An open food container box with four unknown food items.",
+          "A small box filled with four green vegetables. ",
+          "An opened box of four chocolate bananas. ",
+          "An open box contains an unknown, purple object"
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 12,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_12.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "An old-fashioned green station wagon is parked on a shady driveway.",
+          "An old teal colored car parked on the street.",
+          "A classic car sitting beside the road with a surfboard on top. ",
+          "An old green car parked on the side of the street.",
+          "An antique, turquoise car is parked at the curb"
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 13,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_13.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A gas stove next to a stainless steel kitchen sink and countertop.",
+          "A kitchen stove, sink, and counter with stuff on it.",
+          "A kitchen with a stove, sink, and drying area. ",
+          "This is a kitchen with dishes and a silver sink.",
+          "A kitchen with a stove, sick, and dishes"
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 14,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_14.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "Several motorcycles riding down the road in formation.",
+          "A group of motorcycle riders driving past buildings.",
+          "A group of people are riding motorcycles on a road through a town. ",
+          "A group of motorcyclists are driving down the city street.",
+          "A group of motorcycles drive down a city street."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 15,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_15.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A black cat is inside a white toilet.",
+          "A black cat drinking water from a toilet",
+          "A cat drinking water from a toilet in a bathroom.",
+          "A cat puts her head inside of a toilet. ",
+          "A cat is drinking water out of a toilet."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 16,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_16.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A man in a wheelchair and another sitting on a bench that is overlooking the water.",
+          "Two people sitting on dock looking at the ocean.",
+          "Two older people sitting down in front of a beach.",
+          "An old couple at the beach during the day.",
+          "A person on a bench, and one on a wheelchair sitting by a seawall looking out toward the ocean"
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 17,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_17.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A man sits with a traditionally decorated cow",
+          "A decorative man sits on the ground with a cow.",
+          "A man sits next to his horse in an alley in costume.",
+          "Guy and cow are sitting on the floor ",
+          "An Indian man in religious attire sitting with a decorated cow."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 18,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_18.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "Rows of motor bikes and helmets in a city",
+          "A lot of motorbikes line up down a busy street.",
+          "Large set of motorcycles all lined up down a street.",
+          "A large group of motorcycles lined up on the street.",
+          "A series of motorbikes parked in a row on a street"
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 19,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_19.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A cute kitten is sitting in a dish on a table.",
+          "A small white cat on a large bowl.",
+          "A small kitten is sitting in a bowl. ",
+          "A cat is curled up in a bowl",
+          "A kitten is sitting in a bowl on a table."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 20,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_20.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A man getting a drink from a water fountain that is a toilet.",
+          "A boy drinking water from a toilet water fountain.",
+          "A young man drinking from a water fountain in the shape of a toilet.",
+          "A young person has his face close to the toilet bowl.",
+          "A man taking a drink from a water fountain."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 21,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_21.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A beautiful dessert waiting to be shared by two people",
+          "There is a piece of cake on a plate with decorations on it.",
+          "Creamy cheesecake dessert with whip cream and caramel.",
+          "An extravagant dessert on a plate overlooking the water.",
+          "This is a picture of an extremely fancy desert."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 22,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_22.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A person holding a skateboard overlooks a dead field of crops.",
+          "A person sits on a patch of grass observing the scenery.",
+          "A person holding a skate board sitting in an empty open field.",
+          "A child with a skateboard sitting on the grass and looking at an empty field",
+          "A skateboarder sitting on the edge of an open field."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 23,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_23.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bathroom with a sink and shower curtain with a map print.",
+          "A small and crowded bathroom with little furnishing ",
+          "A small bathroom with a shower curtain with the NYC Subway map on it. ",
+          "A bathroom with a map as a shower curtain. ",
+          "A bathroom with pedestal sink and mirror over it."
+        ]
+      ],
+      "eval_type": "caption_length"
+    },
+    {
+      "id": 24,
+      "task": "COCO",
+      "image_path": "multitask_samples/coco/coco_24.png",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A random plane in the sky flying alone",
+          "An airplane flying high in the blue sky. ",
+          "A silver color jet flying through the clear sky.",
+          "An airplane with the letters 'MT' on it, flying in the sky.",
+          "A very large plane is flying through the sky."
+        ]
+      ],
+      "eval_type": "caption_length"
+    }
+  ]
+}

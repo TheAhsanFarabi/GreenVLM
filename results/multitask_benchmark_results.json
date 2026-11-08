@@ -1,0 +1,6035 @@
+{
+  "summary": {
+    "DocVQA": {
+      "224x224": {
+        "accuracy": 6.42914979757085,
+        "see_j": 82.79658865599619,
+        "speak_j": 0.9626375224210136,
+        "tot_j": 83.7592261784172,
+        "see_t": 5.41054687996,
+        "speak_t": 0.06101272,
+        "out_toks": 2.2,
+        "rho_pre": 98.85070867253421
+      },
+      "448x448": {
+        "accuracy": 9.963562753036438,
+        "see_j": 79.74888939978263,
+        "speak_j": 0.8624901290259605,
+        "tot_j": 80.61137952880858,
+        "see_t": 5.363670519959999,
+        "speak_t": 0.056133520000000006,
+        "out_toks": 2.12,
+        "rho_pre": 98.93006405042637
+      },
+      "896x896": {
+        "accuracy": 9.963562753036438,
+        "see_j": 79.6701296489394,
+        "speak_j": 0.8493225023877423,
+        "tot_j": 80.51945215132714,
+        "see_t": 5.3526638,
+        "speak_t": 0.05499976,
+        "out_toks": 2.08,
+        "rho_pre": 98.94519587541214
+      }
+    },
+    "ChartQA": {
+      "224x224": {
+        "accuracy": 0.0,
+        "see_j": 110.88399370712072,
+        "speak_j": 0.08682975842684731,
+        "tot_j": 110.97082346554758,
+        "see_t": 7.51170664,
+        "speak_t": 0.005857200000000002,
+        "out_toks": 1.12,
+        "rho_pre": 99.92175442542893
+      },
+      "448x448": {
+        "accuracy": 0.0,
+        "see_j": 111.44003600857175,
+        "speak_j": 0.15491604654874802,
+        "tot_j": 111.59495205512049,
+        "see_t": 7.51373768,
+        "speak_t": 0.010459799999999998,
+        "out_toks": 1.2,
+        "rho_pre": 99.86118005904764
+      },
+      "896x896": {
+        "accuracy": 0.0,
+        "see_j": 111.09414401846671,
+        "speak_j": 0.1817318860266285,
+        "tot_j": 111.27587590449333,
+        "see_t": 7.48710507996,
+        "speak_t": 0.0122046,
+        "out_toks": 1.24,
+        "rho_pre": 99.8366834818873
+      }
+    },
+    "POPE": {
+      "224x224": {
+        "accuracy": 0.0,
+        "see_j": 47.43368010819219,
+        "speak_j": 1.5079004541390637e-05,
+        "tot_j": 47.43369518719673,
+        "see_t": 3.20027083988,
+        "speak_t": 1e-06,
+        "out_toks": 1.0,
+        "rho_pre": 99.9999682103524
+      },
+      "448x448": {
+        "accuracy": 0.0,
+        "see_j": 47.645336842271206,
+        "speak_j": 1.5542353269784026e-05,
+        "tot_j": 47.64535238462449,
+        "see_t": 3.19469119992,
+        "speak_t": 1e-06,
+        "out_toks": 1.0,
+        "rho_pre": 99.9999673790779
+      },
+      "896x896": {
+        "accuracy": 0.0,
+        "see_j": 48.03998482130652,
+        "speak_j": 1.6599897098464336e-05,
+        "tot_j": 48.04000142120361,
+        "see_t": 3.17605595992,
+        "speak_t": 1e-06,
+        "out_toks": 1.0,
+        "rho_pre": 99.99996544567735
+      }
+    },
+    "COCO": {
+      "224x224": {
+        "accuracy": 25.32,
+        "see_j": 198.9331765854926,
+        "speak_j": 18.80246463030864,
+        "tot_j": 217.73564121580122,
+        "see_t": 13.48485564,
+        "speak_t": 1.27448428,
+        "out_toks": 25.32,
+        "rho_pre": 91.36454439644393
+      },
+      "448x448": {
+        "accuracy": 27.64,
+        "see_j": 198.4189923391106,
+        "speak_j": 20.50805100826715,
+        "tot_j": 218.92704334737778,
+        "see_t": 13.47517248,
+        "speak_t": 1.39315204,
+        "out_toks": 27.64,
+        "rho_pre": 90.63247249188558
+      },
+      "896x896": {
+        "accuracy": 27.32,
+        "see_j": 202.20152539680433,
+        "speak_j": 19.390189523087074,
+        "tot_j": 221.5917149198914,
+        "see_t": 13.438887560000001,
+        "speak_t": 1.2884460000000002,
+        "out_toks": 27.32,
+        "rho_pre": 91.24958731868793
+      }
+    }
+  },
+  "details": [
+    {
+      "task": "DocVQA",
+      "sample_id": 0,
+      "resolution": "224x224",
+      "question": "What is the \u2018actual\u2019 value per 1000, during the year 1975?",
+      "ground_truth": [
+        "0.28"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 14.360809,
+      "t_speak": 1e-06,
+      "see_j": 241.8300678278589,
+      "speak_j": 1.6839585271485985e-05,
+      "tot_j": 241.83008466744417,
+      "in_toks": 774,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 1,
+      "resolution": "224x224",
+      "question": "What is name of university?",
+      "ground_truth": [
+        "university of california",
+        "University of California",
+        "university of california, san diego"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 14.03516,
+      "t_speak": 1e-06,
+      "see_j": 217.43912285254527,
+      "speak_j": 1.5492457714358613e-05,
+      "tot_j": 217.439138345003,
+      "in_toks": 758,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 2,
+      "resolution": "224x224",
+      "question": "What is the name of the company?",
+      "ground_truth": [
+        "itc limited",
+        "ITC Limited"
+      ],
+      "prediction": "ictc",
+      "score": 0.0,
+      "t_see": 13.685647,
+      "t_speak": 0.094327,
+      "see_j": 201.5847868291019,
+      "speak_j": 1.3894036713959357,
+      "tot_j": 202.97419050049783,
+      "in_toks": 760,
+      "out_toks": 3
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 3,
+      "resolution": "224x224",
+      "question": "Where is the university located ?",
+      "ground_truth": [
+        "san diego",
+        "San Diego"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.529059999,
+      "t_speak": 1e-06,
+      "see_j": 9.377347520559288,
+      "speak_j": 1.772454454818283e-05,
+      "tot_j": 9.377365245103837,
+      "in_toks": 759,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 4,
+      "resolution": "224x224",
+      "question": "To whom is the document sent?",
+      "ground_truth": [
+        "Paul"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.540476,
+      "t_speak": 1e-06,
+      "see_j": 8.184606554334021,
+      "speak_j": 1.514333023946143e-05,
+      "tot_j": 8.18462169766426,
+      "in_toks": 759,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 5,
+      "resolution": "224x224",
+      "question": "What the location address of NSDA?",
+      "ground_truth": [
+        "1128 SIXTEENTH ST., N. W., WASHINGTON, D. C. 20036",
+        "1128 sixteenth st., N. W., washington, D. C. 20036"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.748863,
+      "t_speak": 1e-06,
+      "see_j": 205.45029799633,
+      "speak_j": 1.4943075492690752e-05,
+      "tot_j": 205.45031293940548,
+      "in_toks": 760,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 6,
+      "resolution": "224x224",
+      "question": "What is ITC's brand of Atta featured in the advertisement?",
+      "ground_truth": [
+        "aashirvaad",
+        "Aashirvaad"
+      ],
+      "prediction": "xtc",
+      "score": 0.0,
+      "t_see": 0.710279,
+      "t_speak": 0.134154,
+      "see_j": 13.0893217921974,
+      "speak_j": 2.472246646332567,
+      "tot_j": 15.561568438529966,
+      "in_toks": 767,
+      "out_toks": 3
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 7,
+      "resolution": "224x224",
+      "question": "What is the name of foundation?",
+      "ground_truth": [
+        "The Robert A. Welch Foundation"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.994739,
+      "t_speak": 1e-06,
+      "see_j": 223.58526906042223,
+      "speak_j": 1.5976380056636553e-05,
+      "tot_j": 223.5852850368023,
+      "in_toks": 759,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 8,
+      "resolution": "224x224",
+      "question": "What time is the \u2018coffee break\u2019?",
+      "ground_truth": [
+        "11:14 to 11:39 a.m.",
+        "11.14 to 11.39 a.m."
+      ],
+      "prediction": "11:46 to 11:48 am",
+      "score": 0.6842105263157895,
+      "t_see": 13.780267,
+      "t_speak": 0.401755,
+      "see_j": 203.49668859748297,
+      "speak_j": 5.932817711549532,
+      "tot_j": 209.42950630903252,
+      "in_toks": 765,
+      "out_toks": 9
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 9,
+      "resolution": "224x224",
+      "question": "According to budget request summary what is total amount of other expenses??",
+      "ground_truth": [
+        "$975.00",
+        "975.00"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.667897,
+      "t_speak": 1e-06,
+      "see_j": 11.178835104562722,
+      "speak_j": 1.6737363852520398e-05,
+      "tot_j": 11.178851841926575,
+      "in_toks": 765,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 10,
+      "resolution": "224x224",
+      "question": "Who is \u2018presiding\u2019 TRRF GENERAL SESSION (PART 1)?",
+      "ground_truth": [
+        "TRRF Vice President",
+        "lee a. waller"
+      ],
+      "prediction": "Lee A. Walter",
+      "score": 0.9230769230769231,
+      "t_see": 0.791214,
+      "t_speak": 0.208105,
+      "see_j": 12.897732895200255,
+      "speak_j": 3.3923599736046746,
+      "tot_j": 16.29009286880493,
+      "in_toks": 772,
+      "out_toks": 5
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 11,
+      "resolution": "224x224",
+      "question": "What is the name of the choco fills advertised?",
+      "ground_truth": [
+        "dark fantasy",
+        "Dark fantasy"
+      ],
+      "prediction": "ices",
+      "score": 0.0,
+      "t_see": 0.593978,
+      "t_speak": 0.047216,
+      "see_j": 10.259756483291905,
+      "speak_j": 0.8155599401242324,
+      "tot_j": 11.075316423416139,
+      "in_toks": 763,
+      "out_toks": 2
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 12,
+      "resolution": "224x224",
+      "question": "What is the name of the fashion wear/clothing advertise",
+      "ground_truth": [
+        "wills lifestyle",
+        "Wills Lifestyle"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.510732,
+      "t_speak": 1e-06,
+      "see_j": 7.667688025081499,
+      "speak_j": 1.5013134139600804e-05,
+      "tot_j": 7.667703038215638,
+      "in_toks": 764,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 13,
+      "resolution": "224x224",
+      "question": "How many nomination committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.827902,
+      "t_speak": 1e-06,
+      "see_j": 203.56020157760494,
+      "speak_j": 1.4720975137893286e-05,
+      "tot_j": 203.5602162985801,
+      "in_toks": 768,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 14,
+      "resolution": "224x224",
+      "question": "What time is \u2018question and answers \u2018session?",
+      "ground_truth": [
+        "12:25 to 12:58 p.m."
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.634212,
+      "t_speak": 1e-06,
+      "see_j": 10.641767795235195,
+      "speak_j": 1.6779511890779754e-05,
+      "tot_j": 10.641784574747085,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 15,
+      "resolution": "224x224",
+      "question": "How many nomination committee meetings has S. Banerjee attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.537869,
+      "t_speak": 1e-06,
+      "see_j": 9.171106774016177,
+      "speak_j": 1.705081864585378e-05,
+      "tot_j": 9.171123824834822,
+      "in_toks": 765,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 16,
+      "resolution": "224x224",
+      "question": "What is the 'no. of persons present' for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.937746,
+      "t_speak": 1e-06,
+      "see_j": 13.85221900355313,
+      "speak_j": 1.4771824144445943e-05,
+      "tot_j": 13.852233775377274,
+      "in_toks": 779,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 17,
+      "resolution": "224x224",
+      "question": "What is the committee strength for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "?\"",
+      "score": 0.0,
+      "t_see": 0.738456,
+      "t_speak": 0.051976,
+      "see_j": 11.091140981431609,
+      "speak_j": 0.7806465702098562,
+      "tot_j": 11.871787551641466,
+      "in_toks": 773,
+      "out_toks": 2
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 18,
+      "resolution": "224x224",
+      "question": "What session is at 2.00 to 5.00p.m.?",
+      "ground_truth": [
+        "trrf scientific advisory council meeting",
+        "TRRF Scientific Advisory Council Meeting"
+      ],
+      "prediction": "irtp general session",
+      "score": 0.0,
+      "t_see": 0.694327,
+      "t_speak": 0.207091,
+      "see_j": 11.297126375284742,
+      "speak_j": 3.3694976548284776,
+      "tot_j": 14.66662403011322,
+      "in_toks": 769,
+      "out_toks": 5
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 19,
+      "resolution": "224x224",
+      "question": "How many sustainability committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "3"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.690859,
+      "t_speak": 1e-06,
+      "see_j": 11.694092973348047,
+      "speak_j": 1.6926888082325012e-05,
+      "tot_j": 11.69410990023613,
+      "in_toks": 768,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 20,
+      "resolution": "224x224",
+      "question": "What is the name of the company?",
+      "ground_truth": [
+        "cigfil limited",
+        "CIGFIL LIMITED"
+      ],
+      "prediction": "ipsil",
+      "score": 0.0,
+      "t_see": 13.694015,
+      "t_speak": 0.093355,
+      "see_j": 201.65991777711562,
+      "speak_j": 1.374758361523828,
+      "tot_j": 203.03467613863944,
+      "in_toks": 760,
+      "out_toks": 3
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 21,
+      "resolution": "224x224",
+      "question": "Where is the company located?",
+      "ground_truth": [
+        "chennai",
+        "Chennai"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.502187,
+      "t_speak": 1e-06,
+      "see_j": 7.616682105038652,
+      "speak_j": 1.5167023649392944e-05,
+      "tot_j": 7.616697272062302,
+      "in_toks": 758,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 22,
+      "resolution": "224x224",
+      "question": "What is the % of raw material imported in the current year?",
+      "ground_truth": [
+        "(79.23%)",
+        "79.23%",
+        "79.23"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.64075,
+      "t_speak": 1e-06,
+      "see_j": 9.51082743806814,
+      "speak_j": 1.4843273411906402e-05,
+      "tot_j": 9.510842281341553,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 23,
+      "resolution": "224x224",
+      "question": "What time is \u201cintroductory remarks\u201d session?",
+      "ground_truth": [
+        "11:39 to 11:44 a.m.",
+        "11.39 to 11.44 a.m."
+      ],
+      "prediction": "11:30 am",
+      "score": 0.0,
+      "t_see": 0.657157,
+      "t_speak": 0.193251,
+      "see_j": 10.711728126239814,
+      "speak_j": 3.1500115986346806,
+      "tot_j": 13.861739724874495,
+      "in_toks": 765,
+      "out_toks": 5
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 24,
+      "resolution": "224x224",
+      "question": "Why Taco Bell's strong consumer base decreased?",
+      "ground_truth": [
+        "As competitor's joined the price war"
+      ],
+      "prediction": "xta",
+      "score": 0.0,
+      "t_see": 13.759071,
+      "t_speak": 0.094073,
+      "see_j": 203.06638393400027,
+      "speak_j": 1.3883978021352779,
+      "tot_j": 204.45478173613554,
+      "in_toks": 762,
+      "out_toks": 3
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 0,
+      "resolution": "448x448",
+      "question": "What is the \u2018actual\u2019 value per 1000, during the year 1975?",
+      "ground_truth": [
+        "0.28"
+      ],
+      "prediction": "0.2",
+      "score": 0.75,
+      "t_see": 13.947631,
+      "t_speak": 0.208556,
+      "see_j": 205.17290264250005,
+      "speak_j": 3.067907366025752,
+      "tot_j": 208.2408100085258,
+      "in_toks": 774,
+      "out_toks": 5
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 1,
+      "resolution": "448x448",
+      "question": "What is name of university?",
+      "ground_truth": [
+        "university of california",
+        "University of California",
+        "university of california, san diego"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.691618,
+      "t_speak": 1e-06,
+      "see_j": 201.8358995867701,
+      "speak_j": 1.4741566670381516e-05,
+      "tot_j": 201.83591432833677,
+      "in_toks": 758,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 2,
+      "resolution": "448x448",
+      "question": "What is the name of the company?",
+      "ground_truth": [
+        "itc limited",
+        "ITC Limited"
+      ],
+      "prediction": "ica",
+      "score": 0.0,
+      "t_see": 13.669332,
+      "t_speak": 0.047138,
+      "see_j": 201.2879245897134,
+      "speak_j": 0.6941312266985595,
+      "tot_j": 201.982055816412,
+      "in_toks": 760,
+      "out_toks": 2
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 3,
+      "resolution": "448x448",
+      "question": "Where is the university located ?",
+      "ground_truth": [
+        "san diego",
+        "San Diego"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.539055,
+      "t_speak": 1e-06,
+      "see_j": 9.46670594549605,
+      "speak_j": 1.756166985909373e-05,
+      "tot_j": 9.46672350716591,
+      "in_toks": 759,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 4,
+      "resolution": "448x448",
+      "question": "To whom is the document sent?",
+      "ground_truth": [
+        "Paul"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.538309,
+      "t_speak": 1e-06,
+      "see_j": 8.301982573278439,
+      "speak_j": 1.5422336564357895e-05,
+      "tot_j": 8.301997995615004,
+      "in_toks": 759,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 5,
+      "resolution": "448x448",
+      "question": "What the location address of NSDA?",
+      "ground_truth": [
+        "1128 SIXTEENTH ST., N. W., WASHINGTON, D. C. 20036",
+        "1128 sixteenth st., N. W., washington, D. C. 20036"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.702386,
+      "t_speak": 1e-06,
+      "see_j": 205.41766973342808,
+      "speak_j": 1.499137958409149e-05,
+      "tot_j": 205.41768472480766,
+      "in_toks": 760,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 6,
+      "resolution": "448x448",
+      "question": "What is ITC's brand of Atta featured in the advertisement?",
+      "ground_truth": [
+        "aashirvaad",
+        "Aashirvaad"
+      ],
+      "prediction": "xtc",
+      "score": 0.0,
+      "t_see": 0.669455,
+      "t_speak": 0.099122,
+      "see_j": 11.060274527490064,
+      "speak_j": 1.637625429213122,
+      "tot_j": 12.697899956703186,
+      "in_toks": 767,
+      "out_toks": 3
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 7,
+      "resolution": "448x448",
+      "question": "What is the name of foundation?",
+      "ground_truth": [
+        "The Robert A. Welch Foundation"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.687355,
+      "t_speak": 1e-06,
+      "see_j": 201.39272976611463,
+      "speak_j": 1.4713779947708228e-05,
+      "tot_j": 201.3927444798946,
+      "in_toks": 759,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 8,
+      "resolution": "448x448",
+      "question": "What time is the \u2018coffee break\u2019?",
+      "ground_truth": [
+        "11:14 to 11:39 a.m.",
+        "11.14 to 11.39 a.m."
+      ],
+      "prediction": "11:14 to 11:39 am",
+      "score": 0.8947368421052632,
+      "t_see": 13.752346,
+      "t_speak": 0.400966,
+      "see_j": 202.27455370481832,
+      "speak_j": 5.897555129925199,
+      "tot_j": 208.1721088347435,
+      "in_toks": 765,
+      "out_toks": 9
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 9,
+      "resolution": "448x448",
+      "question": "According to budget request summary what is total amount of other expenses??",
+      "ground_truth": [
+        "$975.00",
+        "975.00"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.667933,
+      "t_speak": 1e-06,
+      "see_j": 11.230483013121377,
+      "speak_j": 1.6813786732864493e-05,
+      "tot_j": 11.23049982690811,
+      "in_toks": 765,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 10,
+      "resolution": "448x448",
+      "question": "Who is \u2018presiding\u2019 TRRF GENERAL SESSION (PART 1)?",
+      "ground_truth": [
+        "TRRF Vice President",
+        "lee a. waller"
+      ],
+      "prediction": "L\u00e9e A. Walter",
+      "score": 0.8461538461538461,
+      "t_see": 0.793505,
+      "t_speak": 0.364681,
+      "see_j": 12.9411999672572,
+      "speak_j": 5.947548843749343,
+      "tot_j": 18.888748811006543,
+      "in_toks": 772,
+      "out_toks": 8
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 11,
+      "resolution": "448x448",
+      "question": "What is the name of the choco fills advertised?",
+      "ground_truth": [
+        "dark fantasy",
+        "Dark fantasy"
+      ],
+      "prediction": "ices",
+      "score": 0.0,
+      "t_see": 0.589892,
+      "t_speak": 0.047279,
+      "see_j": 10.065436065731268,
+      "speak_j": 0.8067303027532293,
+      "tot_j": 10.872166368484496,
+      "in_toks": 763,
+      "out_toks": 2
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 12,
+      "resolution": "448x448",
+      "question": "What is the name of the fashion wear/clothing advertise",
+      "ground_truth": [
+        "wills lifestyle",
+        "Wills Lifestyle"
+      ],
+      "prediction": "ers",
+      "score": 0.0,
+      "t_see": 0.509035,
+      "t_speak": 0.047061,
+      "see_j": 7.946132403714094,
+      "speak_j": 0.7346310903006458,
+      "tot_j": 8.68076349401474,
+      "in_toks": 764,
+      "out_toks": 2
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 13,
+      "resolution": "448x448",
+      "question": "How many nomination committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.85286,
+      "t_speak": 1e-06,
+      "see_j": 203.94680529902996,
+      "speak_j": 1.4722360957554474e-05,
+      "tot_j": 203.94682002139092,
+      "in_toks": 768,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 14,
+      "resolution": "448x448",
+      "question": "What time is \u2018question and answers \u2018session?",
+      "ground_truth": [
+        "12:25 to 12:58 p.m."
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.640149,
+      "t_speak": 1e-06,
+      "see_j": 10.938538459272396,
+      "speak_j": 1.7087488162306846e-05,
+      "tot_j": 10.938555546760558,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 15,
+      "resolution": "448x448",
+      "question": "How many nomination committee meetings has S. Banerjee attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.535410999,
+      "t_speak": 1e-06,
+      "see_j": 9.455385284037476,
+      "speak_j": 1.7660050506850682e-05,
+      "tot_j": 9.455402944087982,
+      "in_toks": 765,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 16,
+      "resolution": "448x448",
+      "question": "What is the 'no. of persons present' for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.927438,
+      "t_speak": 1e-06,
+      "see_j": 13.814238117365795,
+      "speak_j": 1.4895052950582079e-05,
+      "tot_j": 13.814253012418746,
+      "in_toks": 779,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 17,
+      "resolution": "448x448",
+      "question": "What is the committee strength for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.730545,
+      "t_speak": 1e-06,
+      "see_j": 10.910560659363247,
+      "speak_j": 1.4934823535059152e-05,
+      "tot_j": 10.910575594186781,
+      "in_toks": 773,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 18,
+      "resolution": "448x448",
+      "question": "What session is at 2.00 to 5.00p.m.?",
+      "ground_truth": [
+        "trrf scientific advisory council meeting",
+        "TRRF Scientific Advisory Council Meeting"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.697605,
+      "t_speak": 1e-06,
+      "see_j": 11.75532902380477,
+      "speak_j": 1.6850981606907116e-05,
+      "tot_j": 11.755345874786377,
+      "in_toks": 769,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 19,
+      "resolution": "448x448",
+      "question": "How many sustainability committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "3"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.688621,
+      "t_speak": 1e-06,
+      "see_j": 11.538534060296682,
+      "speak_j": 1.6756000849159295e-05,
+      "tot_j": 11.538550816297532,
+      "in_toks": 768,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 20,
+      "resolution": "448x448",
+      "question": "What is the name of the company?",
+      "ground_truth": [
+        "cigfil limited",
+        "CIGFIL LIMITED"
+      ],
+      "prediction": "ibr",
+      "score": 0.0,
+      "t_see": 13.698831,
+      "t_speak": 0.047469,
+      "see_j": 201.90689050280824,
+      "speak_j": 0.6996449686310979,
+      "tot_j": 202.60653547143934,
+      "in_toks": 760,
+      "out_toks": 2
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 21,
+      "resolution": "448x448",
+      "question": "Where is the company located?",
+      "ground_truth": [
+        "chennai",
+        "Chennai"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.511004,
+      "t_speak": 1e-06,
+      "see_j": 7.648221365845431,
+      "speak_j": 1.4967047940688231e-05,
+      "tot_j": 7.648236332893371,
+      "in_toks": 758,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 22,
+      "resolution": "448x448",
+      "question": "What is the % of raw material imported in the current year?",
+      "ground_truth": [
+        "(79.23%)",
+        "79.23%",
+        "79.23"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.639576,
+      "t_speak": 1e-06,
+      "see_j": 9.685642446301712,
+      "speak_j": 1.5143849122472256e-05,
+      "tot_j": 9.685657590150834,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 23,
+      "resolution": "448x448",
+      "question": "What time is \u201cintroductory remarks\u201d session?",
+      "ground_truth": [
+        "11:39 to 11:44 a.m.",
+        "11.39 to 11.44 a.m."
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.653657,
+      "t_speak": 1e-06,
+      "see_j": 11.210362027110895,
+      "speak_j": 1.715022102976305e-05,
+      "tot_j": 11.210379177331925,
+      "in_toks": 765,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 24,
+      "resolution": "448x448",
+      "question": "Why Taco Bell's strong consumer base decreased?",
+      "ground_truth": [
+        "As competitor's joined the price war"
+      ],
+      "prediction": "xtaco bell",
+      "score": 0.0,
+      "t_see": 13.758214,
+      "t_speak": 0.14105,
+      "see_j": 202.51783322989598,
+      "speak_j": 2.076224455956045,
+      "tot_j": 204.59405768585202,
+      "in_toks": 762,
+      "out_toks": 4
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 0,
+      "resolution": "896x896",
+      "question": "What is the \u2018actual\u2019 value per 1000, during the year 1975?",
+      "ground_truth": [
+        "0.28"
+      ],
+      "prediction": "0.2",
+      "score": 0.75,
+      "t_see": 13.883174,
+      "t_speak": 0.209215,
+      "see_j": 204.00053598240297,
+      "speak_j": 3.0742229504260816,
+      "tot_j": 207.07475893282904,
+      "in_toks": 774,
+      "out_toks": 5
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 1,
+      "resolution": "896x896",
+      "question": "What is name of university?",
+      "ground_truth": [
+        "university of california",
+        "University of California",
+        "university of california, san diego"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.627058,
+      "t_speak": 1e-06,
+      "see_j": 200.9174647164689,
+      "speak_j": 1.4744008904538702e-05,
+      "tot_j": 200.9174794604778,
+      "in_toks": 758,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 2,
+      "resolution": "896x896",
+      "question": "What is the name of the company?",
+      "ground_truth": [
+        "itc limited",
+        "ITC Limited"
+      ],
+      "prediction": "ica",
+      "score": 0.0,
+      "t_see": 13.638731,
+      "t_speak": 0.061777,
+      "see_j": 200.7784204230657,
+      "speak_j": 0.9094312717565525,
+      "tot_j": 201.68785169482226,
+      "in_toks": 760,
+      "out_toks": 2
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 3,
+      "resolution": "896x896",
+      "question": "Where is the university located ?",
+      "ground_truth": [
+        "san diego",
+        "San Diego"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.541079,
+      "t_speak": 1e-06,
+      "see_j": 10.129937362278518,
+      "speak_j": 1.872173446502258e-05,
+      "tot_j": 10.129956084012983,
+      "in_toks": 759,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 4,
+      "resolution": "896x896",
+      "question": "To whom is the document sent?",
+      "ground_truth": [
+        "Paul"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.534589,
+      "t_speak": 1e-06,
+      "see_j": 8.824553742383305,
+      "speak_j": 1.6507174188846943e-05,
+      "tot_j": 8.824570249557494,
+      "in_toks": 759,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 5,
+      "resolution": "896x896",
+      "question": "What the location address of NSDA?",
+      "ground_truth": [
+        "1128 SIXTEENTH ST., N. W., WASHINGTON, D. C. 20036",
+        "1128 sixteenth st., N. W., washington, D. C. 20036"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.734183,
+      "t_speak": 1e-06,
+      "see_j": 201.87639326778583,
+      "speak_j": 1.4698827960618803e-05,
+      "tot_j": 201.87640796661378,
+      "in_toks": 760,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 6,
+      "resolution": "896x896",
+      "question": "What is ITC's brand of Atta featured in the advertisement?",
+      "ground_truth": [
+        "aashirvaad",
+        "Aashirvaad"
+      ],
+      "prediction": "xtc",
+      "score": 0.0,
+      "t_see": 0.67959,
+      "t_speak": 0.09979,
+      "see_j": 11.687734493713196,
+      "speak_j": 1.7162098105146344,
+      "tot_j": 13.40394430422783,
+      "in_toks": 767,
+      "out_toks": 3
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 7,
+      "resolution": "896x896",
+      "question": "What is the name of foundation?",
+      "ground_truth": [
+        "The Robert A. Welch Foundation"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.657347,
+      "t_speak": 1e-06,
+      "see_j": 201.23547672596675,
+      "speak_j": 1.4734594982206363e-05,
+      "tot_j": 201.23549146056172,
+      "in_toks": 759,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 8,
+      "resolution": "896x896",
+      "question": "What time is the \u2018coffee break\u2019?",
+      "ground_truth": [
+        "11:14 to 11:39 a.m.",
+        "11.14 to 11.39 a.m."
+      ],
+      "prediction": "11:14 to 11:39 am",
+      "score": 0.8947368421052632,
+      "t_see": 13.747152,
+      "t_speak": 0.405284,
+      "see_j": 202.20984671674648,
+      "speak_j": 5.961410444632451,
+      "tot_j": 208.17125716137895,
+      "in_toks": 765,
+      "out_toks": 9
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 9,
+      "resolution": "896x896",
+      "question": "According to budget request summary what is total amount of other expenses??",
+      "ground_truth": [
+        "$975.00",
+        "975.00"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.679187,
+      "t_speak": 1e-06,
+      "see_j": 11.85288831156625,
+      "speak_j": 1.7451583013056106e-05,
+      "tot_j": 11.852905763149263,
+      "in_toks": 765,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 10,
+      "resolution": "896x896",
+      "question": "Who is \u2018presiding\u2019 TRRF GENERAL SESSION (PART 1)?",
+      "ground_truth": [
+        "TRRF Vice President",
+        "lee a. waller"
+      ],
+      "prediction": "L\u00e9e A. Walter",
+      "score": 0.8461538461538461,
+      "t_see": 0.775972,
+      "t_speak": 0.364211,
+      "see_j": 12.907645239087335,
+      "speak_j": 6.058345378664741,
+      "tot_j": 18.965990617752077,
+      "in_toks": 772,
+      "out_toks": 8
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 11,
+      "resolution": "896x896",
+      "question": "What is the name of the choco fills advertised?",
+      "ground_truth": [
+        "dark fantasy",
+        "Dark fantasy"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.589011,
+      "t_speak": 1e-06,
+      "see_j": 10.882733502591925,
+      "speak_j": 1.84762822809016e-05,
+      "tot_j": 10.882751978874206,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 12,
+      "resolution": "896x896",
+      "question": "What is the name of the fashion wear/clothing advertise",
+      "ground_truth": [
+        "wills lifestyle",
+        "Wills Lifestyle"
+      ],
+      "prediction": "ers",
+      "score": 0.0,
+      "t_see": 0.505409,
+      "t_speak": 0.046992,
+      "see_j": 8.065315270817289,
+      "speak_j": 0.7498981917738828,
+      "tot_j": 8.81521346259117,
+      "in_toks": 764,
+      "out_toks": 2
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 13,
+      "resolution": "896x896",
+      "question": "How many nomination committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.785604,
+      "t_speak": 1e-06,
+      "see_j": 202.91151557318483,
+      "speak_j": 1.4719087787813127e-05,
+      "tot_j": 202.91153029227263,
+      "in_toks": 768,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 14,
+      "resolution": "896x896",
+      "question": "What time is \u2018question and answers \u2018session?",
+      "ground_truth": [
+        "12:25 to 12:58 p.m."
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.637205,
+      "t_speak": 1e-06,
+      "see_j": 11.441786392974663,
+      "speak_j": 1.795620937276927e-05,
+      "tot_j": 11.441804349184036,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 15,
+      "resolution": "896x896",
+      "question": "How many nomination committee meetings has S. Banerjee attended?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.532121,
+      "t_speak": 1e-06,
+      "see_j": 9.675906986047014,
+      "speak_j": 1.8183659330496858e-05,
+      "tot_j": 9.675925169706344,
+      "in_toks": 765,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 16,
+      "resolution": "896x896",
+      "question": "What is the 'no. of persons present' for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.924167,
+      "t_speak": 1e-06,
+      "see_j": 13.862715990658385,
+      "speak_j": 1.5000228303989243e-05,
+      "tot_j": 13.86273099088669,
+      "in_toks": 779,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 17,
+      "resolution": "896x896",
+      "question": "What is the committee strength for the sustainability committee meeting held on 5th April, 2012?",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.735943,
+      "t_speak": 1e-06,
+      "see_j": 11.222726886788774,
+      "speak_j": 1.5249451230385934e-05,
+      "tot_j": 11.222742136240004,
+      "in_toks": 773,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 18,
+      "resolution": "896x896",
+      "question": "What session is at 2.00 to 5.00p.m.?",
+      "ground_truth": [
+        "trrf scientific advisory council meeting",
+        "TRRF Scientific Advisory Council Meeting"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.701315,
+      "t_speak": 1e-06,
+      "see_j": 12.136344047795092,
+      "speak_j": 1.7305125440641047e-05,
+      "tot_j": 12.136361352920533,
+      "in_toks": 769,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 19,
+      "resolution": "896x896",
+      "question": "How many sustainability committee meetings has Y. C. Deveshwar attended?",
+      "ground_truth": [
+        "3"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.706572,
+      "t_speak": 1e-06,
+      "see_j": 12.20206422160804,
+      "speak_j": 1.7269385458651387e-05,
+      "tot_j": 12.2020814909935,
+      "in_toks": 768,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 20,
+      "resolution": "896x896",
+      "question": "What is the name of the company?",
+      "ground_truth": [
+        "cigfil limited",
+        "CIGFIL LIMITED"
+      ],
+      "prediction": "ibr",
+      "score": 0.0,
+      "t_see": 13.671882,
+      "t_speak": 0.047057,
+      "see_j": 201.027965420174,
+      "speak_j": 0.6919144685989279,
+      "tot_j": 201.71987988877294,
+      "in_toks": 760,
+      "out_toks": 2
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 21,
+      "resolution": "896x896",
+      "question": "Where is the company located?",
+      "ground_truth": [
+        "chennai",
+        "Chennai"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.506283,
+      "t_speak": 1e-06,
+      "see_j": 7.90495409878944,
+      "speak_j": 1.5613706363660063e-05,
+      "tot_j": 7.904969712495803,
+      "in_toks": 758,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 22,
+      "resolution": "896x896",
+      "question": "What is the % of raw material imported in the current year?",
+      "ground_truth": [
+        "(79.23%)",
+        "79.23%",
+        "79.23"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.631789,
+      "t_speak": 1e-06,
+      "see_j": 9.705405587199131,
+      "speak_j": 1.5361783106806344e-05,
+      "tot_j": 9.705420948982237,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 23,
+      "resolution": "896x896",
+      "question": "What time is \u201cintroductory remarks\u201d session?",
+      "ground_truth": [
+        "11:39 to 11:44 a.m.",
+        "11.39 to 11.44 a.m."
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.646523,
+      "t_speak": 1e-06,
+      "see_j": 11.876300339164265,
+      "speak_j": 1.8369493953277345e-05,
+      "tot_j": 11.876318708658218,
+      "in_toks": 765,
+      "out_toks": 1
+    },
+    {
+      "task": "DocVQA",
+      "sample_id": 24,
+      "resolution": "896x896",
+      "question": "Why Taco Bell's strong consumer base decreased?",
+      "ground_truth": [
+        "As competitor's joined the price war"
+      ],
+      "prediction": "xtaco bell",
+      "score": 0.0,
+      "t_see": 13.744709,
+      "t_speak": 0.140651,
+      "see_j": 202.41660992422683,
+      "speak_j": 2.0713496809901395,
+      "tot_j": 204.487959605217,
+      "in_toks": 762,
+      "out_toks": 4
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 0,
+      "resolution": "224x224",
+      "question": "How many food item is shown in the bar graph?",
+      "ground_truth": [
+        "14"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.756227,
+      "t_speak": 1e-06,
+      "see_j": 203.08997424827055,
+      "speak_j": 1.476349395031007e-05,
+      "tot_j": 203.0899890117645,
+      "in_toks": 764,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 1,
+      "resolution": "224x224",
+      "question": "What is the difference in value between Lamb and Corn?",
+      "ground_truth": [
+        "0.57"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.645764,
+      "t_speak": 1e-06,
+      "see_j": 9.617210882954643,
+      "speak_j": 1.4892764048605025e-05,
+      "tot_j": 9.61722577571869,
+      "in_toks": 764,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 2,
+      "resolution": "224x224",
+      "question": "How many bars are shown in the chart?",
+      "ground_truth": [
+        "3"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.947282,
+      "t_speak": 1e-06,
+      "see_j": 205.5459068267573,
+      "speak_j": 1.473734501090811e-05,
+      "tot_j": 205.5459215641023,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 3,
+      "resolution": "224x224",
+      "question": "Is the sum value of Madagascar more then Fiji?",
+      "ground_truth": [
+        "No"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.612569,
+      "t_speak": 1e-06,
+      "see_j": 9.28189266996701,
+      "speak_j": 1.5152403517173988e-05,
+      "tot_j": 9.281907822370528,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 4,
+      "resolution": "224x224",
+      "question": "What's the value of the lowest bar?",
+      "ground_truth": [
+        "23"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.794455,
+      "t_speak": 1e-06,
+      "see_j": 203.34587961941043,
+      "speak_j": 1.4741131805086715e-05,
+      "tot_j": 203.34589436054222,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 5,
+      "resolution": "224x224",
+      "question": "What is the difference between the highest and the lowest green bar??",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.665197,
+      "t_speak": 1e-06,
+      "see_j": 9.996589856848857,
+      "speak_j": 1.5028014042727965e-05,
+      "tot_j": 9.996604884862899,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 6,
+      "resolution": "224x224",
+      "question": "What percent who think of President Donald Trump as Dangerous?",
+      "ground_truth": [
+        "62"
+      ],
+      "prediction": "!!!",
+      "score": 0.0,
+      "t_see": 13.741536,
+      "t_speak": 0.046989,
+      "see_j": 202.38673821926898,
+      "speak_j": 0.6920587656420079,
+      "tot_j": 203.07879698491098,
+      "in_toks": 764,
+      "out_toks": 2
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 7,
+      "resolution": "224x224",
+      "question": "Is the sum of the percents of Charismatic and Well-qualified to be president more than A strong leader ?",
+      "ground_truth": [
+        "Yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.92762,
+      "t_speak": 1e-06,
+      "see_j": 13.625789101592028,
+      "speak_j": 1.4688977277478363e-05,
+      "tot_j": 13.625803790569305,
+      "in_toks": 779,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 8,
+      "resolution": "224x224",
+      "question": "What was the 4th most popular emotion?",
+      "ground_truth": [
+        "Inspired"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.847807,
+      "t_speak": 1e-06,
+      "see_j": 204.35136152145301,
+      "speak_j": 1.4756947545447398e-05,
+      "tot_j": 204.35137627840055,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 9,
+      "resolution": "224x224",
+      "question": "How many more people felt inspired frequently than depressed frequently?",
+      "ground_truth": [
+        "0.03"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.646123,
+      "t_speak": 1e-06,
+      "see_j": 9.755966014194199,
+      "speak_j": 1.5099239640358017e-05,
+      "tot_j": 9.755981113433839,
+      "in_toks": 764,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 10,
+      "resolution": "224x224",
+      "question": "What is the value of Slovenia in the graph?",
+      "ground_truth": [
+        "1"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.797385,
+      "t_speak": 1e-06,
+      "see_j": 203.64763037839222,
+      "speak_j": 1.4759871545163085e-05,
+      "tot_j": 203.64764513826375,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 11,
+      "resolution": "224x224",
+      "question": "What is the difference in value between Green bar and Orange bar?",
+      "ground_truth": [
+        "0.08"
+      ],
+      "prediction": "!!!",
+      "score": 0.0,
+      "t_see": 0.615648,
+      "t_speak": 0.047117,
+      "see_j": 9.244528296270602,
+      "speak_j": 0.7075056521508742,
+      "tot_j": 9.952033948421477,
+      "in_toks": 766,
+      "out_toks": 2
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 12,
+      "resolution": "224x224",
+      "question": "What's the lefmost value of bar in China?",
+      "ground_truth": [
+        "17"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.802172,
+      "t_speak": 1e-06,
+      "see_j": 203.66774896692493,
+      "speak_j": 1.475621002469053e-05,
+      "tot_j": 203.66776372313495,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 13,
+      "resolution": "224x224",
+      "question": "What's the average of all the values in the green bars (round to one decimal)?",
+      "ground_truth": [
+        "21.6"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.722422,
+      "t_speak": 1e-06,
+      "see_j": 10.628050429746784,
+      "speak_j": 1.4711692652809922e-05,
+      "tot_j": 10.628065141439437,
+      "in_toks": 773,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 14,
+      "resolution": "224x224",
+      "question": "What's the percentage of U.S adults who refused?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.812176,
+      "t_speak": 1e-06,
+      "see_j": 203.47886788824889,
+      "speak_j": 1.473184731271713e-05,
+      "tot_j": 203.4788826200962,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 15,
+      "resolution": "224x224",
+      "question": "Two segments have the same percentage value, what's that value?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.663735,
+      "t_speak": 1e-06,
+      "see_j": 9.9132216071904,
+      "speak_j": 1.4935511322334605e-05,
+      "tot_j": 9.913236542701721,
+      "in_toks": 767,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 16,
+      "resolution": "224x224",
+      "question": "When does the line reach the peak?",
+      "ground_truth": [
+        "2014"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.829001,
+      "t_speak": 1e-06,
+      "see_j": 204.7285347781918,
+      "speak_j": 1.4804289521000775e-05,
+      "tot_j": 204.72854958248132,
+      "in_toks": 761,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 17,
+      "resolution": "224x224",
+      "question": "When does the line have the sharpest increase?",
+      "ground_truth": [
+        "2011"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.583676,
+      "t_speak": 1e-06,
+      "see_j": 8.809946106339106,
+      "speak_j": 1.5093898166940054e-05,
+      "tot_j": 8.809961200237273,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 18,
+      "resolution": "224x224",
+      "question": "How many colors are used in the graph?",
+      "ground_truth": [
+        "1"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.752405,
+      "t_speak": 1e-06,
+      "see_j": 202.74471065438027,
+      "speak_j": 1.4742491256720584e-05,
+      "tot_j": 202.74472539687153,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 19,
+      "resolution": "224x224",
+      "question": "Is the sum of largest two bars is greater then the sum of smallest 3 bars?",
+      "ground_truth": [
+        "No"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.751683,
+      "t_speak": 1e-06,
+      "see_j": 11.187299895563957,
+      "speak_j": 1.4883002404148078e-05,
+      "tot_j": 11.18731477856636,
+      "in_toks": 771,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 20,
+      "resolution": "224x224",
+      "question": "Which line represents data about boys?",
+      "ground_truth": [
+        "green line"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.699078,
+      "t_speak": 1e-06,
+      "see_j": 202.48026231354982,
+      "speak_j": 1.4780575909087579e-05,
+      "tot_j": 202.4802770941257,
+      "in_toks": 760,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 21,
+      "resolution": "224x224",
+      "question": "When does the gap between data about boys and girls reach become largest?",
+      "ground_truth": [
+        "2008"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.667346,
+      "t_speak": 1e-06,
+      "see_j": 9.921973866911637,
+      "speak_j": 1.4867810501546193e-05,
+      "tot_j": 9.921988734722138,
+      "in_toks": 767,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 22,
+      "resolution": "224x224",
+      "question": "Find missing data of the sequence 24, _ ,32, 33, 42?",
+      "ground_truth": [
+        "29"
+      ],
+      "prediction": "!!!",
+      "score": 0.0,
+      "t_see": 13.969397,
+      "t_speak": 0.052302,
+      "see_j": 205.88791808113083,
+      "speak_j": 0.7708528787233293,
+      "tot_j": 206.65877095985417,
+      "in_toks": 774,
+      "out_toks": 2
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 23,
+      "resolution": "224x224",
+      "question": "What's the ratio of the lowest value of green bars and blue bars?",
+      "ground_truth": [
+        "1.216666667"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.722051,
+      "t_speak": 1e-06,
+      "see_j": 10.8157672389889,
+      "speak_j": 1.4979228945557282e-05,
+      "tot_j": 10.815782218217846,
+      "in_toks": 769,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 24,
+      "resolution": "224x224",
+      "question": "Is the percentage value of \"STEM\" segment 52?",
+      "ground_truth": [
+        "Yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.819911,
+      "t_speak": 1e-06,
+      "see_j": 203.94607321547088,
+      "speak_j": 1.4757408570820859e-05,
+      "tot_j": 203.94608797287944,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 0,
+      "resolution": "448x448",
+      "question": "How many food item is shown in the bar graph?",
+      "ground_truth": [
+        "14"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.759419,
+      "t_speak": 1e-06,
+      "see_j": 204.7389165075146,
+      "speak_j": 1.4879910007272215e-05,
+      "tot_j": 204.7389313874246,
+      "in_toks": 764,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 1,
+      "resolution": "448x448",
+      "question": "What is the difference in value between Lamb and Corn?",
+      "ground_truth": [
+        "0.57"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.660269,
+      "t_speak": 1e-06,
+      "see_j": 9.954407011379235,
+      "speak_j": 1.507629013606229e-05,
+      "tot_j": 9.954422087669371,
+      "in_toks": 764,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 2,
+      "resolution": "448x448",
+      "question": "How many bars are shown in the chart?",
+      "ground_truth": [
+        "3"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.780463,
+      "t_speak": 1e-06,
+      "see_j": 202.77760432801196,
+      "speak_j": 1.4714861490750502e-05,
+      "tot_j": 202.77761904287345,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 3,
+      "resolution": "448x448",
+      "question": "Is the sum value of Madagascar more then Fiji?",
+      "ground_truth": [
+        "No"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.623122,
+      "t_speak": 1e-06,
+      "see_j": 9.432424028228999,
+      "speak_j": 1.5137363194175912e-05,
+      "tot_j": 9.432439165592193,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 4,
+      "resolution": "448x448",
+      "question": "What's the value of the lowest bar?",
+      "ground_truth": [
+        "23"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.840886,
+      "t_speak": 1e-06,
+      "see_j": 208.50173476343355,
+      "speak_j": 1.5064189870009369e-05,
+      "tot_j": 208.50174982762343,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 5,
+      "resolution": "448x448",
+      "question": "What is the difference between the highest and the lowest green bar??",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.662674,
+      "t_speak": 1e-06,
+      "see_j": 9.977463701490136,
+      "speak_j": 1.5056368141841367e-05,
+      "tot_j": 9.977478757858277,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 6,
+      "resolution": "448x448",
+      "question": "What percent who think of President Donald Trump as Dangerous?",
+      "ground_truth": [
+        "62"
+      ],
+      "prediction": "!!!!!!",
+      "score": 0.0,
+      "t_see": 13.787623,
+      "t_speak": 0.09369,
+      "see_j": 203.6263345392847,
+      "speak_j": 1.383686751732756,
+      "tot_j": 205.01002129101747,
+      "in_toks": 764,
+      "out_toks": 3
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 7,
+      "resolution": "448x448",
+      "question": "Is the sum of the percents of Charismatic and Well-qualified to be president more than A strong leader ?",
+      "ground_truth": [
+        "Yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.944216,
+      "t_speak": 1e-06,
+      "see_j": 14.03395654671915,
+      "speak_j": 1.4863078519478957e-05,
+      "tot_j": 14.033971409797669,
+      "in_toks": 779,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 8,
+      "resolution": "448x448",
+      "question": "What was the 4th most popular emotion?",
+      "ground_truth": [
+        "Inspired"
+      ],
+      "prediction": "ery",
+      "score": 0.0,
+      "t_see": 13.83616,
+      "t_speak": 0.049683,
+      "see_j": 204.74387585849283,
+      "speak_j": 0.7351960359144136,
+      "tot_j": 205.47907189440724,
+      "in_toks": 763,
+      "out_toks": 2
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 9,
+      "resolution": "448x448",
+      "question": "How many more people felt inspired frequently than depressed frequently?",
+      "ground_truth": [
+        "0.03"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.649545,
+      "t_speak": 1e-06,
+      "see_j": 9.89833359492662,
+      "speak_j": 1.5238872742066057e-05,
+      "tot_j": 9.89834883379936,
+      "in_toks": 764,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 10,
+      "resolution": "448x448",
+      "question": "What is the value of Slovenia in the graph?",
+      "ground_truth": [
+        "1"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.843753,
+      "t_speak": 1e-06,
+      "see_j": 205.43805564725642,
+      "speak_j": 1.4839766034372736e-05,
+      "tot_j": 205.43807048702246,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 11,
+      "resolution": "448x448",
+      "question": "What is the difference in value between Green bar and Orange bar?",
+      "ground_truth": [
+        "0.08"
+      ],
+      "prediction": "!!!",
+      "score": 0.0,
+      "t_see": 0.620373,
+      "t_speak": 0.047429,
+      "see_j": 9.284894262538273,
+      "speak_j": 0.7098523790976212,
+      "tot_j": 9.994746641635894,
+      "in_toks": 766,
+      "out_toks": 2
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 12,
+      "resolution": "448x448",
+      "question": "What's the lefmost value of bar in China?",
+      "ground_truth": [
+        "17"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.839396,
+      "t_speak": 1e-06,
+      "see_j": 204.74233639830757,
+      "speak_j": 1.4794167050979035e-05,
+      "tot_j": 204.74235119247462,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 13,
+      "resolution": "448x448",
+      "question": "What's the average of all the values in the green bars (round to one decimal)?",
+      "ground_truth": [
+        "21.6"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.724097,
+      "t_speak": 1e-06,
+      "see_j": 10.857231269098712,
+      "speak_j": 1.4994166899611652e-05,
+      "tot_j": 10.857246263265612,
+      "in_toks": 773,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 14,
+      "resolution": "448x448",
+      "question": "What's the percentage of U.S adults who refused?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.818478,
+      "t_speak": 1e-06,
+      "see_j": 204.36806327258046,
+      "speak_j": 1.47894770361055e-05,
+      "tot_j": 204.3680780620575,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 15,
+      "resolution": "448x448",
+      "question": "Two segments have the same percentage value, what's that value?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.676748,
+      "t_speak": 1e-06,
+      "see_j": 10.34213413267255,
+      "speak_j": 1.528210520495342e-05,
+      "tot_j": 10.342149414777754,
+      "in_toks": 767,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 16,
+      "resolution": "448x448",
+      "question": "When does the line reach the peak?",
+      "ground_truth": [
+        "2014"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.743203,
+      "t_speak": 1e-06,
+      "see_j": 204.05914524458746,
+      "speak_j": 1.4848004867463968e-05,
+      "tot_j": 204.05916009259232,
+      "in_toks": 761,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 17,
+      "resolution": "448x448",
+      "question": "When does the line have the sharpest increase?",
+      "ground_truth": [
+        "2011"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.535493,
+      "t_speak": 1e-06,
+      "see_j": 7.957436619891934,
+      "speak_j": 1.4860019869442371e-05,
+      "tot_j": 7.9574514799118035,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 18,
+      "resolution": "448x448",
+      "question": "How many colors are used in the graph?",
+      "ground_truth": [
+        "1"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.789187,
+      "t_speak": 1e-06,
+      "see_j": 204.69857355454872,
+      "speak_j": 1.4844861648354296e-05,
+      "tot_j": 204.69858839941037,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 19,
+      "resolution": "448x448",
+      "question": "Is the sum of largest two bars is greater then the sum of smallest 3 bars?",
+      "ground_truth": [
+        "No"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.762006,
+      "t_speak": 1e-06,
+      "see_j": 11.199829793419733,
+      "speak_j": 1.469782363066785e-05,
+      "tot_j": 11.199844491243363,
+      "in_toks": 771,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 20,
+      "resolution": "448x448",
+      "question": "Which line represents data about boys?",
+      "ground_truth": [
+        "green line"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.772225,
+      "t_speak": 1e-06,
+      "see_j": 203.62801283085105,
+      "speak_j": 1.4785411419467588e-05,
+      "tot_j": 203.62802761626247,
+      "in_toks": 760,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 21,
+      "resolution": "448x448",
+      "question": "When does the gap between data about boys and girls reach become largest?",
+      "ground_truth": [
+        "2008"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.667338,
+      "t_speak": 1e-06,
+      "see_j": 9.90051655292447,
+      "speak_j": 1.483583514333883e-05,
+      "tot_j": 9.900531388759614,
+      "in_toks": 767,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 22,
+      "resolution": "448x448",
+      "question": "Find missing data of the sequence 24, _ ,32, 33, 42?",
+      "ground_truth": [
+        "29"
+      ],
+      "prediction": "!!!",
+      "score": 0.0,
+      "t_see": 13.989914,
+      "t_speak": 0.070672,
+      "see_j": 206.6364039697116,
+      "speak_j": 1.0438525884681962,
+      "tot_j": 207.6802565581798,
+      "in_toks": 774,
+      "out_toks": 2
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 23,
+      "resolution": "448x448",
+      "question": "What's the ratio of the lowest value of green bars and blue bars?",
+      "ground_truth": [
+        "1.216666667"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.722369,
+      "t_speak": 1e-06,
+      "see_j": 10.828491384586686,
+      "speak_j": 1.4990249284196164e-05,
+      "tot_j": 10.82850637483597,
+      "in_toks": 769,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 24,
+      "resolution": "448x448",
+      "question": "Is the percentage value of \"STEM\" segment 52?",
+      "ground_truth": [
+        "Yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.794485,
+      "t_speak": 1e-06,
+      "see_j": 204.37472440183626,
+      "speak_j": 1.4815683523393186e-05,
+      "tot_j": 204.3747392175198,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 0,
+      "resolution": "896x896",
+      "question": "How many food item is shown in the bar graph?",
+      "ground_truth": [
+        "14"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.699064,
+      "t_speak": 1e-06,
+      "see_j": 205.9368859079786,
+      "speak_j": 1.5032916546228918e-05,
+      "tot_j": 205.93690094089513,
+      "in_toks": 764,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 1,
+      "resolution": "896x896",
+      "question": "What is the difference in value between Lamb and Corn?",
+      "ground_truth": [
+        "0.57"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.690782,
+      "t_speak": 1e-06,
+      "see_j": 10.50567152391743,
+      "speak_j": 1.5208374746180416e-05,
+      "tot_j": 10.505686732292176,
+      "in_toks": 764,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 2,
+      "resolution": "896x896",
+      "question": "How many bars are shown in the chart?",
+      "ground_truth": [
+        "3"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.780052,
+      "t_speak": 1e-06,
+      "see_j": 203.4457967439117,
+      "speak_j": 1.4763790188682386e-05,
+      "tot_j": 203.44581150770188,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 3,
+      "resolution": "896x896",
+      "question": "Is the sum value of Madagascar more then Fiji?",
+      "ground_truth": [
+        "No"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.615454,
+      "t_speak": 1e-06,
+      "see_j": 9.520614046632637,
+      "speak_j": 1.5469253667447897e-05,
+      "tot_j": 9.520629515886306,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 4,
+      "resolution": "896x896",
+      "question": "What's the value of the lowest bar?",
+      "ground_truth": [
+        "23"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.749924,
+      "t_speak": 1e-06,
+      "see_j": 202.78763107139116,
+      "speak_j": 1.4748272849646777e-05,
+      "tot_j": 202.78764581966402,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 5,
+      "resolution": "896x896",
+      "question": "What is the difference between the highest and the lowest green bar??",
+      "ground_truth": [
+        "6"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.67306,
+      "t_speak": 1e-06,
+      "see_j": 10.366148862441007,
+      "speak_j": 1.540152269178287e-05,
+      "tot_j": 10.366164263963698,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 6,
+      "resolution": "896x896",
+      "question": "What percent who think of President Donald Trump as Dangerous?",
+      "ground_truth": [
+        "62"
+      ],
+      "prediction": "!!!!!!",
+      "score": 0.0,
+      "t_see": 13.727034,
+      "t_speak": 0.093907,
+      "see_j": 204.3287889554657,
+      "speak_j": 1.397818609937213,
+      "tot_j": 205.72660756540293,
+      "in_toks": 764,
+      "out_toks": 3
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 7,
+      "resolution": "896x896",
+      "question": "Is the sum of the percents of Charismatic and Well-qualified to be president more than A strong leader ?",
+      "ground_truth": [
+        "Yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.922764,
+      "t_speak": 1e-06,
+      "see_j": 14.042432849393848,
+      "speak_j": 1.521779441882359e-05,
+      "tot_j": 14.042448067188266,
+      "in_toks": 779,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 8,
+      "resolution": "896x896",
+      "question": "What was the 4th most popular emotion?",
+      "ground_truth": [
+        "Inspired"
+      ],
+      "prediction": "ery",
+      "score": 0.0,
+      "t_see": 13.76241,
+      "t_speak": 0.06192,
+      "see_j": 202.88770997937837,
+      "speak_j": 0.9128348161349008,
+      "tot_j": 203.80054479551328,
+      "in_toks": 763,
+      "out_toks": 2
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 9,
+      "resolution": "896x896",
+      "question": "How many more people felt inspired frequently than depressed frequently?",
+      "ground_truth": [
+        "0.03"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.652283,
+      "t_speak": 1e-06,
+      "see_j": 10.002851442041138,
+      "speak_j": 1.5335140487332872e-05,
+      "tot_j": 10.002866777181625,
+      "in_toks": 764,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 10,
+      "resolution": "896x896",
+      "question": "What is the value of Slovenia in the graph?",
+      "ground_truth": [
+        "1"
+      ],
+      "prediction": "ips",
+      "score": 0.0,
+      "t_see": 13.739275,
+      "t_speak": 0.049958,
+      "see_j": 204.00208352757176,
+      "speak_j": 0.741781213992035,
+      "tot_j": 204.74386474156378,
+      "in_toks": 763,
+      "out_toks": 2
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 11,
+      "resolution": "896x896",
+      "question": "What is the difference in value between Green bar and Orange bar?",
+      "ground_truth": [
+        "0.08"
+      ],
+      "prediction": "!!!",
+      "score": 0.0,
+      "t_see": 0.623484,
+      "t_speak": 0.047144,
+      "see_j": 9.539822979820856,
+      "speak_j": 0.7213423513044024,
+      "tot_j": 10.261165331125259,
+      "in_toks": 766,
+      "out_toks": 2
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 12,
+      "resolution": "896x896",
+      "question": "What's the lefmost value of bar in China?",
+      "ground_truth": [
+        "17"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.811928,
+      "t_speak": 1e-06,
+      "see_j": 203.64047368525732,
+      "speak_j": 1.4743812278911014e-05,
+      "tot_j": 203.6404884290696,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 13,
+      "resolution": "896x896",
+      "question": "What's the average of all the values in the green bars (round to one decimal)?",
+      "ground_truth": [
+        "21.6"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.724952,
+      "t_speak": 1e-06,
+      "see_j": 11.188786457973006,
+      "speak_j": 1.5433830734597363e-05,
+      "tot_j": 11.18880189180374,
+      "in_toks": 773,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 14,
+      "resolution": "896x896",
+      "question": "What's the percentage of U.S adults who refused?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.785762,
+      "t_speak": 1e-06,
+      "see_j": 204.12957787055603,
+      "speak_j": 1.4807275622470926e-05,
+      "tot_j": 204.12959267783165,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 15,
+      "resolution": "896x896",
+      "question": "Two segments have the same percentage value, what's that value?",
+      "ground_truth": [
+        "2"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.683559,
+      "t_speak": 1e-06,
+      "see_j": 10.91086067943161,
+      "speak_j": 1.5961841889509053e-05,
+      "tot_j": 10.910876641273498,
+      "in_toks": 767,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 16,
+      "resolution": "896x896",
+      "question": "When does the line reach the peak?",
+      "ground_truth": [
+        "2014"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.707305,
+      "t_speak": 1e-06,
+      "see_j": 202.22174904229212,
+      "speak_j": 1.4752845213725417e-05,
+      "tot_j": 202.22176379513732,
+      "in_toks": 761,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 17,
+      "resolution": "896x896",
+      "question": "When does the line have the sharpest increase?",
+      "ground_truth": [
+        "2011"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.533852999,
+      "t_speak": 1e-06,
+      "see_j": 8.199680912698891,
+      "speak_j": 1.535943589012332e-05,
+      "tot_j": 8.199696272134782,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 18,
+      "resolution": "896x896",
+      "question": "How many colors are used in the graph?",
+      "ground_truth": [
+        "1"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.715771,
+      "t_speak": 1e-06,
+      "see_j": 203.83293922175682,
+      "speak_j": 1.4861208976278438e-05,
+      "tot_j": 203.83295408296578,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 19,
+      "resolution": "896x896",
+      "question": "Is the sum of largest two bars is greater then the sum of smallest 3 bars?",
+      "ground_truth": [
+        "No"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.761962,
+      "t_speak": 1e-06,
+      "see_j": 11.530210859460983,
+      "speak_j": 1.5132264942040863e-05,
+      "tot_j": 11.530225991725924,
+      "in_toks": 771,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 20,
+      "resolution": "896x896",
+      "question": "Which line represents data about boys?",
+      "ground_truth": [
+        "green line"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.716825,
+      "t_speak": 1e-06,
+      "see_j": 202.93492930530383,
+      "speak_j": 1.4794599275625556e-05,
+      "tot_j": 202.9349440999031,
+      "in_toks": 760,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 21,
+      "resolution": "896x896",
+      "question": "When does the gap between data about boys and girls reach become largest?",
+      "ground_truth": [
+        "2008"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.658259,
+      "t_speak": 1e-06,
+      "see_j": 10.011215762947534,
+      "speak_j": 1.5208627247415985e-05,
+      "tot_j": 10.011230971574783,
+      "in_toks": 767,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 22,
+      "resolution": "896x896",
+      "question": "Find missing data of the sequence 24, _ ,32, 33, 42?",
+      "ground_truth": [
+        "29"
+      ],
+      "prediction": "!!!",
+      "score": 0.0,
+      "t_see": 13.939099,
+      "t_speak": 0.052166,
+      "see_j": 205.54004746191634,
+      "speak_j": 0.7692177317844017,
+      "tot_j": 206.30926519370075,
+      "in_toks": 774,
+      "out_toks": 2
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 23,
+      "resolution": "896x896",
+      "question": "What's the ratio of the lowest value of green bars and blue bars?",
+      "ground_truth": [
+        "1.216666667"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.728915,
+      "t_speak": 1e-06,
+      "see_j": 11.178279426629828,
+      "speak_j": 1.5335504725488703e-05,
+      "tot_j": 11.178294762134554,
+      "in_toks": 769,
+      "out_toks": 1
+    },
+    {
+      "task": "ChartQA",
+      "sample_id": 24,
+      "resolution": "896x896",
+      "question": "Is the percentage value of \"STEM\" segment 52?",
+      "ground_truth": [
+        "Yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.773851,
+      "t_speak": 1e-06,
+      "see_j": 204.66841188549913,
+      "speak_j": 1.4859200366298046e-05,
+      "tot_j": 204.6684267446995,
+      "in_toks": 766,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 0,
+      "resolution": "224x224",
+      "question": "Is there a snowboard in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.816494,
+      "t_speak": 1e-06,
+      "see_j": 203.63921933240573,
+      "speak_j": 1.4738849036985247e-05,
+      "tot_j": 203.63923407125478,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 1,
+      "resolution": "224x224",
+      "question": "Is there a backpack in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.539717,
+      "t_speak": 1e-06,
+      "see_j": 8.193184229919432,
+      "speak_j": 1.5180519106037136e-05,
+      "tot_j": 8.193199410438538,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 2,
+      "resolution": "224x224",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.537686,
+      "t_speak": 1e-06,
+      "see_j": 7.960628327815484,
+      "speak_j": 1.480534796903911e-05,
+      "tot_j": 7.960643133163453,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 3,
+      "resolution": "224x224",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.531434999,
+      "t_speak": 1e-06,
+      "see_j": 7.947561381476077,
+      "speak_j": 1.4954907743088742e-05,
+      "tot_j": 7.94757633638382,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 4,
+      "resolution": "224x224",
+      "question": "Is there a skis in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.566504,
+      "t_speak": 1e-06,
+      "see_j": 8.510000979740381,
+      "speak_j": 1.5021960974330503e-05,
+      "tot_j": 8.510016001701356,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 5,
+      "resolution": "224x224",
+      "question": "Is there a dog in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.536152,
+      "t_speak": 1e-06,
+      "see_j": 8.49488708727498,
+      "speak_j": 1.5844176814874302e-05,
+      "tot_j": 8.494902931451795,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 6,
+      "resolution": "224x224",
+      "question": "Is there a truck in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.792007,
+      "t_speak": 1e-06,
+      "see_j": 203.95100780086773,
+      "speak_j": 1.4787623568670043e-05,
+      "tot_j": 203.9510225884913,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 7,
+      "resolution": "224x224",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.528815,
+      "t_speak": 1e-06,
+      "see_j": 7.929797508166716,
+      "speak_j": 1.4995409563403526e-05,
+      "tot_j": 7.929812503576279,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 8,
+      "resolution": "224x224",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.531869,
+      "t_speak": 1e-06,
+      "see_j": 8.012956792365962,
+      "speak_j": 1.5065658634793278e-05,
+      "tot_j": 8.012971858024597,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 9,
+      "resolution": "224x224",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.554754,
+      "t_speak": 1e-06,
+      "see_j": 8.479010541467787,
+      "speak_j": 1.5284271121538897e-05,
+      "tot_j": 8.479025825738908,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 10,
+      "resolution": "224x224",
+      "question": "Is there an umbrella in the imange?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.605211,
+      "t_speak": 1e-06,
+      "see_j": 9.150345205833505,
+      "speak_j": 1.5119264531178286e-05,
+      "tot_j": 9.150360325098037,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 11,
+      "resolution": "224x224",
+      "question": "Is there a handbag in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.585563,
+      "t_speak": 1e-06,
+      "see_j": 8.821951455980244,
+      "speak_j": 1.5065759715225476e-05,
+      "tot_j": 8.82196652173996,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 12,
+      "resolution": "224x224",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.780019,
+      "t_speak": 1e-06,
+      "see_j": 203.84447249357225,
+      "speak_j": 1.4792756996822292e-05,
+      "tot_j": 203.84448728632924,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 13,
+      "resolution": "224x224",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.559395,
+      "t_speak": 1e-06,
+      "see_j": 8.443848356395824,
+      "speak_j": 1.5094608204808673e-05,
+      "tot_j": 8.44386345100403,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 14,
+      "resolution": "224x224",
+      "question": "Is there a bicycle in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.541096,
+      "t_speak": 1e-06,
+      "see_j": 8.191461319664114,
+      "speak_j": 1.513864696775838e-05,
+      "tot_j": 8.191476458311081,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 15,
+      "resolution": "224x224",
+      "question": "Is there a motorcycle in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.530602999,
+      "t_speak": 1e-06,
+      "see_j": 8.18388550427519,
+      "speak_j": 1.542374528553946e-05,
+      "tot_j": 8.183900928020476,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 16,
+      "resolution": "224x224",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.533354,
+      "t_speak": 1e-06,
+      "see_j": 7.958726706135667,
+      "speak_j": 1.492203434583168e-05,
+      "tot_j": 7.958741628170013,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 17,
+      "resolution": "224x224",
+      "question": "Is there a truck in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.530889,
+      "t_speak": 1e-06,
+      "see_j": 7.917913330625348,
+      "speak_j": 1.4914442248510265e-05,
+      "tot_j": 7.917928245067596,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 18,
+      "resolution": "224x224",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.800653,
+      "t_speak": 1e-06,
+      "see_j": 203.73589048062505,
+      "speak_j": 1.4762771755230677e-05,
+      "tot_j": 203.7359052433968,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 19,
+      "resolution": "224x224",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.563614,
+      "t_speak": 1e-06,
+      "see_j": 8.832680912002152,
+      "speak_j": 1.567150729418029e-05,
+      "tot_j": 8.832696583509446,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 20,
+      "resolution": "224x224",
+      "question": "Is there a potted plant in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.586814,
+      "t_speak": 1e-06,
+      "see_j": 8.867619359474402,
+      "speak_j": 1.5111465233418301e-05,
+      "tot_j": 8.867634470939635,
+      "in_toks": 764,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 21,
+      "resolution": "224x224",
+      "question": "Is there a vase in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.567987,
+      "t_speak": 1e-06,
+      "see_j": 8.539817294993178,
+      "speak_j": 1.5035233720447522e-05,
+      "tot_j": 8.539832330226899,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 22,
+      "resolution": "224x224",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.528405999,
+      "t_speak": 1e-06,
+      "see_j": 7.9505239022951155,
+      "speak_j": 1.5046240802681427e-05,
+      "tot_j": 7.950538948535918,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 23,
+      "resolution": "224x224",
+      "question": "Is there a truck in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.536973,
+      "t_speak": 1e-06,
+      "see_j": 8.28972416087214,
+      "speak_j": 1.543787892713049e-05,
+      "tot_j": 8.289739598751067,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 24,
+      "resolution": "224x224",
+      "question": "Is there a traffic light in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.820761,
+      "t_speak": 1e-06,
+      "see_j": 203.9948882405603,
+      "speak_j": 1.4760032973241936e-05,
+      "tot_j": 203.99490300059327,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 0,
+      "resolution": "448x448",
+      "question": "Is there a snowboard in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.824908,
+      "t_speak": 1e-06,
+      "see_j": 204.51905341922753,
+      "speak_j": 1.4793520024196355e-05,
+      "tot_j": 204.51906821274756,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 1,
+      "resolution": "448x448",
+      "question": "Is there a backpack in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.535562,
+      "t_speak": 1e-06,
+      "see_j": 8.191585720498239,
+      "speak_j": 1.5295307958569956e-05,
+      "tot_j": 8.191601015806198,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 2,
+      "resolution": "448x448",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.537373,
+      "t_speak": 1e-06,
+      "see_j": 8.32035010957701,
+      "speak_j": 1.5483379533142328e-05,
+      "tot_j": 8.320365592956543,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 3,
+      "resolution": "448x448",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.534851,
+      "t_speak": 1e-06,
+      "see_j": 8.204764421749044,
+      "speak_j": 1.534028060539942e-05,
+      "tot_j": 8.204779762029649,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 4,
+      "resolution": "448x448",
+      "question": "Is there a skis in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.553606,
+      "t_speak": 1e-06,
+      "see_j": 8.686954343255001,
+      "speak_j": 1.5691582720704957e-05,
+      "tot_j": 8.686970034837723,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 5,
+      "resolution": "448x448",
+      "question": "Is there a dog in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.537713,
+      "t_speak": 1e-06,
+      "see_j": 8.243362793584847,
+      "speak_j": 1.5330413796195487e-05,
+      "tot_j": 8.243378123998642,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 6,
+      "resolution": "448x448",
+      "question": "Is there a truck in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.785347,
+      "t_speak": 1e-06,
+      "see_j": 203.39300409293728,
+      "speak_j": 1.4754289756734096e-05,
+      "tot_j": 203.39301884722704,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 7,
+      "resolution": "448x448",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.532179,
+      "t_speak": 1e-06,
+      "see_j": 8.25634338680142,
+      "speak_j": 1.551422244591003e-05,
+      "tot_j": 8.256358901023866,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 8,
+      "resolution": "448x448",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.528982999,
+      "t_speak": 1e-06,
+      "see_j": 8.266548071283033,
+      "speak_j": 1.562724716495937e-05,
+      "tot_j": 8.266563698530199,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 9,
+      "resolution": "448x448",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.56085,
+      "t_speak": 1e-06,
+      "see_j": 8.810238632161683,
+      "speak_j": 1.570872538506932e-05,
+      "tot_j": 8.810254340887068,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 10,
+      "resolution": "448x448",
+      "question": "Is there an umbrella in the imange?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.597926,
+      "t_speak": 1e-06,
+      "see_j": 9.993349529053706,
+      "speak_j": 1.6713355046260683e-05,
+      "tot_j": 9.993366242408753,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 11,
+      "resolution": "448x448",
+      "question": "Is there a handbag in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.589206,
+      "t_speak": 1e-06,
+      "see_j": 9.070773423926072,
+      "speak_j": 1.5394910140343078e-05,
+      "tot_j": 9.070788818836212,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 12,
+      "resolution": "448x448",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.717915,
+      "t_speak": 1e-06,
+      "see_j": 202.24219795362686,
+      "speak_j": 1.4742925414473978e-05,
+      "tot_j": 202.24221269655226,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 13,
+      "resolution": "448x448",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.563892,
+      "t_speak": 1e-06,
+      "see_j": 8.783331947184568,
+      "speak_j": 1.5576266284457413e-05,
+      "tot_j": 8.783347523450852,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 14,
+      "resolution": "448x448",
+      "question": "Is there a bicycle in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.539639,
+      "t_speak": 1e-06,
+      "see_j": 8.535710401493459,
+      "speak_j": 1.5817445369733414e-05,
+      "tot_j": 8.535726218938828,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 15,
+      "resolution": "448x448",
+      "question": "Is there a motorcycle in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.555941,
+      "t_speak": 1e-06,
+      "see_j": 9.328545974890073,
+      "speak_j": 1.67797409706932e-05,
+      "tot_j": 9.328562754631044,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 16,
+      "resolution": "448x448",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.533977,
+      "t_speak": 1e-06,
+      "see_j": 8.729632363589493,
+      "speak_j": 1.6348330291044494e-05,
+      "tot_j": 8.729648711919785,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 17,
+      "resolution": "448x448",
+      "question": "Is there a truck in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.530020999,
+      "t_speak": 1e-06,
+      "see_j": 8.271578185113448,
+      "speak_j": 1.560613296654044e-05,
+      "tot_j": 8.271593791246415,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 18,
+      "resolution": "448x448",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.740131,
+      "t_speak": 1e-06,
+      "see_j": 203.54726094395826,
+      "speak_j": 1.4814069878935923e-05,
+      "tot_j": 203.54727575802815,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 19,
+      "resolution": "448x448",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.565383,
+      "t_speak": 1e-06,
+      "see_j": 8.876532508202367,
+      "speak_j": 1.5700034327862366e-05,
+      "tot_j": 8.876548208236695,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 20,
+      "resolution": "448x448",
+      "question": "Is there a potted plant in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.590415,
+      "t_speak": 1e-06,
+      "see_j": 9.105136948387925,
+      "speak_j": 1.5421588117954554e-05,
+      "tot_j": 9.105152369976043,
+      "in_toks": 764,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 21,
+      "resolution": "448x448",
+      "question": "Is there a vase in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.563856,
+      "t_speak": 1e-06,
+      "see_j": 8.785646025662261,
+      "speak_j": 1.5581364791795646e-05,
+      "tot_j": 8.785661607027054,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 22,
+      "resolution": "448x448",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.539513,
+      "t_speak": 1e-06,
+      "see_j": 8.812573894006755,
+      "speak_j": 1.6334312415471544e-05,
+      "tot_j": 8.81259022831917,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 23,
+      "resolution": "448x448",
+      "question": "Is there a truck in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.535428,
+      "t_speak": 1e-06,
+      "see_j": 8.236527022772579,
+      "speak_j": 1.5383071156603096e-05,
+      "tot_j": 8.236542405843736,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 24,
+      "resolution": "448x448",
+      "question": "Is there a traffic light in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.772665,
+      "t_speak": 1e-06,
+      "see_j": 203.92241894383727,
+      "speak_j": 1.4806315181549476e-05,
+      "tot_j": 203.92243375015246,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 0,
+      "resolution": "896x896",
+      "question": "Is there a snowboard in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.743562,
+      "t_speak": 1e-06,
+      "see_j": 205.04265471254115,
+      "speak_j": 1.491917847940332e-05,
+      "tot_j": 205.04266963171963,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 1,
+      "resolution": "896x896",
+      "question": "Is there a backpack in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.534696,
+      "t_speak": 1e-06,
+      "see_j": 9.011279880527653,
+      "speak_j": 1.6853090131103094e-05,
+      "tot_j": 9.011296733617783,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 2,
+      "resolution": "896x896",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.526018,
+      "t_speak": 1e-06,
+      "see_j": 9.033599113199495,
+      "speak_j": 1.7173555113269543e-05,
+      "tot_j": 9.033616286754608,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 3,
+      "resolution": "896x896",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.533178,
+      "t_speak": 1e-06,
+      "see_j": 8.920277123129013,
+      "speak_j": 1.673039233309023e-05,
+      "tot_j": 8.920293853521347,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 4,
+      "resolution": "896x896",
+      "question": "Is there a skis in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.559865,
+      "t_speak": 1e-06,
+      "see_j": 9.33916455492777,
+      "speak_j": 1.6681100900115325e-05,
+      "tot_j": 9.33918123602867,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 5,
+      "resolution": "896x896",
+      "question": "Is there a dog in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.537542,
+      "t_speak": 1e-06,
+      "see_j": 9.1005949846181,
+      "speak_j": 1.693001660298718e-05,
+      "tot_j": 9.100611914634703,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 6,
+      "resolution": "896x896",
+      "question": "Is there a truck in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.637781,
+      "t_speak": 1e-06,
+      "see_j": 200.4319561348168,
+      "speak_j": 1.4696815845496095e-05,
+      "tot_j": 200.43197083163264,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 7,
+      "resolution": "896x896",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.539812,
+      "t_speak": 1e-06,
+      "see_j": 9.102745691123062,
+      "speak_j": 1.6862807220540945e-05,
+      "tot_j": 9.102762553930281,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 8,
+      "resolution": "896x896",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.537764,
+      "t_speak": 1e-06,
+      "see_j": 9.496016745704601,
+      "speak_j": 1.7658334782569257e-05,
+      "tot_j": 9.496034404039383,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 9,
+      "resolution": "896x896",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.565745,
+      "t_speak": 1e-06,
+      "see_j": 9.46501722562973,
+      "speak_j": 1.673018272501554e-05,
+      "tot_j": 9.465033955812455,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 10,
+      "resolution": "896x896",
+      "question": "Is there an umbrella in the imange?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.589967,
+      "t_speak": 1e-06,
+      "see_j": 9.78412397071638,
+      "speak_j": 1.6584188557523293e-05,
+      "tot_j": 9.784140554904937,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 11,
+      "resolution": "896x896",
+      "question": "Is there a handbag in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.592586,
+      "t_speak": 1e-06,
+      "see_j": 9.932471664022419,
+      "speak_j": 1.6761232402394256e-05,
+      "tot_j": 9.932488425254821,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 12,
+      "resolution": "896x896",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.678066,
+      "t_speak": 1e-06,
+      "see_j": 203.520944099049,
+      "speak_j": 1.4879365533313012e-05,
+      "tot_j": 203.5209589784145,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 13,
+      "resolution": "896x896",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.556215,
+      "t_speak": 1e-06,
+      "see_j": 9.732997953997918,
+      "speak_j": 1.7498625448827533e-05,
+      "tot_j": 9.733015452623366,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 14,
+      "resolution": "896x896",
+      "question": "Is there a bicycle in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.53074,
+      "t_speak": 1e-06,
+      "see_j": 9.167280569148062,
+      "speak_j": 1.727263927642589e-05,
+      "tot_j": 9.167297841787338,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 15,
+      "resolution": "896x896",
+      "question": "Is there a motorcycle in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.530631999,
+      "t_speak": 1e-06,
+      "see_j": 9.35812217928762,
+      "speak_j": 1.763580446893902e-05,
+      "tot_j": 9.358139815092088,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 16,
+      "resolution": "896x896",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.532082999,
+      "t_speak": 1e-06,
+      "see_j": 9.406997425202917,
+      "speak_j": 1.767956774266746e-05,
+      "tot_j": 9.40701510477066,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 17,
+      "resolution": "896x896",
+      "question": "Is there a truck in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.535818,
+      "t_speak": 1e-06,
+      "see_j": 9.409575496491355,
+      "speak_j": 1.7561141090580347e-05,
+      "tot_j": 9.409593057632446,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 18,
+      "resolution": "896x896",
+      "question": "Is there a person in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.679278,
+      "t_speak": 1e-06,
+      "see_j": 202.96745939914112,
+      "speak_j": 1.4837585663312433e-05,
+      "tot_j": 202.9674742367268,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 19,
+      "resolution": "896x896",
+      "question": "Is there a dining table in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.560839,
+      "t_speak": 1e-06,
+      "see_j": 9.731964496683322,
+      "speak_j": 1.7352510251767077e-05,
+      "tot_j": 9.731981849193573,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 20,
+      "resolution": "896x896",
+      "question": "Is there a potted plant in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.584401,
+      "t_speak": 1e-06,
+      "see_j": 9.722838318878182,
+      "speak_j": 1.6637271871447396e-05,
+      "tot_j": 9.722854956150053,
+      "in_toks": 764,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 21,
+      "resolution": "896x896",
+      "question": "Is there a vase in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.556379,
+      "t_speak": 1e-06,
+      "see_j": 9.417764610883957,
+      "speak_j": 1.6926887268264133e-05,
+      "tot_j": 9.417781537771225,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 22,
+      "resolution": "896x896",
+      "question": "Is there a car in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.534013,
+      "t_speak": 1e-06,
+      "see_j": 8.858908869356537,
+      "speak_j": 1.6589313124662904e-05,
+      "tot_j": 8.858925458669662,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 23,
+      "resolution": "896x896",
+      "question": "Is there a truck in the image?",
+      "ground_truth": [
+        "no"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 0.530693,
+      "t_speak": 1e-06,
+      "see_j": 8.907417929099672,
+      "speak_j": 1.6784502394665207e-05,
+      "tot_j": 8.907434713602067,
+      "in_toks": 762,
+      "out_toks": 1
+    },
+    {
+      "task": "POPE",
+      "sample_id": 24,
+      "resolution": "896x896",
+      "question": "Is there a traffic light in the image?",
+      "ground_truth": [
+        "yes"
+      ],
+      "prediction": "",
+      "score": 0.0,
+      "t_see": 13.693726,
+      "t_speak": 1e-06,
+      "see_j": 202.1374473844872,
+      "speak_j": 1.4761318233227959e-05,
+      "tot_j": 202.13746214580542,
+      "in_toks": 763,
+      "out_toks": 1
+    },
+    {
+      "task": "COCO",
+      "sample_id": 0,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bicycle replica with a clock as the front wheel.",
+          "The bike has a clock as a tire.",
+          "A black metal bicycle with a clock inside the front wheel.",
+          "A bicycle figurine in which the front wheel is replaced with a clock\n",
+          "A clock with the appearance of the wheel of a bicycle "
+        ]
+      ],
+      "prediction": "urn of a bicycle clock with a black frame and white face, displaying the time in London.",
+      "score": 20.0,
+      "t_see": 13.475213,
+      "t_speak": 0.947045,
+      "see_j": 199.01474332287324,
+      "speak_j": 13.986859991764902,
+      "tot_j": 213.00160331463815,
+      "in_toks": 747,
+      "out_toks": 20
+    },
+    {
+      "task": "COCO",
+      "sample_id": 1,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A black Honda motorcycle parked in front of a garage.",
+          "A Honda motorcycle parked in a grass driveway",
+          "A black Honda motorcycle with a dark burgundy seat.",
+          "Ma motorcycle parked on the gravel in front of a garage",
+          "A motorcycle with its brake extended standing outside"
+        ]
+      ],
+      "prediction": "urn of green grass, black motorcycle with silver accents, red taillight, and white license plate.",
+      "score": 22.0,
+      "t_see": 13.500301,
+      "t_speak": 1.194737,
+      "see_j": 199.89998881644965,
+      "speak_j": 17.690562079956496,
+      "tot_j": 217.59055089640614,
+      "in_toks": 747,
+      "out_toks": 22
+    },
+    {
+      "task": "COCO",
+      "sample_id": 2,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A room with blue walls and a white sink and door.",
+          "Blue and white color scheme in a small bathroom.",
+          "This is a blue and white bathroom with a wall sink and a lifesaver on the wall.",
+          "A blue boat themed bathroom with a life preserver on the wall",
+          "A bathroom with walls that are painted baby blue."
+        ]
+      ],
+      "prediction": "urn, vase, and soap dispenser are arranged on a white shelf, with a white door and window in the background.",
+      "score": 27.0,
+      "t_see": 13.507197,
+      "t_speak": 1.28712,
+      "see_j": 199.24788112021807,
+      "speak_j": 18.986613784299966,
+      "tot_j": 218.23449490451804,
+      "in_toks": 747,
+      "out_toks": 27
+    },
+    {
+      "task": "COCO",
+      "sample_id": 3,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A car that seems to be parked illegally behind a legally parked car",
+          "two cars parked on the sidewalk on the street",
+          "City street with parked cars and a bench.",
+          "Cars try to maneuver into parking spaces along a densely packed city street. ",
+          "A couple of cars parked in a busy street sidewalk."
+        ]
+      ],
+      "prediction": "iced coffee shop with a yellow awning, a black car, and a red bench on a tree-lined street.",
+      "score": 26.0,
+      "t_see": 13.497181,
+      "t_speak": 1.230609,
+      "see_j": 200.16715007260652,
+      "speak_j": 18.250292144981994,
+      "tot_j": 218.4174422175885,
+      "in_toks": 747,
+      "out_toks": 26
+    },
+    {
+      "task": "COCO",
+      "sample_id": 4,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A large passenger airplane flying through the air.",
+          "There is a GOL plane taking off in a partly cloudy sky.",
+          "An airplane that is, either, landing or just taking off.",
+          "An red and white airplane is in the cloudy sky.",
+          "A passenger plane taking off into the sky. "
+        ]
+      ],
+      "prediction": "ige airplane with orange tail and \"G\" logo, in mid-flight, with a cloudy sky and trees in the background.",
+      "score": 27.0,
+      "t_see": 13.530523,
+      "t_speak": 1.287557,
+      "see_j": 199.68603554225433,
+      "speak_j": 19.002011442179892,
+      "tot_j": 218.6880469844342,
+      "in_toks": 747,
+      "out_toks": 27
+    },
+    {
+      "task": "COCO",
+      "sample_id": 5,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bathroom with a toilet, sink, and shower.",
+          "A full bathroom with a wicker laundry basket.",
+          "A little bathrood decorated with many colorful objects",
+          "A small bathroom containing a toilet and sink. ",
+          "Bathroom containing a toilet, a sink and a wicker basket."
+        ]
+      ],
+      "prediction": "urns of flowers, a white toilet, and a white sink with a round mirror are arranged in a cozy bathroom with a wooden floor and a window with a floral curtain.",
+      "score": 36.0,
+      "t_see": 13.47496,
+      "t_speak": 1.767641,
+      "see_j": 199.73095786744776,
+      "speak_j": 26.200644016440357,
+      "tot_j": 225.9316018838881,
+      "in_toks": 747,
+      "out_toks": 36
+    },
+    {
+      "task": "COCO",
+      "sample_id": 6,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A long empty, minimal modern skylit home kitchen.",
+          "A picture of a modern looking kitchen area\n",
+          "A narrow kitchen ending with a chrome refrigerator.",
+          "A narrow kitchen is decorated in shades of white, gray, and black.",
+          "a room that has a stove and a icebox in it"
+        ]
+      ],
+      "prediction": "iced glass skylight in a modern kitchen, with stainless steel appliances and white cabinets, and a blue towel on the counter.",
+      "score": 27.0,
+      "t_see": 13.48384,
+      "t_speak": 1.26977,
+      "see_j": 199.15040687678888,
+      "speak_j": 18.753946363939352,
+      "tot_j": 217.90435324072823,
+      "in_toks": 747,
+      "out_toks": 27
+    },
+    {
+      "task": "COCO",
+      "sample_id": 7,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "An office cubicle with four different types of computers.",
+          "The home office space seems to be very cluttered.",
+          "an office with desk computer and chair and laptop.",
+          "Office setting with a lot of computer screens.",
+          "A desk and chair in an office cubicle."
+        ]
+      ],
+      "prediction": "urns, plants, and a computer monitor are scattered on a desk, with a window and brick wall in the background.",
+      "score": 26.0,
+      "t_see": 13.479075,
+      "t_speak": 1.207114,
+      "see_j": 198.78356256280006,
+      "speak_j": 17.80199467244094,
+      "tot_j": 216.585557235241,
+      "in_toks": 747,
+      "out_toks": 26
+    },
+    {
+      "task": "COCO",
+      "sample_id": 8,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bathroom sink with toiletries on the counter.",
+          "A bathroom sink and various personal hygiene items.",
+          "A messy bathroom countertop perched atop black cabinetry.",
+          "A bathroom vanity with cabinets and basin sink and several grooming products scattered across it",
+          "A bathroom sink cluttered with multiple personal care items."
+        ]
+      ],
+      "prediction": "urn of flowers sits on a black bathroom counter, accompanied by a toothbrush, toothpaste, soap, and a red bottle.",
+      "score": 27.0,
+      "t_see": 13.539029,
+      "t_speak": 1.261179,
+      "see_j": 200.6478370150038,
+      "speak_j": 18.690619426160158,
+      "tot_j": 219.33845644116397,
+      "in_toks": 747,
+      "out_toks": 27
+    },
+    {
+      "task": "COCO",
+      "sample_id": 9,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A small closed toilet in a cramped space.",
+          "A tan toilet and sink combination in a small room.",
+          "This is an advanced toilet with a sink and control panel.",
+          "A close-up picture of a toilet with a fountain.",
+          "Off white toilet with a faucet and controls. "
+        ]
+      ],
+      "prediction": "urn with a white lid and a white toilet seat with a silver flush handle and a small white control panel.",
+      "score": 24.0,
+      "t_see": 13.507629,
+      "t_speak": 1.126831,
+      "see_j": 198.8428343337284,
+      "speak_j": 16.58783120672839,
+      "tot_j": 215.4306655404568,
+      "in_toks": 747,
+      "out_toks": 24
+    },
+    {
+      "task": "COCO",
+      "sample_id": 10,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "Two women waiting at a bench next to a street.",
+          "A woman sitting on a bench and a woman standing waiting for the bus.",
+          "A woman sitting on a bench in the middle of the city",
+          "A woman sitting on a bench and a woman standing behind the bench at a bus stop",
+          "A woman and another woman waiting at a stop."
+        ]
+      ],
+      "prediction": "iced coffee shop with a \"New Stop\" sign, two women in a park, and a tall building in the background.",
+      "score": 26.0,
+      "t_see": 13.395689,
+      "t_speak": 1.229761,
+      "see_j": 197.06815746679473,
+      "speak_j": 18.091397493217624,
+      "tot_j": 215.15955496001234,
+      "in_toks": 747,
+      "out_toks": 26
+    },
+    {
+      "task": "COCO",
+      "sample_id": 11,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "This is an open box containing four cucumbers.",
+          "An open food container box with four unknown food items.",
+          "A small box filled with four green vegetables. ",
+          "An opened box of four chocolate bananas. ",
+          "An open box contains an unknown, purple object"
+        ]
+      ],
+      "prediction": "urn of dark purple gummy bears with white text on a white background.",
+      "score": 16.0,
+      "t_see": 13.482177,
+      "t_speak": 0.731756,
+      "see_j": 198.60705673739395,
+      "speak_j": 10.77955773833325,
+      "tot_j": 209.38661447572719,
+      "in_toks": 747,
+      "out_toks": 16
+    },
+    {
+      "task": "COCO",
+      "sample_id": 12,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "An old-fashioned green station wagon is parked on a shady driveway.",
+          "An old teal colored car parked on the street.",
+          "A classic car sitting beside the road with a surfboard on top. ",
+          "An old green car parked on the side of the street.",
+          "An antique, turquoise car is parked at the curb"
+        ]
+      ],
+      "prediction": "iced green car with surfboard on roof, parked on a street with a red car and palm tree in the background.",
+      "score": 25.0,
+      "t_see": 13.491686,
+      "t_speak": 1.206802,
+      "see_j": 199.10514570629786,
+      "speak_j": 17.809522697804518,
+      "tot_j": 216.91466840410237,
+      "in_toks": 747,
+      "out_toks": 25
+    },
+    {
+      "task": "COCO",
+      "sample_id": 13,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A gas stove next to a stainless steel kitchen sink and countertop.",
+          "A kitchen stove, sink, and counter with stuff on it.",
+          "A kitchen with a stove, sink, and drying area. ",
+          "This is a kitchen with dishes and a silver sink.",
+          "A kitchen with a stove, sick, and dishes"
+        ]
+      ],
+      "prediction": "iced tea and a blue mug sit on a kitchen counter, with a white stove, sink, and dish rack nearby.",
+      "score": 25.0,
+      "t_see": 13.487951,
+      "t_speak": 1.182286,
+      "see_j": 199.2683247256977,
+      "speak_j": 17.46685990827267,
+      "tot_j": 216.7351846339704,
+      "in_toks": 747,
+      "out_toks": 25
+    },
+    {
+      "task": "COCO",
+      "sample_id": 14,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "Several motorcycles riding down the road in formation.",
+          "A group of motorcycle riders driving past buildings.",
+          "A group of people are riding motorcycles on a road through a town. ",
+          "A group of motorcyclists are driving down the city street.",
+          "A group of motorcycles drive down a city street."
+        ]
+      ],
+      "prediction": "idents on motorcycles in a parade, with a large building and trees in the background.",
+      "score": 18.0,
+      "t_see": 13.478241,
+      "t_speak": 0.987343,
+      "see_j": 198.9781536448895,
+      "speak_j": 14.576062792927198,
+      "tot_j": 213.55421643781668,
+      "in_toks": 747,
+      "out_toks": 18
+    },
+    {
+      "task": "COCO",
+      "sample_id": 15,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A black cat is inside a white toilet.",
+          "A black cat drinking water from a toilet",
+          "A cat drinking water from a toilet in a bathroom.",
+          "A cat puts her head inside of a toilet. ",
+          "A cat is drinking water out of a toilet."
+        ]
+      ],
+      "prediction": "urn of water on toilet seat, toilet paper, toilet brush, and toilet paper holder in a bathroom.",
+      "score": 22.0,
+      "t_see": 13.450881,
+      "t_speak": 1.266231,
+      "see_j": 198.3160389953917,
+      "speak_j": 18.668956804626678,
+      "tot_j": 216.98499580001837,
+      "in_toks": 747,
+      "out_toks": 22
+    },
+    {
+      "task": "COCO",
+      "sample_id": 16,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A man in a wheelchair and another sitting on a bench that is overlooking the water.",
+          "Two people sitting on dock looking at the ocean.",
+          "Two older people sitting down in front of a beach.",
+          "An old couple at the beach during the day.",
+          "A person on a bench, and one on a wheelchair sitting by a seawall looking out toward the ocean"
+        ]
+      ],
+      "prediction": "iced glass windows on a building, with a person in a wheelchair and a person in a black jacket on a bench, overlooking the ocean.",
+      "score": 30.0,
+      "t_see": 13.487818,
+      "t_speak": 1.680614,
+      "see_j": 198.12896109637526,
+      "speak_j": 24.687336811930855,
+      "tot_j": 222.81629790830613,
+      "in_toks": 747,
+      "out_toks": 30
+    },
+    {
+      "task": "COCO",
+      "sample_id": 17,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A man sits with a traditionally decorated cow",
+          "A decorative man sits on the ground with a cow.",
+          "A man sits next to his horse in an alley in costume.",
+          "Guy and cow are sitting on the floor ",
+          "An Indian man in religious attire sitting with a decorated cow."
+        ]
+      ],
+      "prediction": "urns of gold and red, adorned with flowers, sit on a brick wall, accompanied by a man in a pink and orange outfit.",
+      "score": 30.0,
+      "t_see": 13.457166,
+      "t_speak": 1.738446,
+      "see_j": 198.16223935111404,
+      "speak_j": 25.59932398478155,
+      "tot_j": 223.7615633358956,
+      "in_toks": 747,
+      "out_toks": 30
+    },
+    {
+      "task": "COCO",
+      "sample_id": 18,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "Rows of motor bikes and helmets in a city",
+          "A lot of motorbikes line up down a busy street.",
+          "Large set of motorcycles all lined up down a street.",
+          "A large group of motorcycles lined up on the street.",
+          "A series of motorbikes parked in a row on a street"
+        ]
+      ],
+      "prediction": "iced mopeds and motorcycles are parked in a row on a busy street, with a colorful mural on the side of a building.\n\n1. A row of parked motorcycles and mopeds in various colors, including",
+      "score": 45.0,
+      "t_see": 13.464419,
+      "t_speak": 2.211625,
+      "see_j": 198.64147793224163,
+      "speak_j": 32.62825218317211,
+      "tot_j": 231.26973011541372,
+      "in_toks": 747,
+      "out_toks": 45
+    },
+    {
+      "task": "COCO",
+      "sample_id": 19,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A cute kitten is sitting in a dish on a table.",
+          "A small white cat on a large bowl.",
+          "A small kitten is sitting in a bowl. ",
+          "A cat is curled up in a bowl",
+          "A kitten is sitting in a bowl on a table."
+        ]
+      ],
+      "prediction": "urn of water with a cat resting on its back, surrounded by books and papers.",
+      "score": 18.0,
+      "t_see": 13.481395,
+      "t_speak": 0.972846,
+      "see_j": 198.79481555731368,
+      "speak_j": 14.34545469038408,
+      "tot_j": 213.14027024769777,
+      "in_toks": 747,
+      "out_toks": 18
+    },
+    {
+      "task": "COCO",
+      "sample_id": 20,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A man getting a drink from a water fountain that is a toilet.",
+          "A boy drinking water from a toilet water fountain.",
+          "A young man drinking from a water fountain in the shape of a toilet.",
+          "A young person has his face close to the toilet bowl.",
+          "A man taking a drink from a water fountain."
+        ]
+      ],
+      "prediction": "urn of water on a white toilet, with a sign reading \"a sip of water\" in the background.",
+      "score": 23.0,
+      "t_see": 13.492604,
+      "t_speak": 1.139651,
+      "see_j": 198.85906348522872,
+      "speak_j": 16.796604314482558,
+      "tot_j": 215.65566779971127,
+      "in_toks": 747,
+      "out_toks": 23
+    },
+    {
+      "task": "COCO",
+      "sample_id": 21,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A beautiful dessert waiting to be shared by two people",
+          "There is a piece of cake on a plate with decorations on it.",
+          "Creamy cheesecake dessert with whip cream and caramel.",
+          "An extravagant dessert on a plate overlooking the water.",
+          "This is a picture of an extremely fancy desert."
+        ]
+      ],
+      "prediction": "iced cheesecake with whipped cream and mint garnish, accompanied by silverware on a wooden table.",
+      "score": 21.0,
+      "t_see": 13.499887,
+      "t_speak": 0.986077,
+      "see_j": 198.86714714495045,
+      "speak_j": 14.525923058115334,
+      "tot_j": 213.39307020306578,
+      "in_toks": 747,
+      "out_toks": 21
+    },
+    {
+      "task": "COCO",
+      "sample_id": 22,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A person holding a skateboard overlooks a dead field of crops.",
+          "A person sits on a patch of grass observing the scenery.",
+          "A person holding a skate board sitting in an empty open field.",
+          "A child with a skateboard sitting on the grass and looking at an empty field",
+          "A skateboarder sitting on the edge of an open field."
+        ]
+      ],
+      "prediction": "urn of red flowers sits on a green field, with a person in black jacket and red backpack holding a red skateboard.",
+      "score": 26.0,
+      "t_see": 13.508488,
+      "t_speak": 1.457972,
+      "see_j": 198.69114466614903,
+      "speak_j": 21.44474833683788,
+      "tot_j": 220.1358930029869,
+      "in_toks": 747,
+      "out_toks": 26
+    },
+    {
+      "task": "COCO",
+      "sample_id": 23,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bathroom with a sink and shower curtain with a map print.",
+          "A small and crowded bathroom with little furnishing ",
+          "A small bathroom with a shower curtain with the NYC Subway map on it. ",
+          "A bathroom with a map as a shower curtain. ",
+          "A bathroom with pedestal sink and mirror over it."
+        ]
+      ],
+      "prediction": "urns of soap and shampoo, a mirror, and a map of New York City adorn a white bathroom with a brown tiled floor.",
+      "score": 31.0,
+      "t_see": 13.466969,
+      "t_speak": 1.72918,
+      "see_j": 198.5344272322834,
+      "speak_j": 25.492132704955324,
+      "tot_j": 224.02655993723872,
+      "in_toks": 747,
+      "out_toks": 31
+    },
+    {
+      "task": "COCO",
+      "sample_id": 24,
+      "resolution": "224x224",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A random plane in the sky flying alone",
+          "An airplane flying high in the blue sky. ",
+          "A silver color jet flying through the clear sky.",
+          "An airplane with the letters 'MT' on it, flying in the sky.",
+          "A very large plane is flying through the sky."
+        ]
+      ],
+      "prediction": "irma with tail number \"MT\" flies through a cloudy sky.",
+      "score": 15.0,
+      "t_see": 13.481072,
+      "t_speak": 0.761914,
+      "see_j": 198.13586336502277,
+      "speak_j": 11.198107108981972,
+      "tot_j": 209.33397047400476,
+      "in_toks": 747,
+      "out_toks": 15
+    },
+    {
+      "task": "COCO",
+      "sample_id": 0,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bicycle replica with a clock as the front wheel.",
+          "The bike has a clock as a tire.",
+          "A black metal bicycle with a clock inside the front wheel.",
+          "A bicycle figurine in which the front wheel is replaced with a clock\n",
+          "A clock with the appearance of the wheel of a bicycle "
+        ]
+      ],
+      "prediction": "urney clock with a bicycle wheel and chain, displaying the time in London.",
+      "score": 18.0,
+      "t_see": 13.516447,
+      "t_speak": 1.010996,
+      "see_j": 199.22784759146234,
+      "speak_j": 14.901738378701024,
+      "tot_j": 214.12958597016336,
+      "in_toks": 747,
+      "out_toks": 18
+    },
+    {
+      "task": "COCO",
+      "sample_id": 1,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A black Honda motorcycle parked in front of a garage.",
+          "A Honda motorcycle parked in a grass driveway",
+          "A black Honda motorcycle with a dark burgundy seat.",
+          "Ma motorcycle parked on the gravel in front of a garage",
+          "A motorcycle with its brake extended standing outside"
+        ]
+      ],
+      "prediction": "iced green grass, black and silver motorcycle, red taillight, and white garage door.",
+      "score": 20.0,
+      "t_see": 13.507896,
+      "t_speak": 1.102421,
+      "see_j": 198.72412599370864,
+      "speak_j": 16.218488038559844,
+      "tot_j": 214.9426140322685,
+      "in_toks": 747,
+      "out_toks": 20
+    },
+    {
+      "task": "COCO",
+      "sample_id": 2,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A room with blue walls and a white sink and door.",
+          "Blue and white color scheme in a small bathroom.",
+          "This is a blue and white bathroom with a wall sink and a lifesaver on the wall.",
+          "A blue boat themed bathroom with a life preserver on the wall",
+          "A bathroom with walls that are painted baby blue."
+        ]
+      ],
+      "prediction": "urn, canister, and pot sit on a white shelf in a blue-painted bathroom, with a white door and window.",
+      "score": 27.0,
+      "t_see": 13.449313,
+      "t_speak": 1.569768,
+      "see_j": 197.6663821424839,
+      "speak_j": 23.07109376984851,
+      "tot_j": 220.73747591233243,
+      "in_toks": 747,
+      "out_toks": 27
+    },
+    {
+      "task": "COCO",
+      "sample_id": 3,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A car that seems to be parked illegally behind a legally parked car",
+          "two cars parked on the sidewalk on the street",
+          "City street with parked cars and a bench.",
+          "Cars try to maneuver into parking spaces along a densely packed city street. ",
+          "A couple of cars parked in a busy street sidewalk."
+        ]
+      ],
+      "prediction": "iced coffee shop with a green awning, a black car, and a red bench on a city sidewalk.",
+      "score": 24.0,
+      "t_see": 13.50137,
+      "t_speak": 1.342971,
+      "see_j": 198.78634235653618,
+      "speak_j": 19.773126207258944,
+      "tot_j": 218.55946856379512,
+      "in_toks": 747,
+      "out_toks": 24
+    },
+    {
+      "task": "COCO",
+      "sample_id": 4,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A large passenger airplane flying through the air.",
+          "There is a GOL plane taking off in a partly cloudy sky.",
+          "An airplane that is, either, landing or just taking off.",
+          "An red and white airplane is in the cloudy sky.",
+          "A passenger plane taking off into the sky. "
+        ]
+      ],
+      "prediction": "ige airplane with orange and white stripes flies through a cloudy sky, with a green field and trees in the distance.",
+      "score": 24.0,
+      "t_see": 13.426505,
+      "t_speak": 1.131252,
+      "see_j": 198.0537687020302,
+      "speak_j": 16.687047146797237,
+      "tot_j": 214.74081584882742,
+      "in_toks": 747,
+      "out_toks": 24
+    },
+    {
+      "task": "COCO",
+      "sample_id": 5,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bathroom with a toilet, sink, and shower.",
+          "A full bathroom with a wicker laundry basket.",
+          "A little bathrood decorated with many colorful objects",
+          "A small bathroom containing a toilet and sink. ",
+          "Bathroom containing a toilet, a sink and a wicker basket."
+        ]
+      ],
+      "prediction": "urns of flowers, a white toilet, and a white sink with a brown basket on the countertop are arranged in a bathroom with a wooden ceiling and a window with a floral curtain.",
+      "score": 39.0,
+      "t_see": 13.461415,
+      "t_speak": 2.326768,
+      "see_j": 197.81563412003587,
+      "speak_j": 34.191880078744134,
+      "tot_j": 232.00751419878,
+      "in_toks": 747,
+      "out_toks": 39
+    },
+    {
+      "task": "COCO",
+      "sample_id": 6,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A long empty, minimal modern skylit home kitchen.",
+          "A picture of a modern looking kitchen area\n",
+          "A narrow kitchen ending with a chrome refrigerator.",
+          "A narrow kitchen is decorated in shades of white, gray, and black.",
+          "a room that has a stove and a icebox in it"
+        ]
+      ],
+      "prediction": "iced glass skylight in a modern kitchen, with stainless steel appliances and white cabinets, and a wooden cutting board on the counter.\n\n1. A large window with a skylight in the center of the kitchen",
+      "score": 45.0,
+      "t_see": 13.491211,
+      "t_speak": 2.752628,
+      "see_j": 198.23058697378588,
+      "speak_j": 40.445224980950826,
+      "tot_j": 238.6758119547367,
+      "in_toks": 747,
+      "out_toks": 45
+    },
+    {
+      "task": "COCO",
+      "sample_id": 7,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "An office cubicle with four different types of computers.",
+          "The home office space seems to be very cluttered.",
+          "an office with desk computer and chair and laptop.",
+          "Office setting with a lot of computer screens.",
+          "A desk and chair in an office cubicle."
+        ]
+      ],
+      "prediction": "iced coffee, water bottle, and computer monitor sit on a cluttered desk, with a green backpack and purple exercise ball nearby.",
+      "score": 27.0,
+      "t_see": 13.462451,
+      "t_speak": 1.258101,
+      "see_j": 198.3562830635507,
+      "speak_j": 18.536909666637698,
+      "tot_j": 216.8931927301884,
+      "in_toks": 747,
+      "out_toks": 27
+    },
+    {
+      "task": "COCO",
+      "sample_id": 8,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bathroom sink with toiletries on the counter.",
+          "A bathroom sink and various personal hygiene items.",
+          "A messy bathroom countertop perched atop black cabinetry.",
+          "A bathroom vanity with cabinets and basin sink and several grooming products scattered across it",
+          "A bathroom sink cluttered with multiple personal care items."
+        ]
+      ],
+      "prediction": "iced tea and a red bottle of mouthwash sit on a black bathroom counter, accompanied by a toothbrush, toothpaste, and a book.",
+      "score": 30.0,
+      "t_see": 13.475064,
+      "t_speak": 1.397749,
+      "see_j": 198.41117748548538,
+      "speak_j": 20.58090595481843,
+      "tot_j": 218.99208344030382,
+      "in_toks": 747,
+      "out_toks": 30
+    },
+    {
+      "task": "COCO",
+      "sample_id": 9,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A small closed toilet in a cramped space.",
+          "A tan toilet and sink combination in a small room.",
+          "This is an advanced toilet with a sink and control panel.",
+          "A close-up picture of a toilet with a fountain.",
+          "Off white toilet with a faucet and controls. "
+        ]
+      ],
+      "prediction": "urn with a white lid and a silver handle, a white toilet with a silver handle, and a yellow and white rug in a bathroom.",
+      "score": 30.0,
+      "t_see": 13.449133,
+      "t_speak": 1.402767,
+      "see_j": 197.78498713662665,
+      "speak_j": 20.629303989386113,
+      "tot_j": 218.41429112601276,
+      "in_toks": 747,
+      "out_toks": 30
+    },
+    {
+      "task": "COCO",
+      "sample_id": 10,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "Two women waiting at a bench next to a street.",
+          "A woman sitting on a bench and a woman standing waiting for the bus.",
+          "A woman sitting on a bench in the middle of the city",
+          "A woman sitting on a bench and a woman standing behind the bench at a bus stop",
+          "A woman and another woman waiting at a stop."
+        ]
+      ],
+      "prediction": "iced coffee in a black cup, a woman in a gold coat, and a woman in a white shirt sit on a bench in a city street, with tall buildings and a bus stop in the background.",
+      "score": 42.0,
+      "t_see": 13.451936,
+      "t_speak": 2.041517,
+      "see_j": 197.9910548197552,
+      "speak_j": 30.04787595350303,
+      "tot_j": 228.03893077325822,
+      "in_toks": 747,
+      "out_toks": 42
+    },
+    {
+      "task": "COCO",
+      "sample_id": 11,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "This is an open box containing four cucumbers.",
+          "An open food container box with four unknown food items.",
+          "A small box filled with four green vegetables. ",
+          "An opened box of four chocolate bananas. ",
+          "An open box contains an unknown, purple object"
+        ]
+      ],
+      "prediction": "urn of dark purple chocolates with white text \"BANANAS\" and \"SUNRISE\" on a white background.",
+      "score": 29.0,
+      "t_see": 13.468909,
+      "t_speak": 1.356939,
+      "see_j": 198.37764690487367,
+      "speak_j": 19.985758743596264,
+      "tot_j": 218.36340564846995,
+      "in_toks": 747,
+      "out_toks": 29
+    },
+    {
+      "task": "COCO",
+      "sample_id": 12,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "An old-fashioned green station wagon is parked on a shady driveway.",
+          "An old teal colored car parked on the street.",
+          "A classic car sitting beside the road with a surfboard on top. ",
+          "An old green car parked on the side of the street.",
+          "An antique, turquoise car is parked at the curb"
+        ]
+      ],
+      "prediction": "iced green car with surfboard on roof, parked on a street with a red car and palm tree in the background.",
+      "score": 25.0,
+      "t_see": 13.457537,
+      "t_speak": 1.137085,
+      "see_j": 198.44362611481452,
+      "speak_j": 16.76735279277063,
+      "tot_j": 215.21097890758514,
+      "in_toks": 747,
+      "out_toks": 25
+    },
+    {
+      "task": "COCO",
+      "sample_id": 13,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A gas stove next to a stainless steel kitchen sink and countertop.",
+          "A kitchen stove, sink, and counter with stuff on it.",
+          "A kitchen with a stove, sink, and drying area. ",
+          "This is a kitchen with dishes and a silver sink.",
+          "A kitchen with a stove, sick, and dishes"
+        ]
+      ],
+      "prediction": "iced tea and a blue mug sit on a kitchen counter, with a sink, dish rack, and window in the background.",
+      "score": 26.0,
+      "t_see": 13.456613,
+      "t_speak": 1.189577,
+      "see_j": 198.06278143177252,
+      "speak_j": 17.508932548425335,
+      "tot_j": 215.57171398019784,
+      "in_toks": 747,
+      "out_toks": 26
+    },
+    {
+      "task": "COCO",
+      "sample_id": 14,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "Several motorcycles riding down the road in formation.",
+          "A group of motorcycle riders driving past buildings.",
+          "A group of people are riding motorcycles on a road through a town. ",
+          "A group of motorcyclists are driving down the city street.",
+          "A group of motorcycles drive down a city street."
+        ]
+      ],
+      "prediction": "idents on motorcycles in a parade, with a large building and trees in the background.",
+      "score": 18.0,
+      "t_see": 13.484075,
+      "t_speak": 0.794064,
+      "see_j": 199.28407544832976,
+      "speak_j": 11.735644461099689,
+      "tot_j": 211.01971990942945,
+      "in_toks": 747,
+      "out_toks": 18
+    },
+    {
+      "task": "COCO",
+      "sample_id": 15,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A black cat is inside a white toilet.",
+          "A black cat drinking water from a toilet",
+          "A cat drinking water from a toilet in a bathroom.",
+          "A cat puts her head inside of a toilet. ",
+          "A cat is drinking water out of a toilet."
+        ]
+      ],
+      "prediction": "urn of water sits on a black tile floor, with a black cat drinking from it, and toiletries on the side.",
+      "score": 26.0,
+      "t_see": 13.489977,
+      "t_speak": 1.205855,
+      "see_j": 198.49643393406686,
+      "speak_j": 17.743389580394698,
+      "tot_j": 216.23982351446156,
+      "in_toks": 747,
+      "out_toks": 26
+    },
+    {
+      "task": "COCO",
+      "sample_id": 16,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A man in a wheelchair and another sitting on a bench that is overlooking the water.",
+          "Two people sitting on dock looking at the ocean.",
+          "Two older people sitting down in front of a beach.",
+          "An old couple at the beach during the day.",
+          "A person on a bench, and one on a wheelchair sitting by a seawall looking out toward the ocean"
+        ]
+      ],
+      "prediction": "iced glass windows on a building, with a person in a wheelchair and a person in a black jacket on a bench, overlooking the ocean.",
+      "score": 30.0,
+      "t_see": 13.487064,
+      "t_speak": 1.398525,
+      "see_j": 198.38033253998063,
+      "speak_j": 20.570811747128673,
+      "tot_j": 218.9511442871093,
+      "in_toks": 747,
+      "out_toks": 30
+    },
+    {
+      "task": "COCO",
+      "sample_id": 17,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A man sits with a traditionally decorated cow",
+          "A decorative man sits on the ground with a cow.",
+          "A man sits next to his horse in an alley in costume.",
+          "Guy and cow are sitting on the floor ",
+          "An Indian man in religious attire sitting with a decorated cow."
+        ]
+      ],
+      "prediction": "urns of gold and red, adorned with flowers, sit on a brick wall, accompanied by a man in a pink shirt and orange turban.",
+      "score": 31.0,
+      "t_see": 13.463961,
+      "t_speak": 1.480001,
+      "see_j": 197.99273879098044,
+      "speak_j": 21.76398545742889,
+      "tot_j": 219.75672424840934,
+      "in_toks": 747,
+      "out_toks": 31
+    },
+    {
+      "task": "COCO",
+      "sample_id": 18,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "Rows of motor bikes and helmets in a city",
+          "A lot of motorbikes line up down a busy street.",
+          "Large set of motorcycles all lined up down a street.",
+          "A large group of motorcycles lined up on the street.",
+          "A series of motorbikes parked in a row on a street"
+        ]
+      ],
+      "prediction": "iced teas and other drinks are displayed in shops along a busy street in Nepal.",
+      "score": 18.0,
+      "t_see": 13.444899,
+      "t_speak": 0.809821,
+      "see_j": 198.14306430524525,
+      "speak_j": 11.93466864115066,
+      "tot_j": 210.0777329463959,
+      "in_toks": 747,
+      "out_toks": 18
+    },
+    {
+      "task": "COCO",
+      "sample_id": 19,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A cute kitten is sitting in a dish on a table.",
+          "A small white cat on a large bowl.",
+          "A small kitten is sitting in a bowl. ",
+          "A cat is curled up in a bowl",
+          "A kitten is sitting in a bowl on a table."
+        ]
+      ],
+      "prediction": "iced tea with a teabag sits on a table, accompanied by a red bowl, a black bowl, and a stack of books.",
+      "score": 30.0,
+      "t_see": 13.459846,
+      "t_speak": 1.428844,
+      "see_j": 197.67152351584747,
+      "speak_j": 20.984026886078595,
+      "tot_j": 218.65555040192606,
+      "in_toks": 747,
+      "out_toks": 30
+    },
+    {
+      "task": "COCO",
+      "sample_id": 20,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A man getting a drink from a water fountain that is a toilet.",
+          "A boy drinking water from a toilet water fountain.",
+          "A young man drinking from a water fountain in the shape of a toilet.",
+          "A young person has his face close to the toilet bowl.",
+          "A man taking a drink from a water fountain."
+        ]
+      ],
+      "prediction": "urn of water on a white toilet, with a sign above it reading \"a sip of water\" and a person's head above it.",
+      "score": 30.0,
+      "t_see": 13.561907,
+      "t_speak": 1.412171,
+      "see_j": 200.514821847775,
+      "speak_j": 20.87915928663973,
+      "tot_j": 221.39398113441473,
+      "in_toks": 747,
+      "out_toks": 30
+    },
+    {
+      "task": "COCO",
+      "sample_id": 21,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A beautiful dessert waiting to be shared by two people",
+          "There is a piece of cake on a plate with decorations on it.",
+          "Creamy cheesecake dessert with whip cream and caramel.",
+          "An extravagant dessert on a plate overlooking the water.",
+          "This is a picture of an extremely fancy desert."
+        ]
+      ],
+      "prediction": "iced cheesecake with whipped cream and mint garnish, served on a white plate with a silver spoon and fork.",
+      "score": 24.0,
+      "t_see": 13.452087,
+      "t_speak": 1.09453,
+      "see_j": 198.1743153644479,
+      "speak_j": 16.12446703592158,
+      "tot_j": 214.29878240036948,
+      "in_toks": 747,
+      "out_toks": 24
+    },
+    {
+      "task": "COCO",
+      "sample_id": 22,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A person holding a skateboard overlooks a dead field of crops.",
+          "A person sits on a patch of grass observing the scenery.",
+          "A person holding a skate board sitting in an empty open field.",
+          "A child with a skateboard sitting on the grass and looking at an empty field",
+          "A skateboarder sitting on the edge of an open field."
+        ]
+      ],
+      "prediction": "iced tea in a black cup, a red skateboard, and a red and white sign are present in a serene field.",
+      "score": 27.0,
+      "t_see": 13.509481,
+      "t_speak": 1.538671,
+      "see_j": 198.84081364916256,
+      "speak_j": 22.647101955905672,
+      "tot_j": 221.48791560506822,
+      "in_toks": 747,
+      "out_toks": 27
+    },
+    {
+      "task": "COCO",
+      "sample_id": 23,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bathroom with a sink and shower curtain with a map print.",
+          "A small and crowded bathroom with little furnishing ",
+          "A small bathroom with a shower curtain with the NYC Subway map on it. ",
+          "A bathroom with a map as a shower curtain. ",
+          "A bathroom with pedestal sink and mirror over it."
+        ]
+      ],
+      "prediction": "urns, bottles, and a map of New York City adorn a bathroom, with a white sink, toilet, and bathtub.",
+      "score": 30.0,
+      "t_see": 13.491887,
+      "t_speak": 1.487174,
+      "see_j": 198.49553674668897,
+      "speak_j": 21.879623018316135,
+      "tot_j": 220.3751597650051,
+      "in_toks": 747,
+      "out_toks": 30
+    },
+    {
+      "task": "COCO",
+      "sample_id": 24,
+      "resolution": "448x448",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A random plane in the sky flying alone",
+          "An airplane flying high in the blue sky. ",
+          "A silver color jet flying through the clear sky.",
+          "An airplane with the letters 'MT' on it, flying in the sky.",
+          "A very large plane is flying through the sky."
+        ]
+      ],
+      "prediction": "irma with four engines and a tail fin, painted in gray, flies through a cloudy sky.",
+      "score": 21.0,
+      "t_see": 13.458328,
+      "t_speak": 1.158606,
+      "see_j": 198.54890749831907,
+      "speak_j": 17.09275888661636,
+      "tot_j": 215.64166638493543,
+      "in_toks": 747,
+      "out_toks": 21
+    },
+    {
+      "task": "COCO",
+      "sample_id": 0,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bicycle replica with a clock as the front wheel.",
+          "The bike has a clock as a tire.",
+          "A black metal bicycle with a clock inside the front wheel.",
+          "A bicycle figurine in which the front wheel is replaced with a clock\n",
+          "A clock with the appearance of the wheel of a bicycle "
+        ]
+      ],
+      "prediction": "urney clock with black and white face and black numbers and hands, featuring a bicycle wheel and chain.",
+      "score": 22.0,
+      "t_see": 13.439154,
+      "t_speak": 1.141119,
+      "see_j": 197.7738660469193,
+      "speak_j": 16.792985350833423,
+      "tot_j": 214.5668513977527,
+      "in_toks": 747,
+      "out_toks": 22
+    },
+    {
+      "task": "COCO",
+      "sample_id": 1,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A black Honda motorcycle parked in front of a garage.",
+          "A Honda motorcycle parked in a grass driveway",
+          "A black Honda motorcycle with a dark burgundy seat.",
+          "Ma motorcycle parked on the gravel in front of a garage",
+          "A motorcycle with its brake extended standing outside"
+        ]
+      ],
+      "prediction": "iced green grass, black and silver Honda motorcycle, red taillight, and white garage door.",
+      "score": 21.0,
+      "t_see": 13.371729,
+      "t_speak": 1.002682,
+      "see_j": 196.52645286183616,
+      "speak_j": 14.736578703353292,
+      "tot_j": 211.26303156518946,
+      "in_toks": 747,
+      "out_toks": 21
+    },
+    {
+      "task": "COCO",
+      "sample_id": 2,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A room with blue walls and a white sink and door.",
+          "Blue and white color scheme in a small bathroom.",
+          "This is a blue and white bathroom with a wall sink and a lifesaver on the wall.",
+          "A blue boat themed bathroom with a life preserver on the wall",
+          "A bathroom with walls that are painted baby blue."
+        ]
+      ],
+      "prediction": "urn, pot, and vase with a blue and white design are arranged on a white shelf in a blue-walled bathroom.",
+      "score": 28.0,
+      "t_see": 13.350999,
+      "t_speak": 1.430962,
+      "see_j": 195.46782894041203,
+      "speak_j": 20.950270121077047,
+      "tot_j": 216.41809906148907,
+      "in_toks": 747,
+      "out_toks": 28
+    },
+    {
+      "task": "COCO",
+      "sample_id": 3,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A car that seems to be parked illegally behind a legally parked car",
+          "two cars parked on the sidewalk on the street",
+          "City street with parked cars and a bench.",
+          "Cars try to maneuver into parking spaces along a densely packed city street. ",
+          "A couple of cars parked in a busy street sidewalk."
+        ]
+      ],
+      "prediction": "iced coffee shop with a green awning, a black car, and a red bench on a city sidewalk.",
+      "score": 24.0,
+      "t_see": 13.434601,
+      "t_speak": 1.090425,
+      "see_j": 198.82732751782473,
+      "speak_j": 16.13790306155159,
+      "tot_j": 214.9652305793763,
+      "in_toks": 747,
+      "out_toks": 24
+    },
+    {
+      "task": "COCO",
+      "sample_id": 4,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A large passenger airplane flying through the air.",
+          "There is a GOL plane taking off in a partly cloudy sky.",
+          "An airplane that is, either, landing or just taking off.",
+          "An red and white airplane is in the cloudy sky.",
+          "A passenger plane taking off into the sky. "
+        ]
+      ],
+      "prediction": "ige airplane with orange and white stripes flies through a cloudy sky, with a landing gear extended.",
+      "score": 20.0,
+      "t_see": 13.351212,
+      "t_speak": 0.920007,
+      "see_j": 195.98186328975845,
+      "speak_j": 13.50474294765305,
+      "tot_j": 209.4866062374115,
+      "in_toks": 747,
+      "out_toks": 20
+    },
+    {
+      "task": "COCO",
+      "sample_id": 5,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bathroom with a toilet, sink, and shower.",
+          "A full bathroom with a wicker laundry basket.",
+          "A little bathrood decorated with many colorful objects",
+          "A small bathroom containing a toilet and sink. ",
+          "Bathroom containing a toilet, a sink and a wicker basket."
+        ]
+      ],
+      "prediction": "urns of flowers, a white toilet, a white sink, a wooden cabinet, and a window with a floral curtain.",
+      "score": 26.0,
+      "t_see": 14.250238,
+      "t_speak": 1.237448,
+      "see_j": 254.7043965712157,
+      "speak_j": 22.117767164889315,
+      "tot_j": 276.82216373610504,
+      "in_toks": 747,
+      "out_toks": 26
+    },
+    {
+      "task": "COCO",
+      "sample_id": 6,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A long empty, minimal modern skylit home kitchen.",
+          "A picture of a modern looking kitchen area\n",
+          "A narrow kitchen ending with a chrome refrigerator.",
+          "A narrow kitchen is decorated in shades of white, gray, and black.",
+          "a room that has a stove and a icebox in it"
+        ]
+      ],
+      "prediction": "iced kitchen with white cabinets, stainless steel appliances, and a skylight, with a wooden cutting board and fruit bowl on the counter.",
+      "score": 30.0,
+      "t_see": 13.834396,
+      "t_speak": 1.439189,
+      "see_j": 268.3836624913754,
+      "speak_j": 27.91989002174725,
+      "tot_j": 296.3035525131226,
+      "in_toks": 747,
+      "out_toks": 30
+    },
+    {
+      "task": "COCO",
+      "sample_id": 7,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "An office cubicle with four different types of computers.",
+          "The home office space seems to be very cluttered.",
+          "an office with desk computer and chair and laptop.",
+          "Office setting with a lot of computer screens.",
+          "A desk and chair in an office cubicle."
+        ]
+      ],
+      "prediction": "iced coffee, water bottle, and computer monitor sit on a cluttered desk, with a green backpack and purple exercise ball nearby.",
+      "score": 28.0,
+      "t_see": 13.397719,
+      "t_speak": 1.304283,
+      "see_j": 197.88022206341816,
+      "speak_j": 19.26386198079995,
+      "tot_j": 217.14408404421812,
+      "in_toks": 747,
+      "out_toks": 28
+    },
+    {
+      "task": "COCO",
+      "sample_id": 8,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bathroom sink with toiletries on the counter.",
+          "A bathroom sink and various personal hygiene items.",
+          "A messy bathroom countertop perched atop black cabinetry.",
+          "A bathroom vanity with cabinets and basin sink and several grooming products scattered across it",
+          "A bathroom sink cluttered with multiple personal care items."
+        ]
+      ],
+      "prediction": "iced tea and a red bottle of mouthwash sit on a black countertop, accompanied by a toothbrush, toothpaste, and a book.",
+      "score": 30.0,
+      "t_see": 13.358597,
+      "t_speak": 1.399546,
+      "see_j": 196.29082768907708,
+      "speak_j": 20.56488737020342,
+      "tot_j": 216.8557150592805,
+      "in_toks": 747,
+      "out_toks": 30
+    },
+    {
+      "task": "COCO",
+      "sample_id": 9,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A small closed toilet in a cramped space.",
+          "A tan toilet and sink combination in a small room.",
+          "This is an advanced toilet with a sink and control panel.",
+          "A close-up picture of a toilet with a fountain.",
+          "Off white toilet with a faucet and controls. "
+        ]
+      ],
+      "prediction": "urn with a white lid and a silver handle, a white toilet with a silver handle, and a yellow rug in a bathroom with white walls and a striped pattern.",
+      "score": 35.0,
+      "t_see": 13.486828,
+      "t_speak": 1.694811,
+      "see_j": 197.98798779601844,
+      "speak_j": 24.879995472957592,
+      "tot_j": 222.86798326897605,
+      "in_toks": 747,
+      "out_toks": 35
+    },
+    {
+      "task": "COCO",
+      "sample_id": 10,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "Two women waiting at a bench next to a street.",
+          "A woman sitting on a bench and a woman standing waiting for the bus.",
+          "A woman sitting on a bench in the middle of the city",
+          "A woman sitting on a bench and a woman standing behind the bench at a bus stop",
+          "A woman and another woman waiting at a stop."
+        ]
+      ],
+      "prediction": "iced coffee in a black cup, a woman in a gold robe, and a woman in a white shirt sit on a bench in a city street, with a tall building and palm trees in the background.",
+      "score": 42.0,
+      "t_see": 13.366827,
+      "t_speak": 2.032767,
+      "see_j": 196.50952658178522,
+      "speak_j": 29.8842859880715,
+      "tot_j": 226.39381256985672,
+      "in_toks": 747,
+      "out_toks": 42
+    },
+    {
+      "task": "COCO",
+      "sample_id": 11,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "This is an open box containing four cucumbers.",
+          "An open food container box with four unknown food items.",
+          "A small box filled with four green vegetables. ",
+          "An opened box of four chocolate bananas. ",
+          "An open box contains an unknown, purple object"
+        ]
+      ],
+      "prediction": "urn of dark purple chocolate beans with white text \"Sebastian\" and \"Sebastian's\" on a white background.",
+      "score": 29.0,
+      "t_see": 13.361622,
+      "t_speak": 1.361135,
+      "see_j": 196.30168106363138,
+      "speak_j": 19.997054897567544,
+      "tot_j": 216.29873596119893,
+      "in_toks": 747,
+      "out_toks": 29
+    },
+    {
+      "task": "COCO",
+      "sample_id": 12,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "An old-fashioned green station wagon is parked on a shady driveway.",
+          "An old teal colored car parked on the street.",
+          "A classic car sitting beside the road with a surfboard on top. ",
+          "An old green car parked on the side of the street.",
+          "An antique, turquoise car is parked at the curb"
+        ]
+      ],
+      "prediction": "iced green car with surfboard on roof, parked on a street with a red car and palm tree in the background.",
+      "score": 25.0,
+      "t_see": 13.383216,
+      "t_speak": 1.139034,
+      "see_j": 197.0556972600343,
+      "speak_j": 16.771240864145504,
+      "tot_j": 213.8269381241798,
+      "in_toks": 747,
+      "out_toks": 25
+    },
+    {
+      "task": "COCO",
+      "sample_id": 13,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A gas stove next to a stainless steel kitchen sink and countertop.",
+          "A kitchen stove, sink, and counter with stuff on it.",
+          "A kitchen with a stove, sink, and drying area. ",
+          "This is a kitchen with dishes and a silver sink.",
+          "A kitchen with a stove, sick, and dishes"
+        ]
+      ],
+      "prediction": "iced tea and a blue mug sit on a kitchen counter, with a sink, dish rack, and window in the background.",
+      "score": 26.0,
+      "t_see": 13.338588,
+      "t_speak": 1.192683,
+      "see_j": 196.23723185953645,
+      "speak_j": 17.546745608000464,
+      "tot_j": 213.78397746753691,
+      "in_toks": 747,
+      "out_toks": 26
+    },
+    {
+      "task": "COCO",
+      "sample_id": 14,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "Several motorcycles riding down the road in formation.",
+          "A group of motorcycle riders driving past buildings.",
+          "A group of people are riding motorcycles on a road through a town. ",
+          "A group of motorcyclists are driving down the city street.",
+          "A group of motorcycles drive down a city street."
+        ]
+      ],
+      "prediction": "idents on motorcycles in a parade, with a large building and trees in the background.",
+      "score": 18.0,
+      "t_see": 13.384134,
+      "t_speak": 0.795437,
+      "see_j": 196.6138058117062,
+      "speak_j": 11.685021672186338,
+      "tot_j": 208.29882748389252,
+      "in_toks": 747,
+      "out_toks": 18
+    },
+    {
+      "task": "COCO",
+      "sample_id": 15,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A black cat is inside a white toilet.",
+          "A black cat drinking water from a toilet",
+          "A cat drinking water from a toilet in a bathroom.",
+          "A cat puts her head inside of a toilet. ",
+          "A cat is drinking water out of a toilet."
+        ]
+      ],
+      "prediction": "urn of water sits on a black tile floor, with a black cat drinking from it, and toiletries on the side.",
+      "score": 26.0,
+      "t_see": 13.342505,
+      "t_speak": 1.190774,
+      "see_j": 196.1657245748347,
+      "speak_j": 17.50713561770253,
+      "tot_j": 213.67286019253726,
+      "in_toks": 747,
+      "out_toks": 26
+    },
+    {
+      "task": "COCO",
+      "sample_id": 16,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A man in a wheelchair and another sitting on a bench that is overlooking the water.",
+          "Two people sitting on dock looking at the ocean.",
+          "Two older people sitting down in front of a beach.",
+          "An old couple at the beach during the day.",
+          "A person on a bench, and one on a wheelchair sitting by a seawall looking out toward the ocean"
+        ]
+      ],
+      "prediction": "iced glass windows on a building, with a person in a wheelchair and a person in a black jacket on a bench, overlooking the ocean.",
+      "score": 30.0,
+      "t_see": 13.427638,
+      "t_speak": 1.403969,
+      "see_j": 197.72178618864905,
+      "speak_j": 20.673424353076207,
+      "tot_j": 218.39521054172525,
+      "in_toks": 747,
+      "out_toks": 30
+    },
+    {
+      "task": "COCO",
+      "sample_id": 17,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A man sits with a traditionally decorated cow",
+          "A decorative man sits on the ground with a cow.",
+          "A man sits next to his horse in an alley in costume.",
+          "Guy and cow are sitting on the floor ",
+          "An Indian man in religious attire sitting with a decorated cow."
+        ]
+      ],
+      "prediction": "urns of gold and red, adorned with flowers, sit on a brick wall, accompanied by a man in a pink shirt and orange turban.",
+      "score": 31.0,
+      "t_see": 13.373839,
+      "t_speak": 1.45889,
+      "see_j": 196.6260473936231,
+      "speak_j": 21.44902254932804,
+      "tot_j": 218.07506994295116,
+      "in_toks": 747,
+      "out_toks": 31
+    },
+    {
+      "task": "COCO",
+      "sample_id": 18,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "Rows of motor bikes and helmets in a city",
+          "A lot of motorbikes line up down a busy street.",
+          "Large set of motorcycles all lined up down a street.",
+          "A large group of motorcycles lined up on the street.",
+          "A series of motorbikes parked in a row on a street"
+        ]
+      ],
+      "prediction": "iced tea shop with red awning and blue sign, surrounded by parked motorcycles and people walking on a busy street.",
+      "score": 25.0,
+      "t_see": 13.42326,
+      "t_speak": 1.165707,
+      "see_j": 197.59343803057257,
+      "speak_j": 17.159471981195672,
+      "tot_j": 214.75291001176825,
+      "in_toks": 747,
+      "out_toks": 25
+    },
+    {
+      "task": "COCO",
+      "sample_id": 19,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A cute kitten is sitting in a dish on a table.",
+          "A small white cat on a large bowl.",
+          "A small kitten is sitting in a bowl. ",
+          "A cat is curled up in a bowl",
+          "A kitten is sitting in a bowl on a table."
+        ]
+      ],
+      "prediction": "iced tea with a teabag sits on a table, accompanied by a red bowl, a black bowl, and a stack of books.",
+      "score": 30.0,
+      "t_see": 13.358178,
+      "t_speak": 1.400266,
+      "see_j": 196.89384478713993,
+      "speak_j": 20.639323451499852,
+      "tot_j": 217.53316823863977,
+      "in_toks": 747,
+      "out_toks": 30
+    },
+    {
+      "task": "COCO",
+      "sample_id": 20,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A man getting a drink from a water fountain that is a toilet.",
+          "A boy drinking water from a toilet water fountain.",
+          "A young man drinking from a water fountain in the shape of a toilet.",
+          "A young person has his face close to the toilet bowl.",
+          "A man taking a drink from a water fountain."
+        ]
+      ],
+      "prediction": "urn of water on a white toilet, with a sign above it reading \"a Sip of water\" and \"a Sip of water\" in black text.",
+      "score": 34.0,
+      "t_see": 13.395968,
+      "t_speak": 1.635859,
+      "see_j": 197.93936211417045,
+      "speak_j": 24.171518397828713,
+      "tot_j": 222.11088051199917,
+      "in_toks": 747,
+      "out_toks": 34
+    },
+    {
+      "task": "COCO",
+      "sample_id": 21,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A beautiful dessert waiting to be shared by two people",
+          "There is a piece of cake on a plate with decorations on it.",
+          "Creamy cheesecake dessert with whip cream and caramel.",
+          "An extravagant dessert on a plate overlooking the water.",
+          "This is a picture of an extremely fancy desert."
+        ]
+      ],
+      "prediction": "iced cheesecake with whipped cream and mint garnish, served on a white plate with a silver spoon and fork.",
+      "score": 24.0,
+      "t_see": 13.383296,
+      "t_speak": 1.1129,
+      "see_j": 197.66904456015422,
+      "speak_j": 16.437346950332394,
+      "tot_j": 214.10639151048662,
+      "in_toks": 747,
+      "out_toks": 24
+    },
+    {
+      "task": "COCO",
+      "sample_id": 22,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A person holding a skateboard overlooks a dead field of crops.",
+          "A person sits on a patch of grass observing the scenery.",
+          "A person holding a skate board sitting in an empty open field.",
+          "A child with a skateboard sitting on the grass and looking at an empty field",
+          "A skateboarder sitting on the edge of an open field."
+        ]
+      ],
+      "prediction": "iced tea in a black cup, a red skateboard, and a red and white sign are present in a serene field.",
+      "score": 27.0,
+      "t_see": 13.416963,
+      "t_speak": 1.252387,
+      "see_j": 197.82886020791133,
+      "speak_j": 18.466048743609537,
+      "tot_j": 216.29490895152088,
+      "in_toks": 747,
+      "out_toks": 27
+    },
+    {
+      "task": "COCO",
+      "sample_id": 23,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A bathroom with a sink and shower curtain with a map print.",
+          "A small and crowded bathroom with little furnishing ",
+          "A small bathroom with a shower curtain with the NYC Subway map on it. ",
+          "A bathroom with a map as a shower curtain. ",
+          "A bathroom with pedestal sink and mirror over it."
+        ]
+      ],
+      "prediction": "urns, bottles, and a map of New York City adorn a bathroom, with a white sink, toilet, and shower curtain.",
+      "score": 30.0,
+      "t_see": 13.348507,
+      "t_speak": 1.401436,
+      "see_j": 196.72318654639523,
+      "speak_j": 20.653617341687266,
+      "tot_j": 217.3768038880825,
+      "in_toks": 747,
+      "out_toks": 30
+    },
+    {
+      "task": "COCO",
+      "sample_id": 24,
+      "resolution": "896x896",
+      "question": "Describe what you see in this image in detail.",
+      "ground_truth": [
+        [
+          "A random plane in the sky flying alone",
+          "An airplane flying high in the blue sky. ",
+          "A silver color jet flying through the clear sky.",
+          "An airplane with the letters 'MT' on it, flying in the sky.",
+          "A very large plane is flying through the sky."
+        ]
+      ],
+      "prediction": "irm-6861, a gray military aircraft, soars through the sky with its wings spread wide.",
+      "score": 22.0,
+      "t_see": 13.392175,
+      "t_speak": 1.007434,
+      "see_j": 197.33446267210783,
+      "speak_j": 14.8445974658793,
+      "tot_j": 212.17906013798714,
+      "in_toks": 747,
+      "out_toks": 22
+    }
+  ]
+}

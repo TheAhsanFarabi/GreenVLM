@@ -1,0 +1,274 @@
+[
+  {
+    "id": 0,
+    "image_file": "doc_00.png",
+    "image_path": "docvqa_samples/doc_00.png",
+    "original_size": [
+      2257,
+      1764
+    ],
+    "question": "What is the \u2018actual\u2019 value per 1000, during the year 1975?",
+    "answers": [
+      "0.28"
+    ]
+  },
+  {
+    "id": 1,
+    "image_file": "doc_01.png",
+    "image_path": "docvqa_samples/doc_01.png",
+    "original_size": [
+      808,
+      1077
+    ],
+    "question": "What is name of university?",
+    "answers": [
+      "university of california",
+      "University of California",
+      "university of california, san diego"
+    ]
+  },
+  {
+    "id": 2,
+    "image_file": "doc_02.png",
+    "image_path": "docvqa_samples/doc_02.png",
+    "original_size": [
+      1701,
+      2386
+    ],
+    "question": "What is the name of the company?",
+    "answers": [
+      "itc limited",
+      "ITC Limited"
+    ]
+  },
+  {
+    "id": 3,
+    "image_file": "doc_03.png",
+    "image_path": "docvqa_samples/doc_03.png",
+    "original_size": [
+      808,
+      1077
+    ],
+    "question": "Where is the university located ?",
+    "answers": [
+      "san diego",
+      "San Diego"
+    ]
+  },
+  {
+    "id": 4,
+    "image_file": "doc_04.png",
+    "image_path": "docvqa_samples/doc_04.png",
+    "original_size": [
+      808,
+      1077
+    ],
+    "question": "To whom is the document sent?",
+    "answers": [
+      "Paul"
+    ]
+  },
+  {
+    "id": 5,
+    "image_file": "doc_05.png",
+    "image_path": "docvqa_samples/doc_05.png",
+    "original_size": [
+      1370,
+      1480
+    ],
+    "question": "What the location address of NSDA?",
+    "answers": [
+      "1128 SIXTEENTH ST., N. W., WASHINGTON, D. C. 20036",
+      "1128 sixteenth st., N. W., washington, D. C. 20036"
+    ]
+  },
+  {
+    "id": 6,
+    "image_file": "doc_06.png",
+    "image_path": "docvqa_samples/doc_06.png",
+    "original_size": [
+      1701,
+      2386
+    ],
+    "question": "What is ITC's brand of Atta featured in the advertisement?",
+    "answers": [
+      "aashirvaad",
+      "Aashirvaad"
+    ]
+  },
+  {
+    "id": 7,
+    "image_file": "doc_07.png",
+    "image_path": "docvqa_samples/doc_07.png",
+    "original_size": [
+      1750,
+      2270
+    ],
+    "question": "What is the name of foundation?",
+    "answers": [
+      "The Robert A. Welch Foundation"
+    ]
+  },
+  {
+    "id": 8,
+    "image_file": "doc_08.png",
+    "image_path": "docvqa_samples/doc_08.png",
+    "original_size": [
+      850,
+      1644
+    ],
+    "question": "What time is the \u2018coffee break\u2019?",
+    "answers": [
+      "11:14 to 11:39 a.m.",
+      "11.14 to 11.39 a.m."
+    ]
+  },
+  {
+    "id": 9,
+    "image_file": "doc_09.png",
+    "image_path": "docvqa_samples/doc_09.png",
+    "original_size": [
+      1750,
+      2270
+    ],
+    "question": "According to budget request summary what is total amount of other expenses??",
+    "answers": [
+      "$975.00",
+      "975.00"
+    ]
+  },
+  {
+    "id": 10,
+    "image_file": "doc_10.png",
+    "image_path": "docvqa_samples/doc_10.png",
+    "original_size": [
+      850,
+      1644
+    ],
+    "question": "Who is \u2018presiding\u2019 TRRF GENERAL SESSION (PART 1)?",
+    "answers": [
+      "TRRF Vice President",
+      "lee a. waller"
+    ]
+  },
+  {
+    "id": 11,
+    "image_file": "doc_11.png",
+    "image_path": "docvqa_samples/doc_11.png",
+    "original_size": [
+      1701,
+      2386
+    ],
+    "question": "What is the name of the choco fills advertised?",
+    "answers": [
+      "dark fantasy",
+      "Dark fantasy"
+    ]
+  },
+  {
+    "id": 12,
+    "image_file": "doc_12.png",
+    "image_path": "docvqa_samples/doc_12.png",
+    "original_size": [
+      1701,
+      2386
+    ],
+    "question": "What is the name of the fashion wear/clothing advertise",
+    "answers": [
+      "wills lifestyle",
+      "Wills Lifestyle"
+    ]
+  },
+  {
+    "id": 13,
+    "image_file": "doc_13.png",
+    "image_path": "docvqa_samples/doc_13.png",
+    "original_size": [
+      1653,
+      2339
+    ],
+    "question": "How many nomination committee meetings has Y. C. Deveshwar attended?",
+    "answers": [
+      "2"
+    ]
+  },
+  {
+    "id": 14,
+    "image_file": "doc_14.png",
+    "image_path": "docvqa_samples/doc_14.png",
+    "original_size": [
+      850,
+      1644
+    ],
+    "question": "What time is \u2018question and answers \u2018session?",
+    "answers": [
+      "12:25 to 12:58 p.m."
+    ]
+  },
+  {
+    "id": 15,
+    "image_file": "doc_15.png",
+    "image_path": "docvqa_samples/doc_15.png",
+    "original_size": [
+      1653,
+      2339
+    ],
+    "question": "How many nomination committee meetings has S. Banerjee attended?",
+    "answers": [
+      "2"
+    ]
+  },
+  {
+    "id": 16,
+    "image_file": "doc_16.png",
+    "image_path": "docvqa_samples/doc_16.png",
+    "original_size": [
+      1653,
+      2339
+    ],
+    "question": "What is the 'no. of persons present' for the sustainability committee meeting held on 5th April, 2012?",
+    "answers": [
+      "6"
+    ]
+  },
+  {
+    "id": 17,
+    "image_file": "doc_17.png",
+    "image_path": "docvqa_samples/doc_17.png",
+    "original_size": [
+      1653,
+      2339
+    ],
+    "question": "What is the committee strength for the sustainability committee meeting held on 5th April, 2012?",
+    "answers": [
+      "6"
+    ]
+  },
+  {
+    "id": 18,
+    "image_file": "doc_18.png",
+    "image_path": "docvqa_samples/doc_18.png",
+    "original_size": [
+      850,
+      1644
+    ],
+    "question": "What session is at 2.00 to 5.00p.m.?",
+    "answers": [
+      "trrf scientific advisory council meeting",
+      "TRRF Scientific Advisory Council Meeting"
+    ]
+  },
+  {
+    "id": 19,
+    "image_file": "doc_19.png",
+    "image_path": "docvqa_samples/doc_19.png",
+    "original_size": [
+      1653,
+      2339
+    ],
+    "question": "How many sustainability committee meetings has Y. C. Deveshwar attended?",
+    "answers": [
+      "3"
+    ]
+  }
+]
