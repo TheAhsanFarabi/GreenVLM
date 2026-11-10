@@ -12,6 +12,7 @@ Usage:
 """
 
 import os
+import sys
 import json
 import argparse
 import datasets
@@ -119,3 +120,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # The `datasets`/`pyarrow`/`aiohttp` streaming backends spin up background
+    # threads that are not always joined cleanly at interpreter shutdown, which
+    # can trigger a benign-but-alarming "Fatal Python error: PyGILState_Release"
+    # (shown by Ubuntu's apport as "python3.12 unexpectedly stopped") *after* the
+    # data is already written. Flush and hard-exit to skip that buggy finalizer.
+    sys.stdout.flush()
+    sys.stderr.flush()
+    os._exit(0)

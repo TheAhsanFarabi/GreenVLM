@@ -215,7 +215,21 @@ def main():
     parser.add_argument("--data-dir", type=str, default="data/multitask_samples", help="Path to sample images and metadata")
     parser.add_argument("--output-dir", type=str, default="results", help="Directory to save JSON logs and figures")
     parser.add_argument("--limit", type=int, default=0, help="Max samples per task (0 = all). Use for a quick pilot.")
+    parser.add_argument("--backend", type=str, default="ollama", choices=["ollama", "hf"],
+                        help="Inference backend. 'ollama' (default) or 'hf' for HuggingFace models like InternVL.")
+    parser.add_argument("--quant", type=str, default="4bit", choices=["4bit", "8bit", "bf16"],
+                        help="Quantization for the HF backend (default 4bit).")
     args = parser.parse_args()
+
+    # Unified query dispatch so the energy tracker, evaluators, checkpointing and
+    # plotting are identical across backends.
+    if args.backend == "hf":
+        from internvl_backend import hf_query
+        def run_query(prompt, img_b64, max_tokens):
+            return hf_query(args.model, prompt, img_b64, max_tokens=max_tokens, quant=args.quant)
+    else:
+        def run_query(prompt, img_b64, max_tokens):
+            return query_model(args.model, prompt, img_b64, max_tokens=max_tokens)
 
     os.makedirs(args.output_dir, exist_ok=True)
     res_tuples = [(r, r) for r in args.resolutions]
@@ -249,20 +263,42 @@ def main():
     full_log = []
     summary = {t: {} for t in args.tasks}
 
-    # Warm up: load the model into GPU memory with one throwaway call so the cold
-    # load cost is not charged to the first benchmarked sample's energy/time.
-    try:
-        warm_task = next((t for t in args.tasks if all_meta.get(t)), None)
-        if warm_task:
-            ws = all_meta[warm_task][0]
-            wpath = ws["image_path"]
-            if not os.path.exists(wpath):
-                wpath = os.path.join(data_base, wpath)
+    # ------------------------------------------------------------------
+    # Checkpoint / resume. Every completed inference is appended to
+    # <output-dir>/checkpoint.jsonl immediately (flushed + fsynced). Re-running
+    # the exact same command skips already-finished (task, resolution, sample)
+    # items and resumes where it left off after an interruption.
+    # ------------------------------------------------------------------
+    ckpt_path = os.path.join(args.output_dir, "checkpoint.jsonl")
+    done = {}
+    if os.path.exists(ckpt_path):
+        with open(ckpt_path, "r") as cf:
+            for line in cf:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    rec = json.loads(line)
+                except json.JSONDecodeError:
+                    continue  # tolerate a half-written final line from a hard kill
+                done[(rec["task"], rec["resolution"], rec["sample_id"])] = rec
+        print(f"[*] Resume: loaded {len(done)} completed inferences from '{ckpt_path}'.")
+    ckpt_file = open(ckpt_path, "a")
+
+    # Lazily load the model into GPU memory on the first *real* inference so the
+    # cold-load cost is never charged to a benchmarked sample, and a fully-cached
+    # resume run does not reload the model at all.
+    warmed = [False]
+    def ensure_warm(img_b64_warm):
+        if warmed[0]:
+            return
+        try:
             print("[*] Warming up model (loading into GPU memory)...")
-            query_model(args.model, "Describe this image.", resize_image_b64(wpath, res_tuples[0]), max_tokens=5)
+            run_query("Describe this image.", img_b64_warm, max_tokens=5)
             print("[✓] Warmup complete.")
-    except Exception as e:
-        print(f"[!] Warmup skipped: {e}")
+        except Exception as e:
+            print(f"[!] Warmup skipped: {e}")
+        warmed[0] = True
 
     for task in args.tasks:
         samples = all_meta.get(task, [])
@@ -277,6 +313,14 @@ def main():
             acc_list, see_t_list, speak_t_list, see_j_list, speak_j_list, tot_j_list, out_tok_list = [], [], [], [], [], [], []
 
             for idx, s in enumerate(samples, start=1):
+                key = (task, res_str, s["id"])
+                if key in done:
+                    rec = done[key]
+                    acc_list.append(rec["acc"]); see_t_list.append(rec["t_see"]); speak_t_list.append(rec["t_speak"])
+                    see_j_list.append(rec["see_j"]); speak_j_list.append(rec["speak_j"]); tot_j_list.append(rec["tot_j"])
+                    out_tok_list.append(rec["out_tok"]); full_log.append(rec)
+                    continue
+
                 q = s["question"]
                 gts = s["ground_truth"]
                 img_path = s["image_path"]
@@ -295,12 +339,13 @@ def main():
                     prompt = "Describe this image concisely in 2 sentences."
 
                 img_b64 = resize_image_b64(img_path, res)
+                ensure_warm(img_b64)
 
                 tracker = HardwareEnergyTracker(interval_sec=0.02)
                 tracker.start()
 
                 try:
-                    resp = query_model(args.model, prompt, img_b64, max_tokens=task_tokens.get(task, 25))
+                    resp = run_query(prompt, img_b64, max_tokens=task_tokens.get(task, 25))
                 except Exception as e:
                     tracker.stop()
                     print(f"    [Error] Sample {idx} failed: {e}")
@@ -328,6 +373,16 @@ def main():
                 else:
                     acc = float(out_tok)
 
+                rec = {
+                    "task": task, "sample_id": s["id"], "resolution": res_str,
+                    "prediction": ans, "score": acc, "acc": acc, "out_tok": out_tok,
+                    "see_j": see_j, "speak_j": speak_j, "tot_j": tot_j,
+                    "t_see": t_see, "t_speak": t_speak
+                }
+                # Persist immediately so an interruption loses at most this one sample.
+                ckpt_file.write(json.dumps(rec) + "\n"); ckpt_file.flush(); os.fsync(ckpt_file.fileno())
+                done[key] = rec
+
                 acc_list.append(acc)
                 see_t_list.append(t_see)
                 speak_t_list.append(t_speak)
@@ -335,12 +390,7 @@ def main():
                 speak_j_list.append(speak_j)
                 tot_j_list.append(tot_j)
                 out_tok_list.append(out_tok)
-
-                full_log.append({
-                    "task": task, "sample_id": s["id"], "resolution": res_str,
-                    "prediction": ans, "score": acc, "see_j": see_j, "speak_j": speak_j,
-                    "tot_j": tot_j, "t_see": t_see, "t_speak": t_speak
-                })
+                full_log.append(rec)
 
             mean_acc = float(np.mean(acc_list)) * (1.0 if task == "COCO" else 100.0)
             mean_tot_j = float(np.mean(tot_j_list))
@@ -356,6 +406,8 @@ def main():
             }
             metric_label = f"{mean_acc:.1f} toks" if task == "COCO" else f"{mean_acc:.2f}%"
             print(f"  [{res_str}] {task:<8} | Acc: {metric_label:<10} | See: {mean_see_j:5.1f}J ({rho_pre:4.1f}%) | Speak: {mean_speak_j:4.1f}J | Total: {mean_tot_j:5.1f}J")
+
+    ckpt_file.close()
 
     # Save Results
     json_path = os.path.join(args.output_dir, "benchmark_results.json")
