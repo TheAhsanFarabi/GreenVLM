@@ -20,10 +20,15 @@ PY="python3"
 if [ -x "../.venv/bin/python" ]; then PY="../.venv/bin/python"; fi
 echo "Python      : $PY"
 
-DATA_DIR="data/full_samples"
-OUT_ROOT="results/full"
-RESOLUTIONS="224 448 896"
-TASKS="DocVQA ChartQA POPE COCO"
+# All overridable via environment variables so data/results can live on an
+# external disk, e.g.:
+#   DATA_DIR=/media/labib/BIGDISK/greenvlm/data/full_samples \
+#   OUT_ROOT=/media/labib/BIGDISK/greenvlm/results/full \
+#   bash run_full_benchmark.sh
+DATA_DIR="${DATA_DIR:-data/full_samples}"
+OUT_ROOT="${OUT_ROOT:-results/full}"
+RESOLUTIONS="${RESOLUTIONS:-224 448 896}"
+TASKS="${TASKS:-DocVQA ChartQA POPE COCO}"
 
 # Default model set (override by passing model names as arguments).
 # Ollama-served models:
