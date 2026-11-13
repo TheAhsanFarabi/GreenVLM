@@ -1,0 +1,25 @@
+# GreenVLM model registry.
+#   backend: "ollama" (served by local Ollama) or "hf" (HuggingFace transformers)
+#   quant:   only used by the hf backend — one of 4bit | 8bit | bf16
+#
+# To add/remove a model from the full run, just edit this list.
+models:
+  - name: qwen3-vl:8b          # reasoning VLM (decode-dominant contrast case)
+    backend: ollama
+  - name: gemma4:12b
+    backend: ollama
+  - name: llava:7b             # fixed-resolution contrast
+    backend: ollama
+  - name: ministral-3:8b
+    backend: ollama
+  - name: minicpm-v:8b         # dynamic high-res doc VLM
+    backend: ollama
+  - name: OpenGVLab/InternVL3-8B-hf   # dynamic high-res doc VLM (HF backend)
+    backend: hf
+    quant: 4bit
+
+# Default run settings (overridable by environment variables in run_full_benchmark.sh).
+defaults:
+  resolutions: "224 448 896"
+  tasks: "DocVQA ChartQA POPE COCO"
+  max_tokens: 512

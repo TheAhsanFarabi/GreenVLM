@@ -114,24 +114,26 @@ def eval_pope(pred: str, ground_truth: str) -> float:
 # -------------------------------------------------------------
 # Ollama Client & Image Resizer
 # -------------------------------------------------------------
-def query_model(model: str, prompt: str, image_b64: str, max_tokens: int = 30) -> Dict[str, Any]:
+def query_model(model: str, prompt: str, image_b64: str, max_tokens: int = 512) -> Dict[str, Any]:
     url = "http://localhost:11434/api/chat"
     base = model.split(":")[0].lower()
 
-    # Reasoning VLMs (e.g. qwen3-vl) always emit chain-of-thought and only place the
-    # final answer in message.content *after* thinking finishes, so they need a larger
-    # decode budget. Their reasoning tokens are genuine decode work ("speaking" energy).
-    reasoning = base.startswith("qwen3")
-    num_predict = max(max_tokens + 256, 320) if reasoning else max_tokens
-
+    # IDENTICAL generation hyperparameters for every model: greedy decoding
+    # (temperature 0) and the same token budget `max_tokens`. The budget is a cap,
+    # not a target — non-reasoning models stop at EOS after a few tokens, while
+    # reasoning models (qwen3-vl) spend the budget on chain-of-thought. Keeping the
+    # cap uniform removes the earlier per-model asymmetry so cross-model energy and
+    # accuracy are comparable.
     payload = {
         "model": model,
         "messages": [{"role": "user", "content": prompt, "images": [image_b64]}],
         "stream": False,
-        "options": {"temperature": 0.0, "num_predict": num_predict}
+        "options": {"temperature": 0.0, "num_predict": max_tokens}
     }
     # gemma thinking models hide the answer unless thinking is explicitly disabled.
     # (llama3.2-vision is not a thinking model and errors if 'think' is sent.)
+    # This is a capability toggle to make the model answer at all, not a tuned
+    # hyperparameter, so it does not affect the uniform-budget comparison.
     if base.startswith("gemma"):
         payload["think"] = False
 
@@ -215,6 +217,8 @@ def main():
     parser.add_argument("--data-dir", type=str, default="data/multitask_samples", help="Path to sample images and metadata")
     parser.add_argument("--output-dir", type=str, default="results", help="Directory to save JSON logs and figures")
     parser.add_argument("--limit", type=int, default=0, help="Max samples per task (0 = all). Use for a quick pilot.")
+    parser.add_argument("--max-tokens", type=int, default=512,
+                        help="Uniform generation budget (num_predict / max_new_tokens) applied identically to every model and task.")
     parser.add_argument("--backend", type=str, default="ollama", choices=["ollama", "hf"],
                         help="Inference backend. 'ollama' (default) or 'hf' for HuggingFace models like InternVL.")
     parser.add_argument("--quant", type=str, default="4bit", choices=["4bit", "8bit", "bf16"],
@@ -254,12 +258,15 @@ def main():
     print("=" * 86)
     print("  GreenVLM: The Illusion of 'Free' Vision in Real-World Multimodal Tasks")
     print("=" * 86)
-    print(f"Model       : {args.model}")
+    print(f"Model       : {args.model}  (backend={args.backend})")
     print(f"Tasks       : {args.tasks}")
     print(f"Resolutions : {[f'{r[0]}x{r[1]}' for r in res_tuples]}")
+    print(f"Max tokens  : {args.max_tokens} (uniform, greedy temp=0)")
     print("=" * 86)
 
-    task_tokens = {"DocVQA": 20, "ChartQA": 15, "POPE": 5, "COCO": 45}
+    # Which metric the 'accuracy' field holds per task. COCO has no ground truth,
+    # so its value is the mean number of generated caption tokens, NOT a percentage.
+    task_metric = {"DocVQA": "anls", "ChartQA": "relaxed_acc", "POPE": "binary_acc", "COCO": "caption_tokens"}
     full_log = []
     summary = {t: {} for t in args.tasks}
 
@@ -345,7 +352,7 @@ def main():
                 tracker.start()
 
                 try:
-                    resp = run_query(prompt, img_b64, max_tokens=task_tokens.get(task, 25))
+                    resp = run_query(prompt, img_b64, max_tokens=args.max_tokens)
                 except Exception as e:
                     tracker.stop()
                     print(f"    [Error] Sample {idx} failed: {e}")
@@ -399,7 +406,8 @@ def main():
             rho_pre = (mean_see_j / mean_tot_j * 100.0) if mean_tot_j > 0 else 0.0
 
             summary[task][res_str] = {
-                "accuracy": mean_acc, "see_j": mean_see_j, "speak_j": mean_speak_j,
+                "accuracy": mean_acc, "metric": task_metric.get(task, "accuracy"),
+                "see_j": mean_see_j, "speak_j": mean_speak_j,
                 "tot_j": mean_tot_j, "see_t": float(np.mean(see_t_list)),
                 "speak_t": float(np.mean(speak_t_list)), "out_toks": float(np.mean(out_tok_list)),
                 "rho_pre": rho_pre

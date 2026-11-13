@@ -1,15 +1,24 @@
 #!/bin/bash
 # =============================================================================
-# GreenVLM — Full Benchmark Runner (resumable)
+# GreenVLM — Full Benchmark Runner (config-driven, resumable)
 #
-# Runs every model over all tasks and resolutions. Each model writes its own
-# checkpoint (results/full/<model>/checkpoint.jsonl); every completed inference
-# is persisted immediately. If the run is interrupted (Ctrl-C, crash, reboot),
-# just re-run this script — it skips finished work and resumes where it stopped.
+# Models come from configs/models.yaml. Each model writes its own checkpoint
+# (<OUT_ROOT>/<model>/checkpoint.jsonl); every completed inference is persisted
+# immediately. If the run is interrupted (Ctrl-C, crash, reboot), re-run this
+# script with the SAME settings — it skips finished work and resumes.
 #
-# Usage:
-#   bash run_full_benchmark.sh                 # run all models
-#   bash run_full_benchmark.sh qwen3-vl:8b     # run / resume a single model
+# Settings (override via environment variables):
+#   DATA_DIR    dataset dir           (default data/full_samples)
+#   OUT_ROOT    results dir           (default results/full)
+#   RESOLUTIONS square sizes          (default from models.yaml)
+#   TASKS       task list             (default from models.yaml)
+#   MAX_TOKENS  uniform token budget  (default from models.yaml)
+#
+# Examples:
+#   bash run_full_benchmark.sh
+#   DATA_DIR=/mnt/bigdisk/greenvlm/data/full_samples \
+#   OUT_ROOT=/mnt/bigdisk/greenvlm/results/full bash run_full_benchmark.sh
+#   bash run_full_benchmark.sh qwen3-vl:8b        # run/resume one model
 # =============================================================================
 set -u
 cd "$(dirname "$0")"
@@ -18,80 +27,67 @@ cd "$(dirname "$0")"
 # regardless of whether it is activated in the caller's shell.
 PY="python3"
 if [ -x "../.venv/bin/python" ]; then PY="../.venv/bin/python"; fi
-echo "Python      : $PY"
 
-# All overridable via environment variables so data/results can live on an
-# external disk, e.g.:
-#   DATA_DIR=/media/labib/BIGDISK/greenvlm/data/full_samples \
-#   OUT_ROOT=/media/labib/BIGDISK/greenvlm/results/full \
-#   bash run_full_benchmark.sh
+CONFIG="configs/models.yaml"
+
+# Read defaults from the YAML (env vars win if set).
+read_default() { "$PY" -c "import yaml,sys; print(yaml.safe_load(open('$CONFIG')).get('defaults',{}).get('$1',''))"; }
 DATA_DIR="${DATA_DIR:-data/full_samples}"
 OUT_ROOT="${OUT_ROOT:-results/full}"
-RESOLUTIONS="${RESOLUTIONS:-224 448 896}"
-TASKS="${TASKS:-DocVQA ChartQA POPE COCO}"
-
-# Default model set (override by passing model names as arguments).
-# Ollama-served models:
-MODELS=(
-  "qwen3-vl:8b"
-  "gemma4:12b"
-  "llava:7b"
-  "ministral-3:8b"
-  "minicpm-v:8b"
-)
-if [ "$#" -gt 0 ]; then
-  MODELS=("$@")
-fi
-
-# HuggingFace-served models (not available on Ollama). Run via --backend hf.
-# Set to empty to skip. InternVL is the dynamic-resolution doc contrast model.
-HF_MODELS=(
-  "OpenGVLab/InternVL3-8B-hf"
-)
-HF_QUANT="4bit"
+RESOLUTIONS="${RESOLUTIONS:-$(read_default resolutions)}"
+TASKS="${TASKS:-$(read_default tasks)}"
+MAX_TOKENS="${MAX_TOKENS:-$(read_default max_tokens)}"
 
 if [ ! -f "$DATA_DIR/metadata.json" ] && [ ! -f "$DATA_DIR/multitask_samples_metadata.json" ]; then
   echo "[!] No dataset found in '$DATA_DIR'. Run:"
-  echo "    python3 download_datasets.py --samples 250 --output $DATA_DIR"
+  echo "    $PY download_datasets.py --samples 250 --output $DATA_DIR"
   exit 1
 fi
 
 mkdir -p "$OUT_ROOT"
-echo "Models      : ${MODELS[*]}"
+echo "Python      : $PY"
+echo "Config      : $CONFIG"
 echo "Data dir    : $DATA_DIR"
-echo "Resolutions : $RESOLUTIONS"
 echo "Output root : $OUT_ROOT"
+echo "Resolutions : $RESOLUTIONS"
+echo "Tasks       : $TASKS"
+echo "Max tokens  : $MAX_TOKENS (uniform across all models)"
 echo "============================================================"
 
-for M in "${MODELS[@]}"; do
-  OUT="$OUT_ROOT/${M//:/_}"
+# Emit "backend|name|quant" per model (filtered to CLI args if any were given).
+WANT="$*"
+MODEL_LINES=$("$PY" - "$CONFIG" "$WANT" <<'PYEOF'
+import sys, yaml
+cfg = yaml.safe_load(open(sys.argv[1]))
+want = set(sys.argv[2].split()) if len(sys.argv) > 2 and sys.argv[2].strip() else None
+for m in cfg.get("models", []):
+    if want and m["name"] not in want:
+        continue
+    print(f"{m.get('backend','ollama')}|{m['name']}|{m.get('quant','4bit')}")
+PYEOF
+)
+
+if [ -z "$MODEL_LINES" ]; then
+  echo "[!] No matching models in $CONFIG."
+  exit 1
+fi
+
+while IFS='|' read -r BACKEND NAME QUANT; do
+  [ -z "$NAME" ] && continue
+  OUT="$OUT_ROOT/$(echo "$NAME" | tr '/:' '__')"
   echo ""
-  echo "############## MODEL: $M -> $OUT ##############"
+  echo "############## MODEL: $NAME  (backend=$BACKEND) -> $OUT ##############"
+  EXTRA=""
+  if [ "$BACKEND" = "hf" ]; then EXTRA="--backend hf --quant $QUANT"; fi
   "$PY" main_benchmark.py \
-      --model "$M" \
+      --model "$NAME" $EXTRA \
       --tasks $TASKS \
       --resolutions $RESOLUTIONS \
+      --max-tokens "$MAX_TOKENS" \
       --data-dir "$DATA_DIR" \
-      --output-dir "$OUT" || echo "[!] $M exited non-zero (resume by re-running this script)."
-  echo "############## DONE: $M ##############"
-done
-
-# HuggingFace backend models (skipped when invoking with explicit model args).
-if [ "$#" -eq 0 ]; then
-  for M in "${HF_MODELS[@]}"; do
-    OUT="$OUT_ROOT/${M//\//_}"
-    echo ""
-    echo "############## MODEL (hf): $M -> $OUT ##############"
-    "$PY" main_benchmark.py \
-        --model "$M" \
-        --backend hf --quant "$HF_QUANT" \
-        --tasks $TASKS \
-        --resolutions $RESOLUTIONS \
-        --data-dir "$DATA_DIR" \
-        --output-dir "$OUT" || echo "[!] $M exited non-zero (resume by re-running this script)."
-    echo "############## DONE: $M ##############"
-  done
-fi
+      --output-dir "$OUT" || echo "[!] $NAME exited non-zero (resume by re-running this script)."
+  echo "############## DONE: $NAME ##############"
+done <<< "$MODEL_LINES"
 
 echo ""
 echo "ALL_MODELS_COMPLETE"
